@@ -1,6 +1,6 @@
 ---
-title: "Pandas"
-subtitle: "Pandas Documentation"  
+title: "pxtextmining2"
+subtitle: "pxtextmining page 2"
 comments: false
 ---
 

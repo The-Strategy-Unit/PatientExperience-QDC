@@ -51,7 +51,7 @@ website:
       - text: "Homepage"
         file: index.qmd
       - text: "Background and roadmap"
-        file: contribute.qmd
+        file: background.qmd
       - section: Qualitative Framework
         file: framework/index.qmd
         contents:
@@ -65,7 +65,7 @@ website:
         contents:
           - auto: dashboard/*.qmd
       - text: "Acknowledgements"
-        file: Acknowledgements.qmd
+        file: acknowledgements.qmd
   comments:
     giscus:
       repo: CDU-data-science-team/FFT-QDC
