@@ -10,6 +10,5 @@ Distributed under a MIT License. _See [LICENSE.md](/LICENSE) for more informatio
 
 ## About
 
-Project contact email: [craig.shenton@nhs.net](mailto:craig.shenton@nhs.net)
+Project contact email: [cdudatascience@nottshc.nhs.uk](mailto:cdudatascience@nottshc.nhs.uk)
 
-To find out more about the [NHS Python Community](https://nhs-pycom.net/) visit our [website](https://nhs-pycom.net/) or get in touch at [craig.shenton@nhs.net](mailto:craig.shenton@nhs.net)
