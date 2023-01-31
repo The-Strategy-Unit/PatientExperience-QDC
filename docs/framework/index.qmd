@@ -1,0 +1,7 @@
+---
+title: "Framework"
+subtitle: "About the qualitative framework"
+comments: false
+---
+
+Test

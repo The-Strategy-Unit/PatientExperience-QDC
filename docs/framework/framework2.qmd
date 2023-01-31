@@ -1,6 +1,6 @@
 ---
-title: "Pandas"
-subtitle: "Pandas Documentation"  
+title: "framework2"
+subtitle: "framework2"
 comments: false
 ---
 
