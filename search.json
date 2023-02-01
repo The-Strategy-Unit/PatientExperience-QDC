@@ -7,8 +7,8 @@
     "text": "Info about pxtextmining to go here"
   },
   {
-    "objectID": "pxtextmining/pandas.html",
-    "href": "pxtextmining/pandas.html",
+    "objectID": "pxtextmining/pxtextmining.html",
+    "href": "pxtextmining/pxtextmining.html",
     "title": "pxtextmining2",
     "section": "",
     "text": "Under Development"
@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "FFT-QDC website",
     "section": "",
-    "text": "Test"
+    "text": "This is the website for the NHS England (NHSE) Insight and Feedback Team funded Friends and Family Test Qualitative Data Categorisation (FFT-QDC) project. This project is being conducted in partnership with the Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit Data Science Team.\nThe aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the NHS Friends and Family Test.\nThere are three main elements to the project:\n\nCreation of a dataset of free text patient feedback that has been labelled with themes, utilising a new categorisation framework which has been developed by qualitative researchers at NHSE.\nPxtextmining: Development and training of machine learning models to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.\nExperiences Dashboard: Development of a user friendly interface to enable the exploration of qualitative patient feedback.\n\n\n\n\n\n\n\nThis website is still under development and is incomplete"
   },
   {
     "objectID": "framework/index.html",
