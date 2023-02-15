@@ -341,13 +341,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="precision" class="level3">
 <h3 class="anchored" data-anchor-id="precision">Precision</h3>
-<p>Precision measures the ability of a model to avoid false alarms for a class, or the confidence of a model when predicting a specific class. It’s best used when it is important to be correct when identifying a class, reducing false positives but potentially increasing false negatives. Range is between 0 to 1, the higher the better. For the example above the recall would be 1:</p>
+<p>Precision measures the ability of a model to avoid false alarms for a class, or the confidence of a model when predicting a specific class. It’s best used when it is important to be correct when identifying a class, reducing false positives but potentially increasing false negatives. Range is between 0 to 1, the higher the better. For the example in <a href="#tbl-accuracy">Table&nbsp;3</a> the precision would be 1:</p>
 <p>True Positives / (True Positives + False Positives) <br>= 1 / (1 + 0) <br>= 1</p>
 <p>The model did not identify any false positives at all, although it did have 9 false negatives, missing 9/10 of the target of interest. As we know, the recall was poor (0.1).</p>
 <p>The model with high precision but low recall is very good at avoiding false positives, but unfortunately it also made a lot of false negative predictions. The analogy I like to use for understanding optimising for precision is that it is like trying to fish with a spear. You want to be sure that when you catch something, it is definitely a fish. You’re trying to minimise false positives, or anything that is not a fish, but you may miss some fish in doing so (maybe increasing false negatives).</p>
 <p>Scenarios where a model might be optimised for precision include where you are trying to predict the safety of seatbelts. It is important to avoid false positives in this scenario. The cost of throwing away a potentially good seatbelt is relatively low, compared to the cost of equipping a car with a faulty seatbelt.</p>
 <p>In the context of pxtextmining, a model that is optimised for precision may try to be more certain about a label before predicting it for a comment. So for a comment like ‘I really enjoyed dinner and the ward was comfortable’, which has the real labels <code>Food &amp; diet</code> and <code>Environment</code>, the model may only be very certain that it is about <code>Food &amp; diet</code> and label it as such. This means that it might miss the <code>Environment</code> label. This model would therefore produce more false negatives.</p>
 <p>Precision and recall cannot both be increased at the same time, there is a tradeoff to be made between the two.</p>
+<p>Still confused? <a href="https://www.youtube.com/watch?v=qWfzIYCvBqo">This video may help</a>.</p>
 </section>
 <section id="f1-score" class="level3">
 <h3 class="anchored" data-anchor-id="f1-score">F1 score</h3>
