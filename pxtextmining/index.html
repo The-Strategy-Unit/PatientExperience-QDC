@@ -62,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
 <meta property="og:title" content="FFT-QDC website - Machine learning (pxtextmining)">
+<meta property="og:description" content="pxtextmining is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework.">
 <meta property="og:site-name" content="FFT-QDC website">
 </head>
 
@@ -165,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/pxtextmining.html" class="sidebar-item-text sidebar-link">pxtextmining2</a>
+  <a href="../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">Performance metrics</a>
   </div>
 </li>
       </ul>
@@ -217,19 +218,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Info about pxtextmining to go here
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
-</div>
+<p><strong>pxtextmining</strong> is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is <a href="https://github.com/CDU-data-science-team/pxtextmining">available on GitHub</a>.</p>
+<p>On a basic level, this is what is happening:</p>
+<ol type="1">
+<li><p>The dataset created using the qualitative framework is processed. This involves standardising capital letters to lowercase, or removing punctuation and numbers. The words are then converted into numbers, this process is called <em>vectorisation</em>. This is a necessary step to enable the models to handle the words.</p></li>
+<li><p>The processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the <a href="../pxtextmining/performance_metrics.html">performance</a> of the trained model.</p></li>
+<li><p>Different model architectures and algorithms will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.</p></li>
+<li><p>After rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.</p></li>
+<li><p>The best model will be connected to the experiencesdashboard frontend via an API.</p></li>
+</ol>
 
 
 
