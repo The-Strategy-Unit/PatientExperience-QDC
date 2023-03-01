@@ -62,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
 <meta property="og:title" content="FFT-QDC website - Dashboard">
+<meta property="og:description" content="The Experiencedashboard is the front end tool for the FFT-QDC project.">
 <meta property="og:site-name" content="FFT-QDC website">
 </head>
 
@@ -195,7 +196,27 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-structure" id="toc-the-structure" class="nav-link" data-scroll-target="#the-structure">The structure</a></li>
+  <li><a href="#planned-developments" id="toc-planned-developments" class="nav-link" data-scroll-target="#planned-developments">Planned developments</a>
+  <ul>
+  <li><a href="#data-selection" id="toc-data-selection" class="nav-link" data-scroll-target="#data-selection">Data selection</a></li>
+  <li><a href="#data-upload-and-management-section" id="toc-data-upload-and-management-section" class="nav-link" data-scroll-target="#data-upload-and-management-section">Data upload and management section</a></li>
+  <li><a href="#report-builder" id="toc-report-builder" class="nav-link" data-scroll-target="#report-builder">Report builder</a></li>
+  <li><a href="#fft" id="toc-fft" class="nav-link" data-scroll-target="#fft">FFT</a></li>
+  <li><a href="#themes-weighting" id="toc-themes-weighting" class="nav-link" data-scroll-target="#themes-weighting">Themes/ weighting</a></li>
+  <li><a href="#comment-search" id="toc-comment-search" class="nav-link" data-scroll-target="#comment-search">Comment search</a></li>
+  <li><a href="#overlaptrend" id="toc-overlaptrend" class="nav-link" data-scroll-target="#overlaptrend">Overlap/Trend</a>
+  <ul class="collapse">
+  <li><a href="#demographic-tab" id="toc-demographic-tab" class="nav-link" data-scroll-target="#demographic-tab">Demographic tab</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/FFT-QDC/edit/main/dashboard/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/CDU-data-science-team/FFT-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -217,21 +238,69 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Info about pxtextmining to go here
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The <a href="https://github.com/CDU-data-science-team/experiencesdashboard">Experiencedashboard</a> is the front end tool for the FFT-QDC project. It ties the back-end, the <a href="https://cdu-data-science-team.github.io/FFT-QDC/pxtextmining/">Pxtextmining</a>, to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.</p>
+<p>The dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across themes, visualize trend in the data, download reports, etc.</p>
+</section>
+<section id="the-structure" class="level2">
+<h2 class="anchored" data-anchor-id="the-structure">The structure</h2>
+<p>The dashboard is built using <a href="https://shiny.rstudio.com/">Shiny</a>, an R package that makes it easy to build interactive web apps straight from R. The dashboard saves and load data from a database and gives users the ability to upload their unlabeled comment data in several formats for labeling. The dashboard processes feedback data and present several insight from the data using interactive tables, charts and other data format for easy digestion of the data. The figure below shows the schematic diagram of the dashboard’s structure.</p>
+<p><img src="expdash_structure.png" class="img-fluid" alt="structure"></p>
+</section>
+<section id="planned-developments" class="level2">
+<h2 class="anchored" data-anchor-id="planned-developments">Planned developments</h2>
+<p>Below are the key features of the dashboard. We have a live demo of the experiencedashboard <a href="https://feedbackmatters.uk/rsconnect/qdc-demo/">here</a> and the source code is <a href="https://github.com/CDU-data-science-team/experiencesdashboard">here</a>. Some of the features listed below are already implemented in the demo while some are in planned developments, e.g.&nbsp;boolean searching in text search</p>
+<section id="data-selection" class="level4">
+<h4 class="anchored" data-anchor-id="data-selection">Data selection</h4>
+<p>From the sidebar section of the dashboard, Users can drill down using the hierarchy level within their data such as divisions, directorate and teams and they can also filter by dates. The dashboard features and visualization changes in line with the selection.</p>
+</section>
+<section id="data-upload-and-management-section" class="level4">
+<h4 class="anchored" data-anchor-id="data-upload-and-management-section">Data upload and management section</h4>
+<p>In this tab, users have the functionality to</p>
+<ul>
+<li><p><em>Assign label to new data</em>: Users can upload their data and once this data is uploaded the pxtextmining API is called to assign tags to the comments and the data is saved in the database.</p></li>
+<li><p><em>Manage Data</em>: users have the functionality to edit and delete rows within their data right from the dashboard environment.</p></li>
+</ul>
+</section>
+<section id="report-builder" class="level4">
+<h4 class="anchored" data-anchor-id="report-builder">Report builder</h4>
+<p>There are four options to select and each adds sections to the report.</p>
+<ul>
+<li><p>% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/theme</p></li>
+<li><p>Verbatim comments: the actual comments from the selected data</p></li>
+<li><p>Sample demographics: the demographic graphs from the selected data</p></li>
+<li><p>FFT graph: the FFT plot</p></li>
+</ul>
+</section>
+<section id="fft" class="level4">
+<h4 class="anchored" data-anchor-id="fft">FFT</h4>
+<p>This shows the Statistical Process Control (SPC) chart of the FFT score</p>
+</section>
+<section id="themes-weighting" class="level4">
+<h4 class="anchored" data-anchor-id="themes-weighting">Themes/ weighting</h4>
+<p>Shows a table and plot for the number of comments in each category and users can select a category from the table or plot and all the comments relating to that category are displayed</p>
+</section>
+<section id="comment-search" class="level4">
+<h4 class="anchored" data-anchor-id="comment-search">Comment search</h4>
+<p>Users can make a boolen search for comments with specific keyword(s)</p>
+</section>
+<section id="overlaptrend" class="level3">
+<h3 class="anchored" data-anchor-id="overlaptrend">Overlap/Trend</h3>
+<p><em>Trend in category</em>: shows the monthly percentage contribution of each category</p>
+<p><em>Overlapping words</em>: This shows which categories occur together more/less often based on the count or correlation of comments frequencies within the categories</p>
+<section id="demographic-tab" class="level4">
+<h4 class="anchored" data-anchor-id="demographic-tab">Demographic tab</h4>
+<p>Two types of charts are shown here for each demographic variable</p>
+<ul>
+<li>Distribution of demographics in the sample</li>
+<li>Average percentage of maximum FFT score for each category</li>
+</ul>
 
-</div>
-</div>
 
-
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script type="text/javascript">

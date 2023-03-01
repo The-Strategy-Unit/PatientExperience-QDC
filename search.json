@@ -18,7 +18,21 @@
     "href": "dashboard/index.html",
     "title": "Dashboard",
     "section": "",
-    "text": "Info about pxtextmining to go here"
+    "text": "The Experiencedashboard is the front end tool for the FFT-QDC project. It ties the back-end, the Pxtextmining, to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.\nThe dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across themes, visualize trend in the data, download reports, etc."
+  },
+  {
+    "objectID": "dashboard/index.html#the-structure",
+    "href": "dashboard/index.html#the-structure",
+    "title": "Dashboard",
+    "section": "The structure",
+    "text": "The structure\nThe dashboard is built using Shiny, an R package that makes it easy to build interactive web apps straight from R. The dashboard saves and load data from a database and gives users the ability to upload their unlabeled comment data in several formats for labeling. The dashboard processes feedback data and present several insight from the data using interactive tables, charts and other data format for easy digestion of the data. The figure below shows the schematic diagram of the dashboard’s structure."
+  },
+  {
+    "objectID": "dashboard/index.html#planned-developments",
+    "href": "dashboard/index.html#planned-developments",
+    "title": "Dashboard",
+    "section": "Planned developments",
+    "text": "Planned developments\nBelow are the key features of the dashboard. We have a live demo of the experiencedashboard here and the source code is here. Some of the features listed below are already implemented in the demo while some are in planned developments, e.g. boolean searching in text search\n\nData selection\nFrom the sidebar section of the dashboard, Users can drill down using the hierarchy level within their data such as divisions, directorate and teams and they can also filter by dates. The dashboard features and visualization changes in line with the selection.\n\n\nData upload and management section\nIn this tab, users have the functionality to\n\nAssign label to new data: Users can upload their data and once this data is uploaded the pxtextmining API is called to assign tags to the comments and the data is saved in the database.\nManage Data: users have the functionality to edit and delete rows within their data right from the dashboard environment.\n\n\n\nReport builder\nThere are four options to select and each adds sections to the report.\n\n% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/theme\nVerbatim comments: the actual comments from the selected data\nSample demographics: the demographic graphs from the selected data\nFFT graph: the FFT plot\n\n\n\nFFT\nThis shows the Statistical Process Control (SPC) chart of the FFT score\n\n\nThemes/ weighting\nShows a table and plot for the number of comments in each category and users can select a category from the table or plot and all the comments relating to that category are displayed\n\n\nComment search\nUsers can make a boolen search for comments with specific keyword(s)\n\n\nOverlap/Trend\nTrend in category: shows the monthly percentage contribution of each category\nOverlapping words: This shows which categories occur together more/less often based on the count or correlation of comments frequencies within the categories\n\nDemographic tab\nTwo types of charts are shown here for each demographic variable\n\nDistribution of demographics in the sample\nAverage percentage of maximum FFT score for each category"
   },
   {
     "objectID": "dashboard/dashboard2.html",
