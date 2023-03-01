@@ -11,8 +11,12 @@ name: Render and Publish
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
+      issues: write
+      pull-requests: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
