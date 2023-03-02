@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://CDU-data-science-team.github.io/FFT-QDC/posts/update-23-01-31/index.html</loc>
+    <lastmod>2023-03-02T09:08:53.595Z</lastmod>
+  </url>
+  <url>
     <loc>https://CDU-data-science-team.github.io/FFT-QDC/acknowledgements.html</loc>
-    <lastmod>2023-03-01T14:56:22.829Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/FFT-QDC/background.html</loc>
-    <lastmod>2023-03-01T14:56:23.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/FFT-QDC/dashboard/dashboard2.html</loc>
-    <lastmod>2023-03-01T14:56:24.192Z</lastmod>
+    <lastmod>2023-03-02T09:08:54.251Z</lastmod>
   </url>
   <url>
     <loc>https://CDU-data-science-team.github.io/FFT-QDC/dashboard/index.html</loc>
-    <lastmod>2023-03-01T14:56:24.626Z</lastmod>
+    <lastmod>2023-03-02T09:08:54.631Z</lastmod>
   </url>
   <url>
-    <loc>https://CDU-data-science-team.github.io/FFT-QDC/framework/framework2.html</loc>
-    <lastmod>2023-03-01T14:56:25.027Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/FFT-QDC/framework/index.html</loc>
-    <lastmod>2023-03-01T14:56:25.441Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/FFT-QDC/index.html</loc>
-    <lastmod>2023-03-01T14:56:25.871Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/FFT-QDC/posts/update-23-01-31/index.html</loc>
-    <lastmod>2023-03-01T14:56:26.726Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/FFT-QDC/pxtextmining/index.html</loc>
-    <lastmod>2023-03-01T14:56:27.118Z</lastmod>
+    <loc>https://CDU-data-science-team.github.io/FFT-QDC/dashboard/dashboard2.html</loc>
+    <lastmod>2023-03-02T09:08:54.943Z</lastmod>
   </url>
   <url>
     <loc>https://CDU-data-science-team.github.io/FFT-QDC/pxtextmining/performance_metrics.html</loc>
-    <lastmod>2023-03-01T14:56:27.667Z</lastmod>
+    <lastmod>2023-03-02T09:08:55.435Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/FFT-QDC/pxtextmining/index.html</loc>
+    <lastmod>2023-03-02T09:08:55.775Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/FFT-QDC/framework/framework2.html</loc>
+    <lastmod>2023-03-02T09:08:56.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/FFT-QDC/framework/index.html</loc>
+    <lastmod>2023-03-02T09:08:56.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/FFT-QDC/index.html</loc>
+    <lastmod>2023-03-02T09:08:56.719Z</lastmod>
   </url>
   <url>
     <loc>https://CDU-data-science-team.github.io/FFT-QDC/updates.html</loc>
-    <lastmod>2023-03-01T14:56:28.114Z</lastmod>
+    <lastmod>2023-03-02T09:08:57.071Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/FFT-QDC/background.html</loc>
+    <lastmod>2023-03-02T09:08:57.851Z</lastmod>
   </url>
 </urlset>
