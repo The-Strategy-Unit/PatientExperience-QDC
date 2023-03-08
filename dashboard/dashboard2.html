@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Oluwasegun Apejoye">
+<meta name="dcterms.date" content="2023-02-08">
 
-<title>FFT-QDC website - dashboard2</title>
+<title>FFT-QDC website - Additional Analysis for ExperiencesDashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,8 +63,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="FFT-QDC website - dashboard2">
-<meta property="og:description" content="dashboard page 2">
+<meta property="og:title" content="FFT-QDC website - Additional Analysis for ExperiencesDashboard">
+<meta property="og:description" content="Patient Feedback Analysis">
 <meta property="og:site-name" content="FFT-QDC website">
 </head>
 
@@ -118,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">dashboard2</h1>
+      <h1 class="quarto-secondary-nav-title">Additional Analysis for ExperiencesDashboard</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -181,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link active">dashboard2</a>
+  <a href="../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link active">Additional Analysis for ExperiencesDashboard</a>
   </div>
 </li>
       </ul>
@@ -196,22 +198,45 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#overlapping-words" id="toc-overlapping-words" class="nav-link" data-scroll-target="#overlapping-words">1. Overlapping words</a></li>
+  <li><a href="#tf-idfword-counts" id="toc-tf-idfword-counts" class="nav-link" data-scroll-target="#tf-idfword-counts">2. TF-IDF/Word counts</a></li>
+  <li><a href="#word-co-occurence-across-categories" id="toc-word-co-occurence-across-categories" class="nav-link" data-scroll-target="#word-co-occurence-across-categories">3. Word co-occurence across categories</a></li>
+  <li><a href="#word-to-word-connections" id="toc-word-to-word-connections" class="nav-link" data-scroll-target="#word-to-word-connections">4. Word-to-word connections</a></li>
+  <li><a href="#highlight-complex-comments" id="toc-highlight-complex-comments" class="nav-link" data-scroll-target="#highlight-complex-comments">5. Highlight complex comments</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/FFT-QDC/edit/main/dashboard/dashboard2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/CDU-data-science-team/FFT-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">dashboard2</h1>
-<p class="subtitle lead">dashboard page 2</p>
+<h1 class="title d-none d-lg-block">Additional Analysis for ExperiencesDashboard</h1>
+<p class="subtitle lead">Patient Feedback Analysis</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Oluwasegun Apejoye </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 8, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -219,21 +244,70 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This page shows an additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.</p>
+</section>
+<section id="overlapping-words" class="level2">
+<h2 class="anchored" data-anchor-id="overlapping-words">1. Overlapping words</h2>
+<p>This shows relationships between the themes (the categories). It shows the categories that tend to be similar to each other in how they are assigned to comments i.e.&nbsp;how comments shared about one theme relates to another theme. These relationships are shown using the number of comments shared between the themes (comment frequencies) or the Pearson correlation of the comment frequencies. Of particular interest is the correlation among themes, which indicates how often they are assigned together to comments relative to how often they are assigned separately.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="dashboard2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="960"></p>
 </div>
-<div class="callout-caption-container flex-fill">
-Under Development
+<div class="cell-output-display">
+<p><img src="dashboard2_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="960"></p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
+<p>We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the <em>Staff</em> theme shows a strong relationship to the <em>Communication &amp; involvement</em> theme, this indicates comments relating to <em>Staff</em> often relate more to the <em>Communication &amp; involvement</em> category compared to other categories.</p>
+<p>NOTE: The heatmap is available on the dashboard and users will be able to add the network graph to their report (available to download from the dashboard) if they find it more intuitive.</p>
+</section>
+<section id="tf-idfword-counts" class="level2">
+<h2 class="anchored" data-anchor-id="tf-idfword-counts">2. TF-IDF/Word counts</h2>
+<p>We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each theme/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 15 prominent words from each category.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="dashboard2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1152"></p>
+</div>
+</div>
+</section>
+<section id="word-co-occurence-across-categories" class="level2">
+<h2 class="anchored" data-anchor-id="word-co-occurence-across-categories">3. Word co-occurence across categories</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="dashboard2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1152"></p>
+</div>
+</div>
+<p>The Network graph above shows the top 5 words used in each category. The words <em>friendly</em> and <em>staff</em> have high present in comments labelled ‘Staff’. We also see how the “Mental Health Specifics” and “Medication” categories stand out compared to the linkage we see among other groups.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="dashboard2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The above graph shows how the top-occurring words within all the comments combined are distributed across the categories. We can see that among the top 20 frequent words in all the comments combined, most occurred within comments tagged “Care received”. The words <em>staff, helpful and feel</em> account for most of the linkage between “Staff”, “Communication and Involvement” and “General” categories</p>
+</section>
+<section id="word-to-word-connections" class="level2">
+<h2 class="anchored" data-anchor-id="word-to-word-connections">4. Word-to-word connections</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="dashboard2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The above network graph shows the directional linkage between the most common bigrams (pairs of consecutive words) in the whole data. It shows bigrams that occurred more than 5 times and where neither word was a stop word. The transparency of the arrows between the words is based on how common or rare the bigram is in the data.</p>
+<p><em>Friendly</em> formed a major node and we see common short phrases such as <em>Mental Health</em>, <em>friendly staff</em>, and <em>feel comfortable</em></p>
+</section>
+<section id="highlight-complex-comments" class="level2">
+<h2 class="anchored" data-anchor-id="highlight-complex-comments">5. Highlight complex comments</h2>
+<p>We identify there may be situations where the machine learning model might be wrong in the categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below is a sample criterion to highlight complex comments (if any are met):</p>
+<ol type="1">
+<li><p>comments with over 50 words</p></li>
+<li><p>comments with over 3 label attached</p></li>
+</ol>
+<p>In this sample data, there is a total of <strong><em>36</em></strong> comments that might need additional attention.</p>
+<p>These complex comments will be available to download from the dashboard for users to further interrogate the comments and the assigned categories.</p>
 
-</div>
-</div>
 
-
+</section>
 
 </main> <!-- /main -->
 <script type="text/javascript">

@@ -1,17 +1,52 @@
 [
   {
-    "objectID": "posts/update-23-01-31/index.html",
-    "href": "posts/update-23-01-31/index.html",
-    "title": "FILLER",
-    "section": "",
-    "text": "Bla"
-  },
-  {
     "objectID": "acknowledgements.html",
     "href": "acknowledgements.html",
     "title": "Acknowledgements",
     "section": "",
     "text": "Under Development"
+  },
+  {
+    "objectID": "dashboard/dashboard2.html",
+    "href": "dashboard/dashboard2.html",
+    "title": "Additional Analysis for ExperiencesDashboard",
+    "section": "",
+    "text": "This page shows an additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights."
+  },
+  {
+    "objectID": "dashboard/dashboard2.html#overlapping-words",
+    "href": "dashboard/dashboard2.html#overlapping-words",
+    "title": "Additional Analysis for ExperiencesDashboard",
+    "section": "1. Overlapping words",
+    "text": "1. Overlapping words\nThis shows relationships between the themes (the categories). It shows the categories that tend to be similar to each other in how they are assigned to comments i.e. how comments shared about one theme relates to another theme. These relationships are shown using the number of comments shared between the themes (comment frequencies) or the Pearson correlation of the comment frequencies. Of particular interest is the correlation among themes, which indicates how often they are assigned together to comments relative to how often they are assigned separately.\n\n\n\n\n\n\n\n\nWe used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the Staff theme shows a strong relationship to the Communication & involvement theme, this indicates comments relating to Staff often relate more to the Communication & involvement category compared to other categories.\nNOTE: The heatmap is available on the dashboard and users will be able to add the network graph to their report (available to download from the dashboard) if they find it more intuitive."
+  },
+  {
+    "objectID": "dashboard/dashboard2.html#tf-idfword-counts",
+    "href": "dashboard/dashboard2.html#tf-idfword-counts",
+    "title": "Additional Analysis for ExperiencesDashboard",
+    "section": "2. TF-IDF/Word counts",
+    "text": "2. TF-IDF/Word counts\nWe’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each theme/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 15 prominent words from each category."
+  },
+  {
+    "objectID": "dashboard/dashboard2.html#word-co-occurence-across-categories",
+    "href": "dashboard/dashboard2.html#word-co-occurence-across-categories",
+    "title": "Additional Analysis for ExperiencesDashboard",
+    "section": "3. Word co-occurence across categories",
+    "text": "3. Word co-occurence across categories\n\n\n\n\n\nThe Network graph above shows the top 5 words used in each category. The words friendly and staff have high present in comments labelled ‘Staff’. We also see how the “Mental Health Specifics” and “Medication” categories stand out compared to the linkage we see among other groups.\n\n\n\n\n\nThe above graph shows how the top-occurring words within all the comments combined are distributed across the categories. We can see that among the top 20 frequent words in all the comments combined, most occurred within comments tagged “Care received”. The words staff, helpful and feel account for most of the linkage between “Staff”, “Communication and Involvement” and “General” categories"
+  },
+  {
+    "objectID": "dashboard/dashboard2.html#word-to-word-connections",
+    "href": "dashboard/dashboard2.html#word-to-word-connections",
+    "title": "Additional Analysis for ExperiencesDashboard",
+    "section": "4. Word-to-word connections",
+    "text": "4. Word-to-word connections\n\n\n\n\n\nThe above network graph shows the directional linkage between the most common bigrams (pairs of consecutive words) in the whole data. It shows bigrams that occurred more than 5 times and where neither word was a stop word. The transparency of the arrows between the words is based on how common or rare the bigram is in the data.\nFriendly formed a major node and we see common short phrases such as Mental Health, friendly staff, and feel comfortable"
+  },
+  {
+    "objectID": "dashboard/dashboard2.html#highlight-complex-comments",
+    "href": "dashboard/dashboard2.html#highlight-complex-comments",
+    "title": "Additional Analysis for ExperiencesDashboard",
+    "section": "5. Highlight complex comments",
+    "text": "5. Highlight complex comments\nWe identify there may be situations where the machine learning model might be wrong in the categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below is a sample criterion to highlight complex comments (if any are met):\n\ncomments with over 50 words\ncomments with over 3 label attached\n\nIn this sample data, there is a total of 36 comments that might need additional attention.\nThese complex comments will be available to download from the dashboard for users to further interrogate the comments and the assigned categories."
   },
   {
     "objectID": "dashboard/index.html",
@@ -35,11 +70,46 @@
     "text": "Planned developments\nBelow are the key features of the dashboard. We have a live demo of the experiencedashboard here and the source code is here. Some of the features listed below are already implemented in the demo while some are in planned developments, e.g. boolean searching in text search\n\nData selection\nFrom the sidebar section of the dashboard, Users can drill down using the hierarchy level within their data such as divisions, directorate and teams and they can also filter by dates. The dashboard features and visualization changes in line with the selection.\n\n\nData upload and management section\nIn this tab, users have the functionality to\n\nAssign label to new data: Users can upload their data and once this data is uploaded the pxtextmining API is called to assign tags to the comments and the data is saved in the database.\nManage Data: users have the functionality to edit and delete rows within their data right from the dashboard environment.\n\n\n\nReport builder\nThere are four options to select and each adds sections to the report.\n\n% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/theme\nVerbatim comments: the actual comments from the selected data\nSample demographics: the demographic graphs from the selected data\nFFT graph: the FFT plot\n\n\n\nFFT\nThis shows the Statistical Process Control (SPC) chart of the FFT score\n\n\nThemes/ weighting\nShows a table and plot for the number of comments in each category and users can select a category from the table or plot and all the comments relating to that category are displayed\n\n\nComment search\nUsers can make a boolen search for comments with specific keyword(s)\n\n\nOverlap/Trend\nTrend in category: shows the monthly percentage contribution of each category\nOverlapping words: This shows which categories occur together more/less often based on the count or correlation of comments frequencies within the categories\n\nDemographic tab\nTwo types of charts are shown here for each demographic variable\n\nDistribution of demographics in the sample\nAverage percentage of maximum FFT score for each category"
   },
   {
-    "objectID": "dashboard/dashboard2.html",
-    "href": "dashboard/dashboard2.html",
-    "title": "dashboard2",
+    "objectID": "framework/framework2.html",
+    "href": "framework/framework2.html",
+    "title": "framework2",
     "section": "",
     "text": "Under Development"
+  },
+  {
+    "objectID": "framework/index.html",
+    "href": "framework/index.html",
+    "title": "Framework",
+    "section": "",
+    "text": "Test"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "FFT-QDC website",
+    "section": "",
+    "text": "This website is still under development and is incomplete"
+  },
+  {
+    "objectID": "index.html#friends-and-family-test-qualitative-data-categorisation",
+    "href": "index.html#friends-and-family-test-qualitative-data-categorisation",
+    "title": "FFT-QDC website",
+    "section": "Friends and Family Test Qualitative Data Categorisation",
+    "text": "Friends and Family Test Qualitative Data Categorisation\nThis is the website for the NHS England (NHSE) Insight and Feedback Team funded Friends and Family Test Qualitative Data Categorisation (FFT-QDC) project. This project is being conducted in partnership with the Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit Data Science Team.\nThe aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the NHS Friends and Family Test.\nThere are three main elements to the project:\n\nCreation of a dataset of free text patient feedback that has been labelled with themes, utilising a new categorisation framework which has been developed by qualitative researchers at NHSE.\nPxtextmining: Development and training of machine learning models to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.\nExperiences Dashboard: Development of a user friendly interface to enable the exploration of qualitative patient feedback."
+  },
+  {
+    "objectID": "posts/update-23-01-31/index.html",
+    "href": "posts/update-23-01-31/index.html",
+    "title": "FILLER",
+    "section": "",
+    "text": "Bla"
+  },
+  {
+    "objectID": "pxtextmining/index.html",
+    "href": "pxtextmining/index.html",
+    "title": "Machine learning (pxtextmining)",
+    "section": "",
+    "text": "pxtextmining is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is available on GitHub.\nOn a basic level, this is what is happening:\n\nThe dataset created using the qualitative framework is processed. This involves standardising capital letters to lowercase, or removing punctuation and numbers. The words are then converted into numbers, this process is called vectorisation. This is a necessary step to enable the models to handle the words.\nThe processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the performance of the trained model.\nDifferent model architectures and algorithms will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.\nAfter rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.\nThe best model will be connected to the experiencesdashboard frontend via an API."
   },
   {
     "objectID": "pxtextmining/performance_metrics.html",
@@ -89,41 +159,6 @@
     "title": "Performance metrics",
     "section": "Bibliography",
     "text": "Bibliography\n\nL. Mosley, ‘A balanced approach to the multi-class imbalance problem’, Doctor of Philosophy, Iowa State University, Digital Repository, Ames, 2013. doi: 10.31274/etd-180810-3375.\nM.-L. Zhang and Z.-H. Zhou, ‘A Review on Multi-Label Learning Algorithms’, IEEE Trans. Knowl. Data Eng., vol. 26, no. 8, pp. 1819–1837, Aug. 2014, doi: 10.1109/TKDE.2013.39.\nX.-Z. Wu and Z.-H. Zhou, ‘A Unified View of Multi-Label Performance Measures’, in Proceedings of the 34th International Conference on Machine Learning, Jul. 2017, pp. 3780–3788. Accessed: Jan. 20, 2023. [Online]. Available: https://proceedings.mlr.press/v70/wu17a.html\nM. Heydarian, T. E. Doyle, and R. Samavi, ‘MLCM: Multi-Label Confusion Matrix’, IEEE Access, vol. 10, pp. 19083–19095, 2022, doi: 10.1109/ACCESS.2022.3151048.\nS. Henning, W. H. Beluch, A. Fraser, and A. Friedrich, ‘A Survey of Methods for Addressing Class Imbalance in Deep-Learning Based Natural Language Processing’. arXiv, Oct. 10, 2022. Accessed: Jan. 20, 2023. [Online]. Available: http://arxiv.org/abs/2210.04675"
-  },
-  {
-    "objectID": "pxtextmining/index.html",
-    "href": "pxtextmining/index.html",
-    "title": "Machine learning (pxtextmining)",
-    "section": "",
-    "text": "pxtextmining is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is available on GitHub.\nOn a basic level, this is what is happening:\n\nThe dataset created using the qualitative framework is processed. This involves standardising capital letters to lowercase, or removing punctuation and numbers. The words are then converted into numbers, this process is called vectorisation. This is a necessary step to enable the models to handle the words.\nThe processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the performance of the trained model.\nDifferent model architectures and algorithms will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.\nAfter rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.\nThe best model will be connected to the experiencesdashboard frontend via an API."
-  },
-  {
-    "objectID": "framework/framework2.html",
-    "href": "framework/framework2.html",
-    "title": "framework2",
-    "section": "",
-    "text": "Under Development"
-  },
-  {
-    "objectID": "framework/index.html",
-    "href": "framework/index.html",
-    "title": "Framework",
-    "section": "",
-    "text": "Test"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "FFT-QDC website",
-    "section": "",
-    "text": "This website is still under development and is incomplete"
-  },
-  {
-    "objectID": "index.html#friends-and-family-test-qualitative-data-categorisation",
-    "href": "index.html#friends-and-family-test-qualitative-data-categorisation",
-    "title": "FFT-QDC website",
-    "section": "Friends and Family Test Qualitative Data Categorisation",
-    "text": "Friends and Family Test Qualitative Data Categorisation\nThis is the website for the NHS England (NHSE) Insight and Feedback Team funded Friends and Family Test Qualitative Data Categorisation (FFT-QDC) project. This project is being conducted in partnership with the Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit Data Science Team.\nThe aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the NHS Friends and Family Test.\nThere are three main elements to the project:\n\nCreation of a dataset of free text patient feedback that has been labelled with themes, utilising a new categorisation framework which has been developed by qualitative researchers at NHSE.\nPxtextmining: Development and training of machine learning models to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.\nExperiences Dashboard: Development of a user friendly interface to enable the exploration of qualitative patient feedback."
   },
   {
     "objectID": "updates.html",
