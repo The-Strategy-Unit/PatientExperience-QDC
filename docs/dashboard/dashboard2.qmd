@@ -14,7 +14,7 @@ execute:
 This page shows an additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.
 
 ```{r include=FALSE}
-library(tidyverse)
+library(readr)
 library(tidytext)
 library(ggraph)
 library(igraph)
@@ -22,19 +22,19 @@ library(widyr)
 
 source("https://raw.githubusercontent.com/CDU-data-science-team/experiencesdashboard/main/R/utils_overlap_plot_helpers.R")
 
-df <- readr::read_csv("https://raw.githubusercontent.com/CDU-data-science-team/experiencesdashboard/main/data-raw/multilabeled_data.csv", show_col_types = FALSE) %>%
+df <- readr::read_csv("https://raw.githubusercontent.com/CDU-data-science-team/experiencesdashboard/main/data-raw/multilabeled_data.csv", show_col_types = FALSE) |>
   select(-`...1`)
 
-filter_data <- df %>%
+filter_data <- df |>
   filter(!is.na(comment_txt),
          !is.na(location_1),
          !is.na(location_2),
          !is.na(location_3),
          !location_1 == "Unknown") 
 
-tidy_filter_data <- filter_data %>%
-  multi_to_single_label('labels') %>% 
-  mutate(category = value) %>% 
+tidy_filter_data <- filter_data |>
+  multi_to_single_label('labels') |> 
+  mutate(category = value) |> 
   select(-value, -name)
 
 ```
@@ -45,17 +45,17 @@ This shows relationships between the themes (the categories). It shows the categ
 
 ```{r fig.width=10, fig.height=8}
 plot_type = 'correlation'
-filter_data %>% 
-  multi_to_single_label(column_name = 'labels') %>% 
-  make_overlap_theme(group_type = plot_type) %>% 
-  reshape_overlapping_theme() %>% 
+filter_data |> 
+  multi_to_single_label(column_name = 'labels') |> 
+  make_overlap_theme(group_type = plot_type) |> 
+  reshape_overlapping_theme() |> 
   visualize_network('value')
 
 plot_type = 'count'
-filter_data %>% 
-  multi_to_single_label(column_name = 'labels') %>% 
-  make_overlap_theme(group_type = plot_type) %>% 
-  reshape_overlapping_theme() %>%  
+filter_data |> 
+  multi_to_single_label(column_name = 'labels') |> 
+  make_overlap_theme(group_type = plot_type) |> 
+  reshape_overlapping_theme() |>  
   overlap_heatmap_plot(plot_type)
   
 ```
@@ -69,26 +69,26 @@ NOTE: The heatmap is available on the dashboard and users will be able to add th
 We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each theme/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 15 prominent words from each category.
 
 ```{r fig.width=12, fig.height=15}
-tidy_comment_token <- tidy_filter_data %>% 
-  tidytext::unnest_tokens(word, comment_txt, token = "words") %>%
+tidy_comment_token <- tidy_filter_data |> 
+  tidytext::unnest_tokens(word, comment_txt, token = "words") |>
   filter(str_detect(word, "[a-z']$"),
          !word %in% tidytext::stop_words$word)
 
 # common words based on sub-topic
-word_count <- tidy_comment_token %>% 
+word_count <- tidy_comment_token |> 
   count(category, word, sort = TRUE) 
   # count(comment_type, category, word, sort = TRUE) 
 
-tf_idf <- word_count %>%
-  tidytext::bind_tf_idf(word, category, n) %>%
+tf_idf <- word_count |>
+  tidytext::bind_tf_idf(word, category, n) |>
     arrange(desc(tf_idf))
 
 options(repr.P.width=15,repr.P.height=50)
 
-tf_idf %>%
-  group_by(category) %>%
-  slice_max(tf_idf, n = 15, with_ties = F) %>%
-  mutate(word = reorder_within(word, by=tf_idf, within = category)) %>%   
+tf_idf |>
+  group_by(category) |>
+  slice_max(tf_idf, n = 15, with_ties = F) |>
+  mutate(word = reorder_within(word, by=tf_idf, within = category)) |>   
   ggplot(aes(tf_idf, word, fill = category)) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~ category , scales = "free") +
@@ -107,11 +107,11 @@ tf_idf %>%
 #' @return dataframe
 #' @export
 count_bigrams <- function(dataset, text_column) {
-  dataset %>%
-    tidytext::unnest_tokens(bigram, text_column, token = "ngrams", n = 2) %>%
-    tidyr::separate(bigram, c("word1", "word2"), sep = " ") %>%
+  dataset |>
+    tidytext::unnest_tokens(bigram, text_column, token = "ngrams", n = 2) |>
+    tidyr::separate(bigram, c("word1", "word2"), sep = " ") |>
     dplyr::filter(!word1 %in% tidytext::stop_words$word,
-           !word2 %in% tidytext::stop_words$word) %>%
+           !word2 %in% tidytext::stop_words$word) |>
     dplyr::count(word1, word2, sort = TRUE)
 }
 
@@ -125,8 +125,8 @@ count_bigrams <- function(dataset, text_column) {
 visualize_bigrams <- function(bigrams, attr_column) {
   # set.seed(2021)
   
-  bigrams %>%
-    graph_from_data_frame() %>% 
+  bigrams |>
+    graph_from_data_frame() |> 
     ggraph(layout = "fr") +
     geom_edge_link(aes(edge_alpha = n), edge_colour = "black",
                    show.legend = FALSE,
@@ -139,11 +139,11 @@ visualize_bigrams <- function(bigrams, attr_column) {
 
 # top 5 words in each category 
 # set.seed(2020)
-tidy_comment_token %>% 
-  mutate(category = toupper(category)) %>% 
-  count(category, word, sort = TRUE) %>% 
-  group_by(category) %>%
-  slice_max(n, n = 5, with_ties = F) %>%
+tidy_comment_token |> 
+  mutate(category = toupper(category)) |> 
+  count(category, word, sort = TRUE) |> 
+  group_by(category) |>
+  slice_max(n, n = 5, with_ties = F) |>
   # visualize_network()
   visualize_bigrams()
 ```
@@ -153,10 +153,10 @@ The Network graph above shows the top 5 words used in each category. The words *
 ```{r}
 # top 20 words across all the categories
 set.seed(2023)
-tidy_comment_token %>% 
-  mutate(category = toupper(category)) %>% 
-  count(category, word, sort = TRUE) %>% 
-  top_n(40, n) %>% #View()
+tidy_comment_token |> 
+  mutate(category = toupper(category)) |> 
+  count(category, word, sort = TRUE) |> 
+  top_n(40, n) |> #View()
   visualize_network('n')
 
 ```
@@ -166,14 +166,14 @@ The above graph shows how the top-occurring words within all the comments combin
 ## 4. Word-to-word connections
 
 ```{r}
-pat_bigrams <- filter_data %>%
+pat_bigrams <- filter_data |>
   count_bigrams('comment_txt')
 
 # filter out rare combinations, as well as digits
-pat_bigrams %>%
+pat_bigrams |>
   filter(n > 5,
          !stringr::str_detect(word1, "\\d"),
-         !stringr::str_detect(word2, "\\d")) %>% #View()
+         !stringr::str_detect(word2, "\\d")) |> #View()
   visualize_bigrams()
 
 ```
@@ -196,13 +196,13 @@ long_words <- 50
 many_labels <- 3
 multilabel_column <- 'labels'
 
-complex_comments <- filter_data %>% 
+complex_comments <- filter_data |> 
   dplyr::mutate(n_word = lengths(stringr::str_split(comment_txt, ' ')),
-         n_label = lengths(stringr::str_split(multilabel_column, ','))) %>% 
+         n_label = lengths(stringr::str_split(multilabel_column, ','))) |> 
   dplyr::filter(n_word > long_words | n_label > many_labels) 
 
-n_complex_comments <- complex_comments %>% 
-  dplyr::pull(comment_txt) %>% length()
+n_complex_comments <- complex_comments |> 
+  dplyr::pull(comment_txt) |> length()
 
 ```
 
