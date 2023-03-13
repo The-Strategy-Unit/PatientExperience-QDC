@@ -25,12 +25,21 @@ We will try several different model architectures, recording the performance of 
 ## Bibliography
 
 [1]	Li, Chuan, ‘OpenAI’s GPT-3 Language Model: A Technical Overview’, Jun. 03, 2020. https://lambdalabs.com/blog/demystifying-gpt-3 (accessed Feb. 07, 2023).
+
 [2]	A. I. Kadhim, ‘Survey on supervised machine learning techniques for automatic text classification’, Artif Intell Rev, vol. 52, no. 1, pp. 273–292, Jun. 2019, doi: 10.1007/s10462-018-09677-1.
+
 [3]	M.-L. Zhang and Z.-H. Zhou, ‘A Review on Multi-Label Learning Algorithms’, IEEE Trans. Knowl. Data Eng., vol. 26, no. 8, pp. 1819–1837, Aug. 2014, doi: 10.1109/TKDE.2013.39.
+
 [4]	J. Langton, K. Srihasam, and J. Jiang, ‘Comparison of Machine Learning Methods for Multi-label Classification of Nursing Education and Licensure Exam Questions’, in Proceedings of the 3rd Clinical Natural Language Processing Workshop, Online, Nov. 2020, pp. 85–93. doi: 10.18653/v1/2020.clinicalnlp-1.10.
+
 [5]	V. Yogarajan, J. Montiel, T. Smith, and B. Pfahringer, ‘Transformers for Multi-label Classification of Medical Text: An Empirical Comparison’, in Artificial Intelligence in Medicine, vol. 12721, A. Tucker, P. Henriques Abreu, J. Cardoso, P. Pereira Rodrigues, and D. Riaño, Eds. Cham: Springer International Publishing, 2021, pp. 114–123. doi: 10.1007/978-3-030-77211-6_12.
+
 [6]	H. Lu, L. Ehwerhemuepha, and C. Rakovski, ‘A comparative study on deep learning models for text classification of unstructured medical notes with various levels of class imbalance’, BMC Medical Research Methodology, vol. 22, no. 1, p. 181, Jul. 2022, doi: 10.1186/s12874-022-01665-y.
+
 [7]	S. Casola, I. Lauriola, and A. Lavelli, ‘Pre-trained transformers: an empirical comparison’, Machine Learning with Applications, vol. 9, p. 100334, Sep. 2022, doi: 10.1016/j.mlwa.2022.100334.
+
 [8]	A. K. B. Singh, M. Guntu, A. R. Bhimireddy, J. W. Gichoya, and S. Purkayastha, ‘Multi-label natural language processing to identify diagnosis and procedure codes from MIMIC-III inpatient notes’.
+
 [9]	A. Haghighian Roudsari, J. Afshar, W. Lee, and S. Lee, ‘PatentNet: multi-label classification of patent documents using deep learning based language understanding’, Scientometrics, vol. 127, no. 1, pp. 207–231, Jan. 2022, doi: 10.1007/s11192-021-04179-4.
+
 [10]	V. Yogarajan, J. Montiel, T. Smith, and B. Pfahringer, ‘Seeing The Whole Patient: Using Multi-Label Medical Text Classification Techniques to Enhance Predictions of Medical Codes’. arXiv, Mar. 28, 2020. Accessed: Jan. 30, 2023. [Online]. Available: http://arxiv.org/abs/2004.00430
