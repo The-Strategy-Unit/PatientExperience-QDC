@@ -59,7 +59,8 @@ website:
       - section: Machine learning (pxtextmining)
         file: pxtextmining/index.qmd
         contents:
-          - auto: pxtextmining/*.qmd
+          - pxtextmining/performance_metrics.qmd
+          - pxtextmining/model_selection.qmd
       - section: Experiences dashboard
         file: dashboard/index.qmd
         contents:
