@@ -5,32 +5,43 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>FFT-QDC website</title>
-<link>https://CDU-data-science-team.github.io/FFT-QDC/updates.html</link>
-<atom:link href="https://CDU-data-science-team.github.io/FFT-QDC/updates.xml" rel="self" type="application/rss+xml"/>
-<description>Website for the NHS England funded Friends and Family Test Qualitative Data Categorisation project</description>
+<title>PatientExperience-QDC website</title>
+<link>https://CDU-data-science-team.github.io/PatientExperience-QDC/updates.html</link>
+<atom:link href="https://CDU-data-science-team.github.io/PatientExperience-QDC/updates.xml" rel="self" type="application/rss+xml"/>
+<description>Website for the NHS England funded Patient Experience Qualitative Data Categorisation project</description>
 <generator>quarto-1.2.335</generator>
-<lastBuildDate>Tue, 31 Jan 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 13 Mar 2023 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>FILLER</title>
+  <title>Machine learning update</title>
   <dc:creator>YiWen Hon</dc:creator>
-  <link>https://CDU-data-science-team.github.io/FFT-QDC/posts/update-23-01-31/index.html</link>
+  <link>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/index.html</link>
   <description><![CDATA[ 
 
 
 
-<section id="filler" class="level2">
-<h2 class="anchored" data-anchor-id="filler">FILLER</h2>
-<p>Bla</p>
+<p>We’ve had a chance to play around with a few different model architectures now and the main finding is that so far, as in Phase 1 and other <a href="https://www.sciencedirect.com/science/article/pii/S1386505621002689?via%3Dihub">similar projects</a>, Support Vector Classifier is performing the best. We are currently prototyping using only some of the final dataset, and focusing on predicting 1 of 13 overarching ‘major categories’. These are divided into a further 50+ subcategories, which our models are not yet trained to detect, but this will be the next step, once the framework is finalised.</p>
+<p>We have also tried out Distilbert uncased, which is performing well, if not slightly better, than SVC. However, it’s taking a long time to train (around 6 hours on average) and is very large, around 1 GB in size. It also takes a long time to make predictions, around 1 minute per 1000 comments. When we have the final dataset we’ll have a clearer picture of which model will be best suited for the needs of the project.</p>
+<p>The latest development is that we’re able to combine the text with the ‘question type’ feature. Most of the questions asked by trusts can be divided into one of three main types:</p>
+<ul>
+<li><p>What did we do well?</p></li>
+<li><p>What could we do better?</p></li>
+<li><p>Any other comments / no specific question</p></li>
+</ul>
+<p>Including the question type with the text of the comment has improved performance slightly. The way this has been done with BERT can be seen in the diagram below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/model_architecture.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Distilbert model with categorical question type feature</figcaption><p></p>
+</figure>
+</div>
 
 
-</section>
 
  ]]></description>
   <category>news</category>
-  <guid>https://CDU-data-science-team.github.io/FFT-QDC/posts/update-23-01-31/index.html</guid>
-  <pubDate>Tue, 31 Jan 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://CDU-data-science-team.github.io/FFT-QDC/posts/update-23-01-31/thumbnail.png" medium="image" type="image/png"/>
+  <guid>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/index.html</guid>
+  <pubDate>Mon, 13 Mar 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/model_architecture.png" medium="image" type="image/png" height="107" width="144"/>
 </item>
 </channel>
 </rss>

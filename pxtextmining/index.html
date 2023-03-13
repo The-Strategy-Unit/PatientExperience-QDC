@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>FFT-QDC website - Machine learning (pxtextmining)</title>
+<title>PatientExperience-QDC website - Machine learning (pxtextmining)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,9 +61,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="FFT-QDC website - Machine learning (pxtextmining)">
+<meta property="og:title" content="PatientExperience-QDC website - Machine learning (pxtextmining)">
 <meta property="og:description" content="pxtextmining is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework.">
-<meta property="og:site-name" content="FFT-QDC website">
+<meta property="og:site-name" content="PatientExperience-QDC website">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link active" href="../index.html" aria-current="page"><i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text">About FFT-QDC</span></a>
+ <span class="menu-text">About PatientExperience-QDC</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../updates.html"><i class="bi bi-rss" role="img">
@@ -95,19 +95,19 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-help">    
         <li>
-    <a class="dropdown-item" href="https://github.com/CDU-data-science-team/FFT-QDC/issues"><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Report a Bug</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/CDU-data-science-team/FFT-QDC/discussions"><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/discussions"><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Ask a Question</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/CDU-data-science-team/FFT-QDC"><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/CDU-data-science-team/PatientExperience-QDC"><i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -169,6 +169,11 @@ ul.task-list li input[type="checkbox"] {
   <a href="../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">Performance metrics</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">Model selection</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -223,7 +228,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p>The dataset created using the qualitative framework is processed. This involves standardising capital letters to lowercase, or removing punctuation and numbers. The words are then converted into numbers, this process is called <em>vectorisation</em>. This is a necessary step to enable the models to handle the words.</p></li>
 <li><p>The processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the <a href="../pxtextmining/performance_metrics.html">performance</a> of the trained model.</p></li>
-<li><p>Different model architectures and algorithms will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.</p></li>
+<li><p>Different <a href="../pxtextmining/model_selection.html">model architectures and algorithms</a> will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.</p></li>
 <li><p>After rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.</p></li>
 <li><p>The best model will be connected to the experiencesdashboard frontend via an API.</p></li>
 </ol>
@@ -383,10 +388,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/CDU-data-science-team/FFT-QDC/blob/main/LICENCE">License</a>
+    <a class="nav-link" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/blob/main/LICENCE">License</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/CDU-data-science-team/FFT-QDC/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+    <a class="nav-link" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
   </li>  
 </ul>
     </div>

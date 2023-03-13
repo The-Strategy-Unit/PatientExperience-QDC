@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="YiWen Hon">
+<meta name="dcterms.date" content="2023-03-13">
 
-<title>PatientExperience-QDC website - Acknowledgements</title>
+<title>PatientExperience-QDC website - Machine learning update</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./docs/_assets/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/_assets/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -60,9 +62,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Acknowledgements">
+<link rel="stylesheet" href="../../_assets/style/styles.css">
+<meta property="og:title" content="PatientExperience-QDC website - Machine learning update">
+<meta property="og:description" content="We’ve had a chance to play around with a few different model architectures now and the main finding is that so far, as in Phase 1 and other similar projects, Support Vector Classifier is performing…">
+<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/model_architecture.png">
 <meta property="og:site-name" content="PatientExperience-QDC website">
+<meta property="og:image:height" content="547">
+<meta property="og:image:width" content="733">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -77,12 +83,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"><i class="bi bi-book" role="img">
+    <a class="nav-link active" href="../../index.html" aria-current="page"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">About PatientExperience-QDC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./updates.html"><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../updates.html"><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text">Updates</span></a>
   </li>  
@@ -117,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Acknowledgements</h1>
+      <h1 class="quarto-secondary-nav-title">Machine learning update</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -132,17 +138,17 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Homepage</a>
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">Homepage</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./background.html" class="sidebar-item-text sidebar-link">Background and roadmap</a>
+  <a href="../../background.html" class="sidebar-item-text sidebar-link">Background and roadmap</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./framework/index.html" class="sidebar-item-text sidebar-link">Qualitative Framework</a>
+            <a href="../../framework/index.html" class="sidebar-item-text sidebar-link">Qualitative Framework</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -150,14 +156,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./framework/framework2.html" class="sidebar-item-text sidebar-link">framework2</a>
+  <a href="../../framework/framework2.html" class="sidebar-item-text sidebar-link">framework2</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./pxtextmining/index.html" class="sidebar-item-text sidebar-link">Machine learning (pxtextmining)</a>
+            <a href="../../pxtextmining/index.html" class="sidebar-item-text sidebar-link">Machine learning (pxtextmining)</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -165,19 +171,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">Performance metrics</a>
+  <a href="../../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">Performance metrics</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">Model selection</a>
+  <a href="../../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">Model selection</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dashboard/index.html" class="sidebar-item-text sidebar-link">Experiences dashboard</a>
+            <a href="../../dashboard/index.html" class="sidebar-item-text sidebar-link">Experiences dashboard</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -185,14 +191,14 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dashboard/dashboard2.html" class="sidebar-item-text sidebar-link">Additional Analysis for ExperiencesDashboard</a>
+  <a href="../../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link">Additional Analysis for ExperiencesDashboard</a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acknowledgements.html" class="sidebar-item-text sidebar-link active">Acknowledgements</a>
+  <a href="../../acknowledgements.html" class="sidebar-item-text sidebar-link">Acknowledgements</a>
   </div>
 </li>
     </ul>
@@ -207,14 +213,29 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Acknowledgements</h1>
-</div>
+<h1 class="title d-none d-lg-block">Machine learning update</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>YiWen Hon </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 13, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -222,18 +243,20 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Under Development
-</div>
-</div>
-<div class="callout-body-container callout-body">
-
-</div>
+<p>We’ve had a chance to play around with a few different model architectures now and the main finding is that so far, as in Phase 1 and other <a href="https://www.sciencedirect.com/science/article/pii/S1386505621002689?via%3Dihub">similar projects</a>, Support Vector Classifier is performing the best. We are currently prototyping using only some of the final dataset, and focusing on predicting 1 of 13 overarching ‘major categories’. These are divided into a further 50+ subcategories, which our models are not yet trained to detect, but this will be the next step, once the framework is finalised.</p>
+<p>We have also tried out Distilbert uncased, which is performing well, if not slightly better, than SVC. However, it’s taking a long time to train (around 6 hours on average) and is very large, around 1 GB in size. It also takes a long time to make predictions, around 1 minute per 1000 comments. When we have the final dataset we’ll have a clearer picture of which model will be best suited for the needs of the project.</p>
+<p>The latest development is that we’re able to combine the text with the ‘question type’ feature. Most of the questions asked by trusts can be divided into one of three main types:</p>
+<ul>
+<li><p>What did we do well?</p></li>
+<li><p>What could we do better?</p></li>
+<li><p>Any other comments / no specific question</p></li>
+</ul>
+<p>Including the question type with the text of the comment has improved performance slightly. The way this has been done with BERT can be seen in the diagram below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="model_architecture.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Distilbert model with categorical question type feature</figcaption><p></p>
+</figure>
 </div>
 
 
@@ -383,6 +406,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="CDU-data-science-team/PatientExperience-QDC" data-repo-id="R_kgDOI4C5Mw" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
