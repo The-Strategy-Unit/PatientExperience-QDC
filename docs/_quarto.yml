@@ -50,9 +50,10 @@ website:
     contents:
       - text: "Homepage"
         file: index.qmd
-      - text: "Background and roadmap"
+      - text: "Project background"
         file: background/background.qmd
-        contents: background/phase_1.qmd
+        contents: 
+          - background/phase_1.qmd
       - section: Qualitative Framework
         file: framework/index.qmd
         contents:
