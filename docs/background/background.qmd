@@ -37,7 +37,7 @@ Pilot and Partner organisations will be actively engaged with and involved in de
 
 ## Rough timeline
 
-![Timeline for 2022-23](../images/timeline.png)
+![Timeline for 2022-23](timeline.png)
 
 ## Project outputs
 
