@@ -27,7 +27,7 @@
 <li><p>What could we do better?</p></li>
 <li><p>Any other comments / no specific question</p></li>
 </ul>
-<p>Including the question type with the text of the comment has improved performance slightly. The way this has been done with BERT can be seen in the diagram below.</p>
+<p>Including the question type with the text of the comment has improved performance slightly. The way this has been done with BERT can be seen in the diagram below. We tried both of the methods found in <a href="https://stackoverflow.com/a/73576407/17852099">this stackoverflow post</a>, which produced similar results. We went for the concatenated layers, however, as this means the model architecture is more flexible and can be adapted to include other features as well, if necessary.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/model_architecture.png" class="img-fluid figure-img"></p>
