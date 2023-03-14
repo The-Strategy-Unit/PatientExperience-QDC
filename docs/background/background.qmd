@@ -1,6 +1,7 @@
 ---
 title: Background
 subtitle: Project background and roadmap
+image: "model_architecture.png"
 ---
 
 NHS England commissions the Friends and Family Test (FFT), a continuous improvement tool allowing patients and people who use NHS services to feed back on their experience. The NHS constitution sets out a requirement to collect and act on patient feedback – the FFT supports that requirement and provides a framework to do it. Since 2013, NHS provider organisations have been mandated to collect feedback (including free text comments) via the FFT. 
