@@ -70,41 +70,6 @@
     "text": "Machine learning update\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nMar 13, 2023\n\n\nYiWen Hon\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "background.html",
-    "href": "background.html",
-    "title": "Background",
-    "section": "",
-    "text": "NHS England commissions the Friends and Family Test (FFT), a continuous improvement tool allowing patients and people who use NHS services to feed back on their experience. The NHS constitution sets out a requirement to collect and act on patient feedback – the FFT supports that requirement and provides a framework to do it. Since 2013, NHS provider organisations have been mandated to collect feedback (including free text comments) via the FFT.\nPrevious work by the project team at Nottinghamshire Healthcare NHS Foundation Trust has provided an algorithm/system that can classify FFT free text according to categories and how positive or negative it is, but the system has not been tested on the breadth of FFT data available and the system tags to only eight categories, which cannot be altered by users. This system is also trained on responses to one question, which could impact accuracy when different questions are used.\nThe Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project aims to create a minimal viable product that can categorise FFT data according to defined user needs across different service settings (e.g. acute outpatients/inpatients, mental health, community, ambulance, children’s services).\nA founding principle of this work is that the methodology and code should be completely open. Providing the methodology and code behind a solution is important both to allow expert users to satisfy themselves of the rigour of the methodology, as well as allowing anybody across the NHS to run this code and benefit from the system without any payment. Moreover, coding in the open is an important way to build collaborative links across the NHS and government generally."
-  },
-  {
-    "objectID": "background.html#project-objectives-2022-23",
-    "href": "background.html#project-objectives-2022-23",
-    "title": "Background",
-    "section": "PROJECT OBJECTIVES 2022-23",
-    "text": "PROJECT OBJECTIVES 2022-23\n\nEnsure all categories are fit for purpose - they must be validated (through user needs engagement and evaluation) and checked with input from providers and other stakeholders.\nCreate a minimal viable product (MVP) that can categorise FFT data according to defined user needs across different service settings.\nBuild on the machine learning approaches used in the previous work, where possible, increase the granularity of categories to which the model can assign feedback by adding subcategories.\nEnsure the solution can be used on FFT data, e.g. from different service settings and questions. Through pilot and partner organisations, test and confirm accuracy and explore usefulness in a range of service settings for FFT.\nExplore a range of methods to ensure feedback can be labelled with multiple categories (and sentiment or criticality), for example where one comment contains multiple topics. The project will also consider how data is labelled and presented, for example splitting comments into individual mentions.\nDevelop a user-friendly interface (dashboard), including guidance, that meets user needs, e.g. easy to use, timely display of data, reporting and analysis functionality, triangulation options and inclusion of demographics. This will include options for both on-premise and cloud platforms.\nEnsure that the work is open, reproducible, produced with free and open source components, and work nationally to promote use of the system and its components in order to increase good practice in this area\nCollect user case examples of deployment and use of the solution for service improvement.\nCreate easy to use guidance material for deployment and use of the software for both cloud and locally hosted solutions."
-  },
-  {
-    "objectID": "background.html#partner-organisations",
-    "href": "background.html#partner-organisations",
-    "title": "Background",
-    "section": "Partner organisations",
-    "text": "Partner organisations\nPilot and Partner organisations will be actively engaged with and involved in decision making to shape developments in the project. In addition, an advisory group consisting of providers, NHSE and subject matter experts will be set up and used to help guide decisions. The six partner organisations that we are working with to deploy and shape the solution are yet to be revealed."
-  },
-  {
-    "objectID": "background.html#rough-timeline",
-    "href": "background.html#rough-timeline",
-    "title": "Background",
-    "section": "Rough timeline",
-    "text": "Rough timeline\n[INSERT IMAGE HERE]"
-  },
-  {
-    "objectID": "background.html#project-outputs",
-    "href": "background.html#project-outputs",
-    "title": "Background",
-    "section": "Project outputs",
-    "text": "Project outputs\nResults will be presented in the form of a report with key findings and guidance on how to deploy and implement the product locally. This will include, but is not limited to, sharing code and implementation guidance for the developed software, so that the work can be shared and reproduced in other trusts/organisations as well as a best practice document that can be used as a toolkit to support trusts."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "PatientExperience-QDC website",
@@ -208,6 +173,41 @@
     "title": "Performance metrics",
     "section": "Bibliography",
     "text": "Bibliography\n\nL. Mosley, ‘A balanced approach to the multi-class imbalance problem’, Doctor of Philosophy, Iowa State University, Digital Repository, Ames, 2013. doi: 10.31274/etd-180810-3375.\nM.-L. Zhang and Z.-H. Zhou, ‘A Review on Multi-Label Learning Algorithms’, IEEE Trans. Knowl. Data Eng., vol. 26, no. 8, pp. 1819–1837, Aug. 2014, doi: 10.1109/TKDE.2013.39.\nX.-Z. Wu and Z.-H. Zhou, ‘A Unified View of Multi-Label Performance Measures’, in Proceedings of the 34th International Conference on Machine Learning, Jul. 2017, pp. 3780–3788. Accessed: Jan. 20, 2023. [Online]. Available: https://proceedings.mlr.press/v70/wu17a.html\nM. Heydarian, T. E. Doyle, and R. Samavi, ‘MLCM: Multi-Label Confusion Matrix’, IEEE Access, vol. 10, pp. 19083–19095, 2022, doi: 10.1109/ACCESS.2022.3151048.\nS. Henning, W. H. Beluch, A. Fraser, and A. Friedrich, ‘A Survey of Methods for Addressing Class Imbalance in Deep-Learning Based Natural Language Processing’. arXiv, Oct. 10, 2022. Accessed: Jan. 20, 2023. [Online]. Available: http://arxiv.org/abs/2210.04675"
+  },
+  {
+    "objectID": "background/background.html",
+    "href": "background/background.html",
+    "title": "Background",
+    "section": "",
+    "text": "NHS England commissions the Friends and Family Test (FFT), a continuous improvement tool allowing patients and people who use NHS services to feed back on their experience. The NHS constitution sets out a requirement to collect and act on patient feedback – the FFT supports that requirement and provides a framework to do it. Since 2013, NHS provider organisations have been mandated to collect feedback (including free text comments) via the FFT.\nPrevious work by the project team at Nottinghamshire Healthcare NHS Foundation Trust has provided an algorithm/system that can classify FFT free text according to categories and how positive or negative it is, but the system has not been tested on the breadth of FFT data available and the system tags to only eight categories, which cannot be altered by users. This system is also trained on responses to one question, which could impact accuracy when different questions are used.\nThe Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project aims to create a minimal viable product that can categorise FFT data according to defined user needs across different service settings (e.g. acute outpatients/inpatients, mental health, community, ambulance, children’s services).\nA founding principle of this work is that the methodology and code should be completely open. Providing the methodology and code behind a solution is important both to allow expert users to satisfy themselves of the rigour of the methodology, as well as allowing anybody across the NHS to run this code and benefit from the system without any payment. Moreover, coding in the open is an important way to build collaborative links across the NHS and government generally."
+  },
+  {
+    "objectID": "background/background.html#project-objectives-2022-23",
+    "href": "background/background.html#project-objectives-2022-23",
+    "title": "Background",
+    "section": "PROJECT OBJECTIVES 2022-23",
+    "text": "PROJECT OBJECTIVES 2022-23\n\nEnsure all categories are fit for purpose - they must be validated (through user needs engagement and evaluation) and checked with input from providers and other stakeholders.\nCreate a minimal viable product (MVP) that can categorise FFT data according to defined user needs across different service settings.\nBuild on the machine learning approaches used in the previous work, where possible, increase the granularity of categories to which the model can assign feedback by adding subcategories.\nEnsure the solution can be used on FFT data, e.g. from different service settings and questions. Through pilot and partner organisations, test and confirm accuracy and explore usefulness in a range of service settings for FFT.\nExplore a range of methods to ensure feedback can be labelled with multiple categories (and sentiment or criticality), for example where one comment contains multiple topics. The project will also consider how data is labelled and presented, for example splitting comments into individual mentions.\nDevelop a user-friendly interface (dashboard), including guidance, that meets user needs, e.g. easy to use, timely display of data, reporting and analysis functionality, triangulation options and inclusion of demographics. This will include options for both on-premise and cloud platforms.\nEnsure that the work is open, reproducible, produced with free and open source components, and work nationally to promote use of the system and its components in order to increase good practice in this area\nCollect user case examples of deployment and use of the solution for service improvement.\nCreate easy to use guidance material for deployment and use of the software for both cloud and locally hosted solutions."
+  },
+  {
+    "objectID": "background/background.html#partner-organisations",
+    "href": "background/background.html#partner-organisations",
+    "title": "Background",
+    "section": "Partner organisations",
+    "text": "Partner organisations\nPilot and Partner organisations will be actively engaged with and involved in decision making to shape developments in the project. In addition, an advisory group consisting of providers, NHSE and subject matter experts will be set up and used to help guide decisions. The six partner organisations that we are working with to deploy and shape the solution are yet to be revealed."
+  },
+  {
+    "objectID": "background/background.html#rough-timeline",
+    "href": "background/background.html#rough-timeline",
+    "title": "Background",
+    "section": "Rough timeline",
+    "text": "Rough timeline\n\n\n\nTimeline for 2022-23"
+  },
+  {
+    "objectID": "background/background.html#project-outputs",
+    "href": "background/background.html#project-outputs",
+    "title": "Background",
+    "section": "Project outputs",
+    "text": "Project outputs\nResults will be presented in the form of a report with key findings and guidance on how to deploy and implement the product locally. This will include, but is not limited to, sharing code and implementation guidance for the developed software, so that the work can be shared and reproduced in other trusts/organisations as well as a best practice document that can be used as a toolkit to support trusts."
   },
   {
     "objectID": "acknowledgements.html",
