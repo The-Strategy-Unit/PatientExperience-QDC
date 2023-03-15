@@ -4,4 +4,4 @@ subtitle: "About the qualitative framework"
 comments: false
 ---
 
-Test
+Further information about the framework of categories being developed by qualitative researchers at NHS England will follow.

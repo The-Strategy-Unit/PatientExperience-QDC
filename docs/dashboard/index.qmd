@@ -5,19 +5,23 @@ comments: false
 
 ## Introduction
 
-The [Experiencedashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front end tool for the FFT-QDC project. It ties the back-end, the [Pxtextmining](https://cdu-data-science-team.github.io/FFT-QDC/pxtextmining/), to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.
+The [Experiencedashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.
 
 The dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across themes, visualize trend in the data, download reports, etc.
 
 ## The structure
 
-The dashboard is built using [Shiny](https://shiny.rstudio.com/), an R package that makes it easy to build interactive web apps straight from R. The dashboard saves and load data from a database and gives users the ability to upload their unlabeled comment data in several formats for labeling. The dashboard processes feedback data and present several insight from the data using interactive tables, charts and other data format for easy digestion of the data. The figure below shows the schematic diagram of the dashboard's structure.
+The dashboard is built using [Shiny](https://shiny.rstudio.com/), an R package that makes it easy to build interactive web apps straight from R. The dashboard saves and load data from a database and gives users the ability to upload their unlabeled comment data in several formats for labeling. The dashboard processes feedback data and present several insight from the data using interactive tables, charts and other data format for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure.
 
-![](expdash_structure.png){fig-alt="structure"}
+![Fig 1. Dashboard structure](images/expdash_structure.png){fig-alt="Dashboard structure"}
 
 ## Planned developments
 
-Below are the key features of the dashboard. We have a live demo of the experiencedashboard [here](https://feedbackmatters.uk/rsconnect/qdc-demo/) and the source code is [here](https://github.com/CDU-data-science-team/experiencesdashboard). Some of the features listed below are already implemented in the demo while some are in planned developments, e.g. boolean searching in text search
+Below are the key features of the dashboard. We have a live demo of the experience dashboard [here](https://feedbackmatters.uk/rsconnect/qdc-demo/) and the source code is [here](https://github.com/CDU-data-science-team/experiencesdashboard). Figure 2 shows a screenshot of the sample dashboard design...
+
+![Fig 2. Sample dashboard design](images/dashboard-1.svg){fig-alt="Dashboard structure"}
+
+Some of the features listed below are already implemented in the demo while some are in planned developments, e.g. boolean searching in text search
 
 #### Data selection
 
@@ -45,25 +49,27 @@ There are four options to select and each adds sections to the report.
 
 #### FFT
 
-This shows the Statistical Process Control (SPC) chart of the FFT score
+This shows the Statistical Process Control (SPC) chart of the FFT score. The SPC chart is simply a line graph showing the FFT score in a chronological order, with the score on the vertical (y) axis, date on the horizontal (x) axis and the average score is shown as the centre line.
+
+![Fig 3. SPC chart of the FFT score](images/FFT graph.png){fig-alt="FFT graph"}
 
 #### Themes/ weighting
 
-Shows a table and plot for the number of comments in each category and users can select a category from the table or plot and all the comments relating to that category are displayed
+This shows a table and plot for the number of comments in each category and users can select a category from the table or plot and all the comments relating to that category are displayed.
 
 #### Comment search
 
-Users can make a boolen search for comments with specific keyword(s)
+Users can make a boolen search for comments with specific keyword(s).
 
 ### Overlap/Trend 
 
 *Trend in category*: shows the monthly percentage contribution of each category
 
-*Overlapping words*: This shows which categories occur together more/less often based on the count or correlation of comments frequencies within the categories
+*Overlapping words*: This shows which categories occur together more/less often based on the count or correlation of comments frequencies within the categories. Users will also be able to interact with the plot to see the comments any two categories have in common.
 
 #### Demographic tab
 
 Two types of charts are shown here for each demographic variable
 
--   Distribution of demographics in the sample
--   Average percentage of maximum FFT score for each category
+-   Distribution of demographics in the sample.
+-   Average percentage of maximum FFT score for each category.

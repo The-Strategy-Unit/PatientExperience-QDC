@@ -1,6 +1,6 @@
-## FFT QDC project website
+## PatientExperience-QDC project website
 
-Website for the NHS England funded and Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit hosted Friends and Family Test Qualitative Data Categorisation Project
+Website for the NHS England funded and Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit hosted Patient Experience Qualitative Data Categorisation Project
 
 ## License
 

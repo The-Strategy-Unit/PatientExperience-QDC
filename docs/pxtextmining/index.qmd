@@ -11,7 +11,7 @@ On a basic level, this is what is happening:
 
 2. The processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the [performance](performance_metrics.qmd) of the trained model.
 
-3. Different model architectures and algorithms will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.
+3. Different [model architectures and algorithms](model_selection.qmd) will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.
 
 4. After rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.
 

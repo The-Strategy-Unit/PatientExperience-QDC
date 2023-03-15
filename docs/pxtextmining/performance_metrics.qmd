@@ -1,6 +1,8 @@
 ---
 title: "Performance metrics"
 subtitle: "How do we know if the model works?"
+author: "YiWen Hon"
+date: "2023-03-01"
 comments: false
 ---
 
@@ -113,9 +115,12 @@ All of the usual classification metrics (Recall, Precision, F1 score) can be use
 In multilabel, accuracy is sometimes also called ‘exact match accuracy’ or ‘subset accuracy’. This is quite a harsh metric, as all of the labels for the sample must be correct. In the example in @tbl-multilabel, there would be a subset accuracy of only 0.5 as the model did not accurately predict all of the correct labels for the first sample, although it got 5 out of 6 labels right.
 
 You could also obtain generalised recall, precision, and F1 scores for all the labels. The way that this works is the recall, precision, and F1 scores are obtained for each class, and then they are averaged out. They can be averaged in three ways:
-- Micro-averaged: all samples equally contribute to the final averaged metric (in imbalanced dataset with many more of Class A than Class B, both would be treated differently according to the total true positives, false negatives and false positives). 
-- Macro-averaged: all classes equally contribute to the final averaged metric (in imbalanced dataset with many more of Class A than Class B, both would be treated equally in calculating the average)
-- Weighted-averaged: each classes’ contribution to the average is weighted by support (the number of true instances for each label).
+
+* Micro-averaged: all samples equally contribute to the final averaged metric (in imbalanced dataset with many more of Class A than Class B, both would be treated differently according to the total true positives, false negatives and false positives). 
+
+* Macro-averaged: all classes equally contribute to the final averaged metric (in imbalanced dataset with many more of Class A than Class B, both would be treated equally in calculating the average)
+
+* Weighted-averaged: each classes’ contribution to the average is weighted by support (the number of true instances for each label).
 
 ## Conclusion: which metrics to use for pxtextmining Phase 2?
 Ultimately there is not going to be one magic metric that is going to work for the pxtextmining project. As the dataset is quite imbalanced, and we do want to capture the less well-represented classes, the macro-averaged scores are likely to be helpful. I expect to use the macro-averaged F1 score as a very rough indication in the beginning stages of the project.

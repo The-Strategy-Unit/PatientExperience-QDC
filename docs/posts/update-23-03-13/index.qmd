@@ -1,0 +1,25 @@
+---
+title: "Machine learning update"
+author: "YiWen Hon"
+date: "2023-03-13"
+categories: [news]
+image: "model_architecture.png"
+title-block-banner: false
+---
+
+We've had a chance to play around with a few different model architectures now and the main finding is that so far, as in Phase 1 and other [similar projects](https://www.sciencedirect.com/science/article/pii/S1386505621002689?via%3Dihub), Support Vector Classifier is performing the best. We are currently prototyping using only some of the final dataset, and focusing on predicting 1 of 13 overarching 'major categories'. These are divided into a further 50+ subcategories, which our models are not yet trained to detect, but this will be the next step, once the framework is finalised. 
+
+We have also tried out Distilbert uncased, which is performing well, if not slightly better, than SVC. However, it's taking a long time to train (around 6 hours on average) and is very large, around 1 GB in size. It also takes a long time to make predictions, around 1 minute per 1000 comments. When we have the final dataset we'll have a clearer picture of which model will be best suited for the needs of the project.
+
+The latest development is that we're able to combine the text with the 'question type' feature. Most of the questions asked by trusts can be divided into one of three main types:
+
+* What did we do well?
+
+* What could we do better?
+
+* Any other comments / no specific question
+
+Including the question type with the text of the comment has improved performance slightly. The way this has been done with BERT can be seen in the diagram below. We tried both of the methods found in [this stackoverflow post](https://stackoverflow.com/a/73576407/17852099), which produced similar results. We went for the concatenated layers, however, as this means the model architecture is more flexible and can be adapted to include other features as well, if necessary.
+
+![Distilbert model with categorical question type feature](model_architecture.png)
+

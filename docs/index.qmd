@@ -1,9 +1,9 @@
 ---
-pagetitle: "FFT-QDC"
+pagetitle: "PatientExperience-QDC"
 css: index.css
 editor: source
 description: |
-  Website for the NHS England Friends and Family Test Qualitative Data Categorisation project
+  Website for the NHS England Patient Experience Qualitative Data Categorisation project
 comments: false
 ---
 
@@ -14,17 +14,17 @@ comments: false
 :::
 
 
-## Friends and Family Test Qualitative Data Categorisation
+## Patient Experience Qualitative Data Categorisation
 
-This is the website for the NHS England (NHSE) Insight and Feedback Team funded Friends and Family Test Qualitative Data Categorisation (FFT-QDC) project. This project is being conducted in partnership with the [Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit Data Science Team](https://github.com/CDU-data-science-team).
+This is the website for the NHS England (NHSE) Insight and Feedback Team funded Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project. This project is being conducted in partnership with the [Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit Data Science Team](https://github.com/CDU-data-science-team).
 
 The aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the [NHS Friends and Family Test](https://www.england.nhs.uk/fft/).
 
 There are three main elements to the project:
 
-1. Creation of a dataset of free text patient feedback that has been labelled with themes, utilising a new [categorisation framework](https://cdu-data-science-team.github.io/FFT-QDC/framework/) which has been developed by qualitative researchers at NHSE.
+1. Creation of a dataset of free text patient feedback that has been labelled with themes, utilising a new [categorisation framework](framework/index.qmd) which has been developed by qualitative researchers at NHSE.
 
-2. Pxtextmining: Development and training of [machine learning models](https://cdu-data-science-team.github.io/FFT-QDC/pxtextmining/) to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.
+2. Pxtextmining: Development and training of [machine learning models](pxtextmining/index.qmd) to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.
 
-3. Experiences Dashboard: Development of a [user friendly interface](https://cdu-data-science-team.github.io/FFT-QDC/dashboard/) to enable the exploration of qualitative patient feedback.
+3. Experiences Dashboard: Development of a [user friendly interface](dashboard/index.qmd) to enable the exploration of qualitative patient feedback.
 
