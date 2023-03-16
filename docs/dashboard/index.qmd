@@ -5,9 +5,9 @@ comments: false
 
 ## Introduction
 
-The [Experiencedashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.
+The [Experience dashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.
 
-The dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across themes, visualize trend in the data, download reports, etc.
+The dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trend in the data, download reports, etc.
 
 ## The structure
 
@@ -39,7 +39,7 @@ In this tab, users have the functionality to
 
 There are four options to select and each adds sections to the report.
 
--   \% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/theme
+-   \% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/topic
 
 -   Verbatim comments: the actual comments from the selected data
 
@@ -53,7 +53,7 @@ This shows the Statistical Process Control (SPC) chart of the FFT score. The SPC
 
 ![Fig 3. SPC chart of the FFT score](images/FFT graph.png){fig-alt="FFT graph"}
 
-#### Themes/ weighting
+#### Topics/weighting
 
 This shows a table and plot for the number of comments in each category and users can select a category from the table or plot and all the comments relating to that category are displayed.
 
