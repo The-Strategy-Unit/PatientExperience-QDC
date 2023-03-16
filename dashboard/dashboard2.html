@@ -9,7 +9,7 @@
 <meta name="author" content="Oluwasegun Apejoye">
 <meta name="dcterms.date" content="2023-02-08">
 
-<title>PatientExperience-QDC website - Additional Analysis for ExperiencesDashboard</title>
+<title>PatientExperience-QDC website - Additional Analysis for Experiences Dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Additional Analysis for ExperiencesDashboard">
+<meta property="og:title" content="PatientExperience-QDC website - Additional Analysis for Experiences Dashboard">
 <meta property="og:description" content="Patient Feedback Analysis">
 <meta property="og:site-name" content="PatientExperience-QDC website">
 </head>
@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Additional Analysis for ExperiencesDashboard</h1>
+      <h1 class="quarto-secondary-nav-title">Additional Analysis for Experiences Dashboard</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -198,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link active">Additional Analysis for ExperiencesDashboard</a>
+  <a href="../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link active">Additional Analysis for Experiences Dashboard</a>
   </div>
 </li>
       </ul>
@@ -219,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#overlapping-words" id="toc-overlapping-words" class="nav-link" data-scroll-target="#overlapping-words">1. Overlapping words</a></li>
-  <li><a href="#tf-idfword-counts" id="toc-tf-idfword-counts" class="nav-link" data-scroll-target="#tf-idfword-counts">2. TF-IDF/Word counts</a></li>
+  <li><a href="#prominent-words-unique-to-each-category" id="toc-prominent-words-unique-to-each-category" class="nav-link" data-scroll-target="#prominent-words-unique-to-each-category">2. Prominent Words unique to each Category</a></li>
   <li><a href="#word-co-occurence-across-categories" id="toc-word-co-occurence-across-categories" class="nav-link" data-scroll-target="#word-co-occurence-across-categories">3. Word co-occurence across categories</a></li>
   <li><a href="#word-to-word-connections" id="toc-word-to-word-connections" class="nav-link" data-scroll-target="#word-to-word-connections">4. Word-to-word connections</a></li>
   <li><a href="#highlight-complex-comments" id="toc-highlight-complex-comments" class="nav-link" data-scroll-target="#highlight-complex-comments">5. Highlight complex comments</a></li>
@@ -231,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Additional Analysis for ExperiencesDashboard</h1>
+<h1 class="title d-none d-lg-block">Additional Analysis for Experiences Dashboard</h1>
 <p class="subtitle lead">Patient Feedback Analysis</p>
 </div>
 
@@ -261,11 +261,13 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This page shows an additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.</p>
+<p>This page shows a sample report of some of the additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.</p>
+<p>Please note that the data use for this report has been modified and the categories have been randomly assigned only for demonstration purpose. The aim of this sample report is to give you a feel of what will be delivered and not for conclusion to be drawn.</p>
+<p><strong><em>These visuals can be seen as additional data exploration tools to facilitate and lead to more detailed qualitative analysis of the categorised data, rather than replacing the need to read the underlying comments.</em></strong></p>
 </section>
 <section id="overlapping-words" class="level2">
 <h2 class="anchored" data-anchor-id="overlapping-words">1. Overlapping words</h2>
-<p>This shows relationships between the themes (the categories). It shows the categories that tend to be similar to each other in how they are assigned to comments i.e.&nbsp;how comments shared about one theme relates to another theme. These relationships are shown using the number of comments shared between the themes (comment frequencies) or the Pearson correlation of the comment frequencies. Of particular interest is the correlation among themes, which indicates how often they are assigned together to comments relative to how often they are assigned separately.</p>
+<p>This shows relationships between the topics (the categories). It shows the categories that tend to be similar to each other in how they are assigned to comments i.e.&nbsp;how comments shared about one topic relates to another topic. These relationships are shown using the number of comments shared between the topics (comment frequencies) or the Pearson correlation of the comment frequencies. Of particular interest is the correlation among topics, which indicates how often they are assigned together to comments relative to how often they are assigned separately.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="dashboard2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="960"></p>
@@ -274,12 +276,12 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="dashboard2_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="960"></p>
 </div>
 </div>
-<p>We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the <em>Staff</em> theme shows a strong relationship to the <em>Communication &amp; involvement</em> theme, this indicates comments relating to <em>Staff</em> often relate more to the <em>Communication &amp; involvement</em> category compared to other categories.</p>
+<p>We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the <em>Staff</em> topic shows a strong relationship to the <em>Communication &amp; involvement</em> topic, this indicates comments relating to <em>Staff</em> often relate more to the <em>Communication &amp; involvement</em> category compared to other categories.</p>
 <p>NOTE: The heatmap is available on the dashboard and users will be able to add the network graph to their report (available to download from the dashboard) if they find it more intuitive.</p>
 </section>
-<section id="tf-idfword-counts" class="level2">
-<h2 class="anchored" data-anchor-id="tf-idfword-counts">2. TF-IDF/Word counts</h2>
-<p>We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each theme/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 15 prominent words from each category.</p>
+<section id="prominent-words-unique-to-each-category" class="level2">
+<h2 class="anchored" data-anchor-id="prominent-words-unique-to-each-category">2. Prominent Words unique to each Category</h2>
+<p>We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each topic/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 5 prominent words from each category. Note that some categories have less than 5 words. The <em>Travel &amp; Transport</em> and <em>Service location</em> have same prominent words because of the high correlation between both categories as can be seen in the topic correlation network graph above.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="dashboard2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1152"></p>
@@ -318,7 +320,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>comments with over 50 words</p></li>
 <li><p>comments with over 3 label attached</p></li>
 </ol>
-<p>In this sample data, there is a total of <strong><em>36</em></strong> comments that might need additional attention.</p>
+<p>In this sample data, there is a total of <strong><em>36</em></strong> comments out of a total of <strong><em>1998</em></strong> comments that might need additional attention.</p>
 <p>These complex comments will be available to download from the dashboard for users to further interrogate the comments and the assigned categories.</p>
 
 
