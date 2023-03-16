@@ -1,0 +1,14 @@
+---
+title: "Project team"
+comments: false
+---
+
+- Chris Beeley, Senior Lead Data Scientist, The Strategy Unit
+
+- Estelle Phillips, Qualitative Senior Analyst, NHS England
+
+- Oluwasegun Apejoye, Shiny Developer, Nottinghamshire Healthcare NHS Foundation Trust
+
+- Pete Williamson, Insight and Feedback Manager, NHS England
+
+- YiWen Hon, Data Scientist, Nottinghamshire Healthcare NHS Foundation Trust

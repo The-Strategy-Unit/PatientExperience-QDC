@@ -67,8 +67,8 @@ website:
         file: dashboard/index.qmd
         contents:
           - auto: dashboard/*.qmd
-      - text: "Acknowledgements"
-        file: acknowledgements.qmd
+      - text: "Project team"
+        file: project_team.qmd
   comments:
     giscus:
       repo: CDU-data-science-team/PatientExperience-QDC
