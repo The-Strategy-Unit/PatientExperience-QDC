@@ -1,6 +1,5 @@
 ---
-title: "Framework"
-subtitle: "About the qualitative framework"
+title: "Qualitative framework"
 author: "Estelle Phillips"
 comments: false
 ---
