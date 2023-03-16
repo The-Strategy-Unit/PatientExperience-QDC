@@ -4,19 +4,23 @@ subtitle: Project background and roadmap
 image: "model_architecture.png"
 ---
 
-NHS England commissions the Friends and Family Test (FFT), a continuous improvement tool allowing patients and people who use NHS services to feed back on their experience. The NHS constitution sets out a requirement to collect and act on patient feedback – the FFT supports that requirement and provides a framework to do it. Since 2013, NHS provider organisations have been mandated to collect feedback (including free text comments) via the FFT. 
+NHS England commissions the Friends and Family Test (FFT), a continuous improvement tool allowing patients and people who use NHS services to feed back on their experience. The NHS constitution sets out a requirement to collect and act on patient feedback – the FFT supports that requirement and provides a framework to do it. Since 2013, NHS provider organisations have been mandated to collect feedback (including qualitative feedback in the form of written comments) via the FFT. 
 
-Previous work by the project team at Nottinghamshire Healthcare NHS Foundation Trust has provided an algorithm/system that can classify FFT free text according to categories and how positive or negative it is, but the system has not been tested on the breadth of FFT data available and the system tags to only eight categories, which cannot be altered by users. This system is also trained on responses to one question, which could impact accuracy when different questions are used. 
+Previous work by the project team at Nottinghamshire Healthcare NHS Foundation Trust has provided an algorithm/system that can classify FFT qualitative data according to categories and how positive or negative they are, but the system has not been tested on the breadth of FFT data available and the system tags to only eight categories, which cannot be altered by users. This system is also trained on responses to one question, which could impact accuracy when different questions are used. 
 
-The Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project aims to create a minimal viable product that can categorise FFT data according to defined user needs across different service settings (e.g. acute outpatients/inpatients, mental health, community, ambulance, children’s services).
+The Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project aims to create a minimal viable product (MVP) that can categorise FFT data according to defined user needs across different service settings (e.g. acute outpatients/inpatients, mental health, community, ambulance, children’s services).
+
+The project will also explore and increase the granularity of the categories with which the model can categorise feedback and support adding multiple tags to comments where more than one category is present. To help ensure all categories are fit for purpose a framework for categorisation will be developed using a ground up approach, then carefully validated and checked through a through a thorough quality assurance process.
 
 A founding principle of this work is that the methodology and code should be completely open. Providing the methodology and code behind a solution is important both to allow expert users to satisfy themselves of the rigour of the methodology, as well as allowing anybody across the NHS to run this code and benefit from the system without any payment. Moreover, coding in the open is an important way to build collaborative links across the NHS and government generally. 
 
 ## PROJECT OBJECTIVES 2022-23
 
+The aims and objectives of this programme are, broadly, threefold. Firstly, to ensure any new categories and framework are fit for purpose through stakeholder engagement and thorough quality assurance processes. This will involve a significant data labelling exercise to produce the required training data across a breadth of service settings. Secondly, the project will explore and implement multi-tagging methods as a priority. Finally, a user-friendly interface will be generated, including user guidance, with input from users such as trust and other stakeholders. User guidance will incorporate guidance on how to use the categorised qualitative outputs, aligning with training materials that are being developed by NHS England to support qualitive analysis.
+
 - Ensure all categories are fit for purpose - they must be validated (through user needs engagement and evaluation) and checked with input from providers and other stakeholders. 
 
-- Create a minimal viable product (MVP) that can categorise FFT data according to defined user needs across different service settings. 
+- Create a MVP that can categorise FFT data according to defined user needs across different service settings. 
 
 - Build on the machine learning approaches used in the previous work, where possible, increase the granularity of categories to which the model can assign feedback by adding subcategories.
 
@@ -34,7 +38,10 @@ A founding principle of this work is that the methodology and code should be com
 
 ## Partner organisations
 
-Pilot and Partner organisations will be actively engaged with and involved in decision making to shape developments in the project. In addition, an advisory group consisting of providers, NHSE and subject matter experts will be set up and used to help guide decisions. The six partner organisations that we are working with to deploy and shape the solution are yet to be revealed.
+Pilot and Partner organisations (trusts) will be actively engaged with and involved in decision making to shape developments in the project. Organisations can decide/choose their level of commitment to the project.  However, the aim is that partner organisations will provide FFT data to support training and validation of the algorithm, test/pilot the solution, and input to dashboard, framework, guidance material design. We are currently working with six organisations covering a range of different service settings, including settings including acute OP/IP, mental health, community, ambulance, A&E and paediatrics. 
+
+If you are interested in being a partner trust or would like to have a discussion about the project please contact the project team.
+
 
 ## Rough timeline
 
@@ -42,4 +49,9 @@ Pilot and Partner organisations will be actively engaged with and involved in de
 
 ## Project outputs
 
-Results will be presented in the form of a report with key findings and guidance on how to deploy and implement the product locally. This will include, but is not limited to, sharing code and implementation guidance for the developed software, so that the work can be shared and reproduced in other trusts/organisations as well as a best practice document that can be used as a toolkit to support trusts.
+Results will be presented in the form of a report with key findings and guidance on how to deploy and implement the product locally. This will include, but is not limited to, the algorithm code and dashboard template, and implementation guidance for the developed software, so that the work can be shared and reproduced in other trusts/organisations as well as a best practice document that can be used as a toolkit to support trusts.
+
+Feedback will be collected from organisations during and beyond the project timeline to help inform future case studies and evaluate the solution to understand what is/isn’t working well.  
+
+The continuity of the solution beyond the end of the project is yet to be decided. However, the outputs from this project are open source and can be used by anyone. 
+
