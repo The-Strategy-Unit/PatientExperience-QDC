@@ -1,7 +1,35 @@
 ---
 title: "Framework"
 subtitle: "About the qualitative framework"
+author: "Estelle Phillips"
 comments: false
 ---
 
-Further information about the framework of categories being developed by qualitative researchers at NHS England will follow.
+The framework consists of the categories and subcategories that the automated model with assign the qualitative data to. The framework has multiple categories, each with their own set of sub-categories. 
+The current framework is displayed below:
+
+![Qualitative framework as of March 2023](framework_1.png)
+
+When thinking about the categories and sub-categories, the categories can be thought of as the overarching heading grouping similar topics together in a meaningful way to help end users navigate the framework more easily. The sub-categories are more specific and better reflect the underlying data. 
+
+Each sub-category has a description of what the data mapped there covers, for example:
+
+![Further detail on the 'Number & deployment of staff' subcategory](framework_2.png)
+
+Here are some examples of qualitative data that would map to the ‘Number & deployment of staff’ sub-category described above:
+
+> 'Lots of staff'
+
+> 'Staff shortages mean structured day activities can be cancelled at short notice & there is too much time wasted hanging around waiting to see if they run or not.'
+
+> 'MORE STAFF PLEASE!!!!!!'
+
+> 'Have less managers doing same job.'
+
+> 'Staffing levels could improve. More recruitment, nursing assistants especially.'
+
+> 'Would be good to have cover for support in situations where staff are off for extended periods due to holidays and sickness.'
+
+> ‘Don't send trainee staff to people in crisis'
+
+> 'The ward should only have female staff. Staff recruitment spoils what the ward does well.'

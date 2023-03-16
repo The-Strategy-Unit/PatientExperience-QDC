@@ -1,9 +1,27 @@
 ---
-title: "framework2"
-subtitle: "framework2"
+title: "Framework development"
 comments: false
 ---
 
-::: {.callout-warning}
-## This page is still under development
-:::
+## How the framework was built
+
+The inclusion of each sub-category in the framework is based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality improvement teams across different types of 19 NHS Trusts and exploration of pre-existing frameworks including the one used in the phase 1 of this project. 
+Crucially following on from this research the framework was built using a ground-up qualitative inductive coding approach. This consisted of a qualitative analyst manually reading a large volume of patient experience qualitative data and devising categories as they emerged in the data. This approach has meant that the sub-categories are:
+
+- All seen in patient experience qualitative data 
+
+- Reflective of the issues patients themselves raise, how they present their experiences and the language they use (rather than attempting to fit experiences into pre-defined categories which would be a deductive rather than an inductive approach)
+
+- Considered to be distinct enough to form a unique sub-category in terms of vocabulary used and emphasis, thereby aiding their viability for an automated model
+
+- Collectively able to result in an overall framework which makes comprehensive use of the data
+
+
+
+## Further development to the framework
+
+A large volume of qualitative data from across different trust types is being manually labelled by qualitative analysts (i.e., being assigned to the relevant sub-categories), to produce the dataset that will be used to train and test the machine learning model.
+
+As this labelling occurs and quality assurance of the labelling is carried out the qualitative analysts will be vigilant for any emerging topics which have not already been seen in the data so new sub-categories can be added as required. Small amendments may also be made to the existing sub-category names and/or descriptions to ensure these remain well aligned to the qualitative data and reflect any nuances seen across different trust types.
+
+As the work progresses decisions may need to be made around whether it makes sense to merge any of the sub-categories, particularly if they are low in volume as this will impact how well the model is able to identify them. Similarly, before the framework is finalised changes may be made to the category names, along with which sub-categories sit under each category. This will be guided by what is seen in the data and input from partner organisations.
