@@ -8,12 +8,6 @@ comments: false
 ---
 
 
-
-::: {.callout-warning}
-## This website is still under development and is incomplete
-:::
-
-
 ## Patient Experience Qualitative Data Categorisation
 
 This is the website for the NHS England (NHSE) Insight and Feedback Team funded Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project. This project is being conducted in partnership with the [Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit Data Science Team](https://github.com/CDU-data-science-team).
@@ -22,7 +16,7 @@ The aim of this project is develop and test an innovative approach to free text 
 
 There are three main elements to the project:
 
-1. Creation of a dataset of free text patient feedback that has been labelled with themes, utilising a new [categorisation framework](framework/index.qmd) which has been developed by qualitative researchers at NHSE.
+1. Creation of a dataset of free text patient feedback that has been labelled with topics, utilising a new [categorisation framework](framework/index.qmd) which has been developed by qualitative analysts at NHSE.
 
 2. Pxtextmining: Development and training of [machine learning models](pxtextmining/index.qmd) to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.
 

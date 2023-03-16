@@ -1,8 +1,6 @@
 ---
 title: "Performance metrics"
 subtitle: "How do we know if the model works?"
-author: "YiWen Hon"
-date: "2023-03-01"
 comments: false
 ---
 
@@ -16,7 +14,7 @@ The key terminology to understand is the concept of true positives, true negativ
 
 **True positive** is when the sample has the label, and the model correctly predicts this label. An example is given in @tbl-TPTN.
 
-| **Comment**               | **Labels given by qualitative researcher** | **Labels given by hypothetical model** |
+| **Comment**               | **Labels given by qualitative analyst** | **Labels given by hypothetical model** |
 |---------------------------|--------------------------------------------|----------------------------------------|
 | "I really enjoyed dinner" | Food & diet                                | Food & diet                            |
 
@@ -28,7 +26,7 @@ In contrast with true positives and true negatives, false positive and false neg
 
 It has also missed that the real label is `Food & diet`, meaning that it has made a **false negative** prediction for the label `Food & diet`.
 
-| **Comment**               | **Labels given by qualitative researcher** | **Labels given by hypothetical model** |
+| **Comment**               | **Labels given by qualitative analyst** | **Labels given by hypothetical model** |
 |---------------------------|--------------------------------------------|----------------------------------------|
 | "I really enjoyed dinner" | Food & diet                                | Medication                             |
 
