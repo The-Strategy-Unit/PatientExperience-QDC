@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>PatientExperience-QDC website - framework2</title>
+<title>PatientExperience-QDC website - Framework development</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -61,8 +61,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - framework2">
-<meta property="og:description" content="framework2">
+<meta property="og:title" content="PatientExperience-QDC website - Framework development">
+<meta property="og:description" content="The inclusion of each sub-category in the framework is based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality…">
 <meta property="og:site-name" content="PatientExperience-QDC website">
 </head>
 
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">framework2</h1>
+      <h1 class="quarto-secondary-nav-title">Framework development</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../framework/framework2.html" class="sidebar-item-text sidebar-link active">framework2</a>
+  <a href="../framework/framework2.html" class="sidebar-item-text sidebar-link active">Framework development</a>
   </div>
 </li>
       </ul>
@@ -203,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../acknowledgements.html" class="sidebar-item-text sidebar-link">Acknowledgements</a>
+  <a href="../project_team.html" class="sidebar-item-text sidebar-link">Project team</a>
   </div>
 </li>
     </ul>
@@ -211,15 +211,21 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#how-the-framework-was-built" id="toc-how-the-framework-was-built" class="nav-link active" data-scroll-target="#how-the-framework-was-built">How the framework was built</a></li>
+  <li><a href="#further-development-to-the-framework" id="toc-further-development-to-the-framework" class="nav-link" data-scroll-target="#further-development-to-the-framework">Further development to the framework</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">framework2</h1>
-<p class="subtitle lead">framework2</p>
+<h1 class="title d-none d-lg-block">Framework development</h1>
 </div>
 
 
@@ -234,21 +240,24 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-This page is still under development
-</div>
-</div>
-<div class="callout-body-container callout-body">
+<section id="how-the-framework-was-built" class="level2">
+<h2 class="anchored" data-anchor-id="how-the-framework-was-built">How the framework was built</h2>
+<p>The inclusion of each sub-category in the framework is based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality improvement teams across different types of 19 NHS Trusts and exploration of pre-existing frameworks including the one used in the phase 1 of this project. Crucially following on from this research the framework was built using a ground-up qualitative inductive coding approach. This consisted of a qualitative analyst manually reading a large volume of patient experience qualitative data and devising categories as they emerged in the data. This approach has meant that the sub-categories are:</p>
+<ul>
+<li><p>All seen in patient experience qualitative data</p></li>
+<li><p>Reflective of the issues patients themselves raise, how they present their experiences and the language they use (rather than attempting to fit experiences into pre-defined categories which would be a deductive rather than an inductive approach)</p></li>
+<li><p>Considered to be distinct enough to form a unique sub-category in terms of vocabulary used and emphasis, thereby aiding their viability for an automated model</p></li>
+<li><p>Collectively able to result in an overall framework which makes comprehensive use of the data</p></li>
+</ul>
+</section>
+<section id="further-development-to-the-framework" class="level2">
+<h2 class="anchored" data-anchor-id="further-development-to-the-framework">Further development to the framework</h2>
+<p>A large volume of qualitative data from across different trust types is being manually labelled by qualitative analysts (i.e., being assigned to the relevant sub-categories), to produce the dataset that will be used to train and test the machine learning model.</p>
+<p>As this labelling occurs and quality assurance of the labelling is carried out the qualitative analysts will be vigilant for any emerging topics which have not already been seen in the data so new sub-categories can be added as required. Small amendments may also be made to the existing sub-category names and/or descriptions to ensure these remain well aligned to the qualitative data and reflect any nuances seen across different trust types.</p>
+<p>As the work progresses decisions may need to be made around whether it makes sense to merge any of the sub-categories, particularly if they are low in volume as this will impact how well the model is able to identify them. Similarly, before the framework is finalised changes may be made to the category names, along with which sub-categories sit under each category. This will be guided by what is seen in the data and input from partner organisations.</p>
 
-</div>
-</div>
 
-
+</section>
 
 </main> <!-- /main -->
 <script type="text/javascript">
