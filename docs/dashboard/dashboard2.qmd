@@ -1,5 +1,5 @@
 ---
-title: "Additional Analysis for ExperiencesDashboard"
+title: "Additional Analysis for Experiences Dashboard"
 subtitle: "Patient Feedback Analysis"
 author: "Oluwasegun Apejoye"
 date: "2023-02-08"
@@ -12,7 +12,11 @@ execute:
 
 ## Introduction
 
-This page shows an additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.
+This page shows a sample report of some of the additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.
+
+Please note that the data use for this report has been modified and the categories have been randomly assigned only for demonstration purpose. The aim of this sample report is to give you a feel of what will be delivered and not for conclusion to be drawn.    
+
+**_These visuals can be seen as additional data exploration tools to facilitate and lead to more detailed qualitative analysis of the categorised data, rather than replacing the need to read the underlying comments._**
 
 ```{r include=FALSE}
 library(dplyr)
@@ -25,6 +29,8 @@ library(stringr)
 library(stringi)
 
 source("https://raw.githubusercontent.com/CDU-data-science-team/experiencesdashboard/main/R/utils_overlap_plot_helpers.R")
+
+# source("G:/My Drive/Git_version/experiencesdashboard/R/utils_overlap_plot_helpers.R")
 
 df <- readr::read_csv("https://raw.githubusercontent.com/CDU-data-science-team/experiencesdashboard/main/data-raw/multilabeled_data.csv", show_col_types = FALSE) |>
   select(-`...1`)
@@ -45,15 +51,18 @@ tidy_filter_data <- filter_data |>
 
 ## 1. Overlapping words
 
-This shows relationships between the themes (the categories). It shows the categories that tend to be similar to each other in how they are assigned to comments i.e. how comments shared about one theme relates to another theme. These relationships are shown using the number of comments shared between the themes (comment frequencies) or the Pearson correlation of the comment frequencies. Of particular interest is the correlation among themes, which indicates how often they are assigned together to comments relative to how often they are assigned separately.
+This shows relationships between the topics (the categories). It shows the categories that tend to be similar to each other in how they are assigned to comments i.e. how comments shared about one topic relates to another topic. These relationships are shown using the number of comments shared between the topics (comment frequencies) or the Pearson correlation of the comment frequencies. Of particular interest is the correlation among topics, which indicates how often they are assigned together to comments relative to how often they are assigned separately.
 
 ```{r fig.width=10, fig.height=8}
+
 plot_type = 'correlation'
 filter_data |> 
   multi_to_single_label(column_name = 'labels') |> 
   make_overlap_theme(group_type = plot_type) |> 
   reshape_overlapping_theme() |> 
-  visualize_network('value')
+  visualize_network('value') +
+  ggplot2::ggtitle(label = stringr::str_to_sentence(paste((plot_type), "network graph of overlapping topics"))) +
+  theme(plot.title = element_text(size=14, face = "bold"))
 
 plot_type = 'count'
 filter_data |> 
@@ -64,13 +73,13 @@ filter_data |>
   
 ```
 
-We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the *Staff* theme shows a strong relationship to the *Communication & involvement* theme, this indicates comments relating to *Staff* often relate more to the *Communication & involvement* category compared to other categories.
+We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the *Staff* topic shows a strong relationship to the *Communication & involvement* topic, this indicates comments relating to *Staff* often relate more to the *Communication & involvement* category compared to other categories.
 
 NOTE: The heatmap is available on the dashboard and users will be able to add the network graph to their report (available to download from the dashboard) if they find it more intuitive.
 
-## 2. TF-IDF/Word counts
+## 2. Prominent Words unique to each Category
 
-We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each theme/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 15 prominent words from each category.
+We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each topic/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 5 prominent words from each category. Note that some categories have less than 5 words. The *Travel & Transport* and *Service location* have same prominent words because of the high correlation between both categories as can be seen in the topic correlation network graph above. 
 
 ```{r fig.width=12, fig.height=15}
 tidy_comment_token <- tidy_filter_data |> 
@@ -80,7 +89,8 @@ tidy_comment_token <- tidy_filter_data |>
 
 # common words based on sub-topic
 word_count <- tidy_comment_token |> 
-  count(category, word, sort = TRUE) 
+  count(category, word, sort = TRUE) %>% 
+  filter(n > 1)
   # count(comment_type, category, word, sort = TRUE) 
 
 tf_idf <- word_count |>
@@ -91,12 +101,15 @@ options(repr.P.width=15,repr.P.height=50)
 
 tf_idf |>
   group_by(category) |>
-  slice_max(tf_idf, n = 15, with_ties = F) |>
+  slice_max(tf_idf, n = 5, with_ties = F) |>
   mutate(word = reorder_within(word, by=tf_idf, within = category)) |>   
   ggplot(aes(tf_idf, word, fill = category)) +
   geom_col(show.legend = FALSE) +
   facet_wrap(~ category , scales = "free") +
   scale_y_reordered() +
+  ggplot2::theme(
+        axis.text.y = ggplot2::element_text(face = "bold", 
+                                            size = 11)) +
   labs(y = NULL)
 ```
 
@@ -206,11 +219,15 @@ complex_comments <- filter_data |>
   dplyr::filter(n_word > long_words | n_label > many_labels) 
 
 n_complex_comments <- complex_comments |> 
-  dplyr::pull(comment_txt) |> length()
+  dplyr::pull(comment_txt) |> 
+  length()
 
+total_comments <- filter_data |> 
+  dplyr::pull(comment_txt) |> 
+  length()
+  
 ```
 
-
-In this sample data, there is a total of **_`r n_complex_comments`_** comments that might need additional attention. 
+In this sample data, there is a total of **_`r n_complex_comments`_** comments out of a total of **_`r total_comments`_** comments that might need additional attention. 
 
 These complex comments will be available to download from the dashboard for users to further interrogate the comments and the assigned categories.
