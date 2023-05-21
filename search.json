@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "project_team.html",
-    "href": "project_team.html",
-    "title": "Project team",
-    "section": "",
-    "text": "Chris Beeley, Senior Lead Data Scientist, The Strategy Unit\nEstelle Phillips, Qualitative Senior Analyst, NHS England\nOluwasegun Apejoye, Shiny Developer, Nottinghamshire Healthcare NHS Foundation Trust\nPete Williamson, Insight and Feedback Manager, NHS England\nYiWen Hon, Data Scientist, Nottinghamshire Healthcare NHS Foundation Trust"
-  },
-  {
-    "objectID": "framework/index.html",
-    "href": "framework/index.html",
-    "title": "Qualitative framework",
-    "section": "",
-    "text": "The framework consists of the categories and subcategories that the automated model with assign the qualitative data to. The framework has multiple categories, each with their own set of sub-categories. The current framework is displayed below:\n\n\n\nQualitative framework as of March 2023\n\n\nWhen thinking about the categories and sub-categories, the categories can be thought of as the overarching heading grouping similar topics together in a meaningful way to help end users navigate the framework more easily. The sub-categories are more specific and better reflect the underlying data.\nEach sub-category has a description of what the data mapped there covers, for example:\n\n\n\nFurther detail on the ‘Number & deployment of staff’ subcategory\n\n\nHere are some examples of qualitative data that would map to the ‘Number & deployment of staff’ sub-category described above:\n\n‘Lots of staff’\n\n\n‘Staff shortages mean structured day activities can be cancelled at short notice & there is too much time wasted hanging around waiting to see if they run or not.’\n\n\n‘MORE STAFF PLEASE!!!!!!’\n\n\n‘Have less managers doing same job.’\n\n\n‘Staffing levels could improve. More recruitment, nursing assistants especially.’\n\n\n‘Would be good to have cover for support in situations where staff are off for extended periods due to holidays and sickness.’\n\n\n‘Don’t send trainee staff to people in crisis’\n\n\n‘The ward should only have female staff. Staff recruitment spoils what the ward does well.’"
-  },
-  {
-    "objectID": "framework/framework2.html",
-    "href": "framework/framework2.html",
-    "title": "Framework development",
-    "section": "",
-    "text": "The inclusion of each sub-category in the framework is based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality improvement teams across different types of 19 NHS Trusts and exploration of pre-existing frameworks including the one used in the phase 1 of this project. Crucially following on from this research the framework was built using a ground-up qualitative inductive coding approach. This consisted of a qualitative analyst manually reading a large volume of patient experience qualitative data and devising categories as they emerged in the data. This approach has meant that the sub-categories are:\n\nAll seen in patient experience qualitative data\nReflective of the issues patients themselves raise, how they present their experiences and the language they use (rather than attempting to fit experiences into pre-defined categories which would be a deductive rather than an inductive approach)\nConsidered to be distinct enough to form a unique sub-category in terms of vocabulary used and emphasis, thereby aiding their viability for an automated model\nCollectively able to result in an overall framework which makes comprehensive use of the data"
-  },
-  {
-    "objectID": "framework/framework2.html#further-development-to-the-framework",
-    "href": "framework/framework2.html#further-development-to-the-framework",
-    "title": "Framework development",
-    "section": "Further development to the framework",
-    "text": "Further development to the framework\nA large volume of qualitative data from across different trust types is being manually labelled by qualitative analysts (i.e., being assigned to the relevant sub-categories), to produce the dataset that will be used to train and test the machine learning model.\nAs this labelling occurs and quality assurance of the labelling is carried out the qualitative analysts will be vigilant for any emerging topics which have not already been seen in the data so new sub-categories can be added as required. Small amendments may also be made to the existing sub-category names and/or descriptions to ensure these remain well aligned to the qualitative data and reflect any nuances seen across different trust types.\nAs the work progresses decisions may need to be made around whether it makes sense to merge any of the sub-categories, particularly if they are low in volume as this will impact how well the model is able to identify them. Similarly, before the framework is finalised changes may be made to the category names, along with which sub-categories sit under each category. This will be guided by what is seen in the data and input from partner organisations."
-  },
-  {
     "objectID": "pxtextmining/model_selection.html",
     "href": "pxtextmining/model_selection.html",
     "title": "Model selection",
@@ -98,6 +70,34 @@
     "text": "Bibliography\n\nL. Mosley, ‘A balanced approach to the multi-class imbalance problem’, Doctor of Philosophy, Iowa State University, Digital Repository, Ames, 2013. doi: 10.31274/etd-180810-3375.\nM.-L. Zhang and Z.-H. Zhou, ‘A Review on Multi-Label Learning Algorithms’, IEEE Trans. Knowl. Data Eng., vol. 26, no. 8, pp. 1819–1837, Aug. 2014, doi: 10.1109/TKDE.2013.39.\nX.-Z. Wu and Z.-H. Zhou, ‘A Unified View of Multi-Label Performance Measures’, in Proceedings of the 34th International Conference on Machine Learning, Jul. 2017, pp. 3780–3788. Accessed: Jan. 20, 2023. [Online]. Available: https://proceedings.mlr.press/v70/wu17a.html\nM. Heydarian, T. E. Doyle, and R. Samavi, ‘MLCM: Multi-Label Confusion Matrix’, IEEE Access, vol. 10, pp. 19083–19095, 2022, doi: 10.1109/ACCESS.2022.3151048.\nS. Henning, W. H. Beluch, A. Fraser, and A. Friedrich, ‘A Survey of Methods for Addressing Class Imbalance in Deep-Learning Based Natural Language Processing’. arXiv, Oct. 10, 2022. Accessed: Jan. 20, 2023. [Online]. Available: http://arxiv.org/abs/2210.04675"
   },
   {
+    "objectID": "framework/framework2.html",
+    "href": "framework/framework2.html",
+    "title": "Framework development",
+    "section": "",
+    "text": "The inclusion of each sub-category in the framework is based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality improvement teams across different types of 19 NHS Trusts and exploration of pre-existing frameworks including the one used in the phase 1 of this project. Crucially following on from this research the framework was built using a ground-up qualitative inductive coding approach. This consisted of a qualitative analyst manually reading a large volume of patient experience qualitative data and devising categories as they emerged in the data. This approach has meant that the sub-categories are:\n\nAll seen in patient experience qualitative data\nReflective of the issues patients themselves raise, how they present their experiences and the language they use (rather than attempting to fit experiences into pre-defined categories which would be a deductive rather than an inductive approach)\nConsidered to be distinct enough to form a unique sub-category in terms of vocabulary used and emphasis, thereby aiding their viability for an automated model\nCollectively able to result in an overall framework which makes comprehensive use of the data"
+  },
+  {
+    "objectID": "framework/framework2.html#how-the-framework-was-built",
+    "href": "framework/framework2.html#how-the-framework-was-built",
+    "title": "Framework development",
+    "section": "",
+    "text": "The inclusion of each sub-category in the framework is based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality improvement teams across different types of 19 NHS Trusts and exploration of pre-existing frameworks including the one used in the phase 1 of this project. Crucially following on from this research the framework was built using a ground-up qualitative inductive coding approach. This consisted of a qualitative analyst manually reading a large volume of patient experience qualitative data and devising categories as they emerged in the data. This approach has meant that the sub-categories are:\n\nAll seen in patient experience qualitative data\nReflective of the issues patients themselves raise, how they present their experiences and the language they use (rather than attempting to fit experiences into pre-defined categories which would be a deductive rather than an inductive approach)\nConsidered to be distinct enough to form a unique sub-category in terms of vocabulary used and emphasis, thereby aiding their viability for an automated model\nCollectively able to result in an overall framework which makes comprehensive use of the data"
+  },
+  {
+    "objectID": "framework/framework2.html#further-development-to-the-framework",
+    "href": "framework/framework2.html#further-development-to-the-framework",
+    "title": "Framework development",
+    "section": "Further development to the framework",
+    "text": "Further development to the framework\nA large volume of qualitative data from across different trust types is being manually labelled by qualitative analysts (i.e., being assigned to the relevant sub-categories), to produce the dataset that will be used to train and test the machine learning model.\nAs this labelling occurs and quality assurance of the labelling is carried out the qualitative analysts will be vigilant for any emerging topics which have not already been seen in the data so new sub-categories can be added as required. Small amendments may also be made to the existing sub-category names and/or descriptions to ensure these remain well aligned to the qualitative data and reflect any nuances seen across different trust types.\nAs the work progresses decisions may need to be made around whether it makes sense to merge any of the sub-categories, particularly if they are low in volume as this will impact how well the model is able to identify them. Similarly, before the framework is finalised changes may be made to the category names, along with which sub-categories sit under each category. This will be guided by what is seen in the data and input from partner organisations."
+  },
+  {
+    "objectID": "framework/index.html",
+    "href": "framework/index.html",
+    "title": "Qualitative framework",
+    "section": "",
+    "text": "The framework consists of the categories and subcategories that the automated model with assign the qualitative data to. The framework has multiple categories, each with their own set of sub-categories. The current framework is displayed below:\n\n\n\nQualitative framework as of March 2023\n\n\nWhen thinking about the categories and sub-categories, the categories can be thought of as the overarching heading grouping similar topics together in a meaningful way to help end users navigate the framework more easily. The sub-categories are more specific and better reflect the underlying data.\nEach sub-category has a description of what the data mapped there covers, for example:\n\n\n\nFurther detail on the ‘Number & deployment of staff’ subcategory\n\n\nHere are some examples of qualitative data that would map to the ‘Number & deployment of staff’ sub-category described above:\n\n‘Lots of staff’\n\n\n‘Staff shortages mean structured day activities can be cancelled at short notice & there is too much time wasted hanging around waiting to see if they run or not.’\n\n\n‘MORE STAFF PLEASE!!!!!!’\n\n\n‘Have less managers doing same job.’\n\n\n‘Staffing levels could improve. More recruitment, nursing assistants especially.’\n\n\n‘Would be good to have cover for support in situations where staff are off for extended periods due to holidays and sickness.’\n\n\n‘Don’t send trainee staff to people in crisis’\n\n\n‘The ward should only have female staff. Staff recruitment spoils what the ward does well.’"
+  },
+  {
     "objectID": "updates.html",
     "href": "updates.html",
     "title": "Updates",
@@ -107,6 +107,13 @@
   {
     "objectID": "dashboard/index.html",
     "href": "dashboard/index.html",
+    "title": "Dashboard",
+    "section": "",
+    "text": "The Experience dashboard is the front end tool for the PatientExperience-QDC project. It ties the back-end, the Pxtextmining, to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.\nThe dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trend in the data, download reports, etc."
+  },
+  {
+    "objectID": "dashboard/index.html#introduction",
+    "href": "dashboard/index.html#introduction",
     "title": "Dashboard",
     "section": "",
     "text": "The Experience dashboard is the front end tool for the PatientExperience-QDC project. It ties the back-end, the Pxtextmining, to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.\nThe dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trend in the data, download reports, etc."
@@ -128,6 +135,13 @@
   {
     "objectID": "dashboard/dashboard2.html",
     "href": "dashboard/dashboard2.html",
+    "title": "Additional Analysis for Experiences Dashboard",
+    "section": "",
+    "text": "This page shows a sample report of some of the additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.\nPlease note that the data use for this report has been modified and the categories have been randomly assigned only for demonstration purpose. The aim of this sample report is to give you a feel of what will be delivered and not for conclusion to be drawn.\nThese visuals can be seen as additional data exploration tools to facilitate and lead to more detailed qualitative analysis of the categorised data, rather than replacing the need to read the underlying comments."
+  },
+  {
+    "objectID": "dashboard/dashboard2.html#introduction",
+    "href": "dashboard/dashboard2.html#introduction",
     "title": "Additional Analysis for Experiences Dashboard",
     "section": "",
     "text": "This page shows a sample report of some of the additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.\nPlease note that the data use for this report has been modified and the categories have been randomly assigned only for demonstration purpose. The aim of this sample report is to give you a feel of what will be delivered and not for conclusion to be drawn.\nThese visuals can be seen as additional data exploration tools to facilitate and lead to more detailed qualitative analysis of the categorised data, rather than replacing the need to read the underlying comments."
@@ -168,11 +182,46 @@
     "text": "5. Highlight complex comments\nWe identify there may be situations where the machine learning model might be wrong in the categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below is a sample criterion to highlight complex comments (if any are met):\n\ncomments with over 50 words\ncomments with over 3 label attached\n\nIn this sample data, there is a total of 36 comments out of a total of 1998 comments that might need additional attention.\nThese complex comments will be available to download from the dashboard for users to further interrogate the comments and the assigned categories."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "PatientExperience-QDC website",
+    "section": "",
+    "text": "This is the website for the NHS England (NHSE) Insight and Feedback Team funded Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project. This project is being conducted in partnership with the Nottinghamshire Healthcare NHS Foundation Trust Clinical Development Unit Data Science Team.\nThe aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the NHS Friends and Family Test.\nThere are three main elements to the project:\n\nCreation of a dataset of free text patient feedback that has been labelled with topics, utilising a new categorisation framework which has been developed by qualitative analysts at NHSE.\nPxtextmining: Development and training of machine learning models to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.\nExperiences Dashboard: Development of a user friendly interface to enable the exploration of qualitative patient feedback."
+  },
+  {
+    "objectID": "index.html#patient-experience-qualitative-data-categorisation",
+    "href": "index.html#patient-experience-qualitative-data-categorisation",
+    "title": "PatientExperience-QDC website",
+    "section": "",
+    "text": "This is the website for the NHS England (NHSE) Insight and Feedback Team funded Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project. This project is being conducted in partnership with the Nottinghamshire Healthcare NHS Foundation Trust Clinical Development Unit Data Science Team.\nThe aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the NHS Friends and Family Test.\nThere are three main elements to the project:\n\nCreation of a dataset of free text patient feedback that has been labelled with topics, utilising a new categorisation framework which has been developed by qualitative analysts at NHSE.\nPxtextmining: Development and training of machine learning models to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.\nExperiences Dashboard: Development of a user friendly interface to enable the exploration of qualitative patient feedback."
+  },
+  {
+    "objectID": "project_team.html",
+    "href": "project_team.html",
+    "title": "Project team",
+    "section": "",
+    "text": "Chris Beeley, Senior Lead Data Scientist, The Strategy Unit\nEstelle Phillips, Qualitative Senior Analyst, NHS England\nOluwasegun Apejoye, Shiny Developer, Nottinghamshire Healthcare NHS Foundation Trust\nPete Williamson, Insight and Feedback Manager, NHS England\nYiWen Hon, Data Scientist, Nottinghamshire Healthcare NHS Foundation Trust"
+  },
+  {
     "objectID": "posts/update-23-03-13/index.html",
     "href": "posts/update-23-03-13/index.html",
     "title": "Machine learning update",
     "section": "",
     "text": "We’ve had a chance to play around with a few different model architectures now and the main finding is that so far, as in Phase 1 and other similar projects, Support Vector Classifier is performing the best. We are currently prototyping using only some of the final dataset, and focusing on predicting 1 of 13 overarching ‘major categories’. These are divided into a further 50+ subcategories, which our models are not yet trained to detect, but this will be the next step, once the framework is finalised.\nWe have also tried out Distilbert uncased, which is performing well, if not slightly better, than SVC. However, it’s taking a long time to train (around 6 hours on average) and is very large, around 1 GB in size. It also takes a long time to make predictions, around 1 minute per 1000 comments. When we have the final dataset we’ll have a clearer picture of which model will be best suited for the needs of the project.\nThe latest development is that we’re able to combine the text with the ‘question type’ feature. Most of the questions asked by trusts can be divided into one of three main types:\n\nWhat did we do well?\nWhat could we do better?\nAny other comments / no specific question\n\nIncluding the question type with the text of the comment has improved performance slightly. The way this has been done with BERT can be seen in the diagram below. We tried both of the methods found in this stackoverflow post, which produced similar results. We went for the concatenated layers, however, as this means the model architecture is more flexible and can be adapted to include other features as well, if necessary.\n\n\n\nDistilbert model with categorical question type feature"
+  },
+  {
+    "objectID": "background/phase_1.html",
+    "href": "background/phase_1.html",
+    "title": "Phase 1 overview",
+    "section": "",
+    "text": "A short summary of the report for phase 1 of the project is available on this page. The full report can be downloaded here\nPhase 1 of the text mining pilot project hosted at Nottinghamshire Healthcare NHS Foundation Trust and funded by NHS England took place between 2021-22. This formed the basis of the current Patient Experience-QDC project. This project aimed to improve the use of FFT and patient experience survey qualitative data in selected trusts, working towards generating from this piece of work a national “support or guidance toolkit” to help drive service improvements. This project’s overarching goal was to create text mining software, originating in the NHS, which analyses qualitative patient experience data for theme and sentiment, displays this on an online dashboard and is freely available to all NHS Trusts.\nObjectives of phase 1:\nThe project was characterised by three distinct outputs:\nMachine learning model and dataset\nThe models that were trained in phase 1 of the project were trained on approximately 10,000 rows of data that were provided by three partner trusts, and coded using the Python scikit-learn library. There were two models trained that were able to predict two different targets:\nThe winning model for the nine themes was a linear support vector machine with 71% accuracy and 52% class balance accuracy on the test set. This is available on github, together with the code used to create the model and finetune the hyperparameters.\nThe winning model for the nine criticality values was a logistic regression with 59% accuracy and 44% class balance accuracy on the test set. This is also available on github, together with the code used to create the model and finetune the hyperparameters.\nDashboard\nThe two dashboards were created using Shiny/R. The model summary dashboard provided contextual information regarding the trained machine learning models. The other dashboard, experiencesdashboard, was one of the primary outputs of the project. Functionality available in this dashboard was:"
+  },
+  {
+    "objectID": "background/phase_1.html#learning-and-feedback-from-phase-1",
+    "href": "background/phase_1.html#learning-and-feedback-from-phase-1",
+    "title": "Phase 1 overview",
+    "section": "Learning and feedback from phase 1",
+    "text": "Learning and feedback from phase 1\nTo evaluate phase 1 of the project, semi-structured interviews with three of the partner trusts were conducted. Participants were asked to consider whether or not the project outputs met objectives 1 and 3, in particular. The key findings were:\nMachine learning model\nOverall, participants in the evaluation found the algorithm useful, and felt that it could potentially save time and lead to better use of qualitative patient feedback. It was also seen as more sophisticated than the existing commercial solution utilised by one trust. Suggestions for improvements included:\n\nRevision of the themes/categories to better align with the needs of different trust types was suggested, as the phase 1 data was largely skewed towards community trusts.\nMore granular level of thematic tagging (subcategories) was suggested as being helpful as the categories in phase 1 were quite broad.\nPhase 1 had only 1 label for each comment, whereas all respondents stated that in their experience, many comments had multiple labels. The ability to detect multiple topics in a comment text was deemed important functionality in future developments of the algorithm.\nPerformance of criticality/sentiment labelling in phase 1 of the project was not deemed sufficiently reliable to inform decision making.\n\nDashboard \nThe dashboard from phase 1 was easy to use and the searching and presentation of information was commended. Areas for improvement included: More readable/understandable visualisations, through improvements to the design choices\n\nInclusion of trend data (showing changes over time) and other data visualisation\nAlternative output options e.g. PDF, Power BI\nA more usable/intuitive dashboard design\n\nProject management \nInterview participants felt that the project was overall successful in meeting its objectives, and expressed a desire to continue their involvement in further development of the solution. In particular, they praised:\n\nThe project structure, with its initiation and running from within the NHS\nThe knowledge and expertise of the project lead\n\nAreas for improvement included:\n\nClarity around the role of NHSE and increased input to help coordinate expertise\nMore structure and management for the project, as it was all centred around one individual (the project lead)\nBetter opportunity for participating partner trusts to interact with each other and to interrogate decisions and processes in the project\nInformation sharing, with a better balance between detailed technical information and non-technical explanations."
   },
   {
     "objectID": "background/background.html",
@@ -208,26 +257,5 @@
     "title": "Background",
     "section": "Project outputs",
     "text": "Project outputs\nResults will be presented in the form of a report with key findings and guidance on how to deploy and implement the product locally. This will include, but is not limited to, the algorithm code and dashboard template, and implementation guidance for the developed software, so that the work can be shared and reproduced in other trusts/organisations as well as a best practice document that can be used as a toolkit to support trusts.\nFeedback will be collected from organisations during and beyond the project timeline to help inform future case studies and evaluate the solution to understand what is/isn’t working well.\nThe continuity of the solution beyond the end of the project is yet to be decided. However, the outputs from this project are open source and can be used by anyone."
-  },
-  {
-    "objectID": "background/phase_1.html",
-    "href": "background/phase_1.html",
-    "title": "Phase 1 overview",
-    "section": "",
-    "text": "A short summary of the report for phase 1 of the project is available on this page. The full report can be downloaded here\nPhase 1 of the text mining pilot project hosted at Nottinghamshire Healthcare NHS Foundation Trust and funded by NHS England took place between 2021-22. This formed the basis of the current Patient Experience-QDC project. This project aimed to improve the use of FFT and patient experience survey qualitative data in selected trusts, working towards generating from this piece of work a national “support or guidance toolkit” to help drive service improvements. This project’s overarching goal was to create text mining software, originating in the NHS, which analyses qualitative patient experience data for theme and sentiment, displays this on an online dashboard and is freely available to all NHS Trusts.\nObjectives of phase 1:\nThe project was characterised by three distinct outputs:\nMachine learning model and dataset\nThe models that were trained in phase 1 of the project were trained on approximately 10,000 rows of data that were provided by three partner trusts, and coded using the Python scikit-learn library. There were two models trained that were able to predict two different targets:\nThe winning model for the nine themes was a linear support vector machine with 71% accuracy and 52% class balance accuracy on the test set. This is available on github, together with the code used to create the model and finetune the hyperparameters.\nThe winning model for the nine criticality values was a logistic regression with 59% accuracy and 44% class balance accuracy on the test set. This is also available on github, together with the code used to create the model and finetune the hyperparameters.\nDashboard\nThe two dashboards were created using Shiny/R. The model summary dashboard provided contextual information regarding the trained machine learning models. The other dashboard, experiencesdashboard, was one of the primary outputs of the project. Functionality available in this dashboard was:"
-  },
-  {
-    "objectID": "background/phase_1.html#learning-and-feedback-from-phase-1",
-    "href": "background/phase_1.html#learning-and-feedback-from-phase-1",
-    "title": "Phase 1 overview",
-    "section": "Learning and feedback from phase 1",
-    "text": "Learning and feedback from phase 1\nTo evaluate phase 1 of the project, semi-structured interviews with three of the partner trusts were conducted. Participants were asked to consider whether or not the project outputs met objectives 1 and 3, in particular. The key findings were:\nMachine learning model\nOverall, participants in the evaluation found the algorithm useful, and felt that it could potentially save time and lead to better use of qualitative patient feedback. It was also seen as more sophisticated than the existing commercial solution utilised by one trust. Suggestions for improvements included:\n\nRevision of the themes/categories to better align with the needs of different trust types was suggested, as the phase 1 data was largely skewed towards community trusts.\nMore granular level of thematic tagging (subcategories) was suggested as being helpful as the categories in phase 1 were quite broad.\nPhase 1 had only 1 label for each comment, whereas all respondents stated that in their experience, many comments had multiple labels. The ability to detect multiple topics in a comment text was deemed important functionality in future developments of the algorithm.\nPerformance of criticality/sentiment labelling in phase 1 of the project was not deemed sufficiently reliable to inform decision making.\n\nDashboard \nThe dashboard from phase 1 was easy to use and the searching and presentation of information was commended. Areas for improvement included: More readable/understandable visualisations, through improvements to the design choices\n\nInclusion of trend data (showing changes over time) and other data visualisation\nAlternative output options e.g. PDF, Power BI\nA more usable/intuitive dashboard design\n\nProject management \nInterview participants felt that the project was overall successful in meeting its objectives, and expressed a desire to continue their involvement in further development of the solution. In particular, they praised:\n\nThe project structure, with its initiation and running from within the NHS\nThe knowledge and expertise of the project lead\n\nAreas for improvement included:\n\nClarity around the role of NHSE and increased input to help coordinate expertise\nMore structure and management for the project, as it was all centred around one individual (the project lead)\nBetter opportunity for participating partner trusts to interact with each other and to interrogate decisions and processes in the project\nInformation sharing, with a better balance between detailed technical information and non-technical explanations."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "PatientExperience-QDC website",
-    "section": "",
-    "text": "This is the website for the NHS England (NHSE) Insight and Feedback Team funded Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project. This project is being conducted in partnership with the Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit Data Science Team.\nThe aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the NHS Friends and Family Test.\nThere are three main elements to the project:\n\nCreation of a dataset of free text patient feedback that has been labelled with topics, utilising a new categorisation framework which has been developed by qualitative analysts at NHSE.\nPxtextmining: Development and training of machine learning models to automatically categorise unlabelled patient feedback into the categories established in the categorisation framework.\nExperiences Dashboard: Development of a user friendly interface to enable the exploration of qualitative patient feedback."
   }
 ]
