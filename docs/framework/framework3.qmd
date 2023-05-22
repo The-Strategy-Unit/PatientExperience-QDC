@@ -1,0 +1,63 @@
+---
+title: "Framework details"
+author: "Estelle Phillips"
+date: "2023-05-22"
+comments: false
+toc: true
+toc-expand: true
+toc-depth: 3
+toc-title: Framework Categories
+number-sections: false
+---
+
+# Patient Experience Qualitative Data Categorisation Framework, v5
+
+## Access to medical care & support
+
+::: {.callout-note icon=false title="Contacting services" collapse=true}
+
+### Contacting services
+
+Comments relating to how easy/ hard it is to contact services. It includes understanding contact routes, and how accessible these are.
+
+Examples:
+
+Positive: 'You are caring, consistent, always there on the end of a phone or email.', ' I feel I can rIng back anytIme I have a problem.', 'Well traIned staff and easy contactable.', 'Good access to staff and was able to contact when needed.', 'am confIdent that If any Issues arIse that I can rIng and they wIll be addressed.'
+
+Mixed: 'I wasn't given a contact number. I did email the referral centre and they helped.'
+
+Negative: 'I am begging for help with my child's behaviours, and nobody is helping me. I don't know where to go or who to contact.', 'We have struggled getting through on the mobile in the evening. We often try all the way from 6.30 to 7.30, the landline isn't always any better.', 'You could and should update the information given on the website. The telephone number given was out of date, and meant that having rung it, I then had to ring another number, which was given too quickly to take down in one go.', 'Crisis need to stop asking to phone you back when you are in crisis.'
+'
+
+:::
+
+::: {.callout-note icon=false title="Appointment arrangements" collapse=true}
+
+### Appointment arangements
+
+Comments (which can be quite wide ranging) relating to arrangements for appointments in terms of how frequently appointments/ check-ups/ home visits/ ongoing sessions occur, how convenient they are to attend, how long they last, how long people have to wait and punctuality of appointments, as well as cancellations. It also includes how patients have/would like to receive correspondence relating to their appointments e.g. via letter, telephone, text etc. and what it did/ they would they would like it to include.
+
+Examples:
+
+Positive: 'Appointment on time', '1 1/2 hour appointment gave plenty of time for dIscussIons.', 'Good to be forewarned of visit.', 'Kept to your word, rang back when you said you would.'
+
+Negative/ wishlist: 'Long wait for the appointment.', 'Really would like appointments closer together - they are too far apart', 'With covid, not enough home visits', 'Not many appts, wanted more time', 'Longer session and face to face if possible.', 'More physio and longer physio time.', 'Offering more varied time slots to fit around work.', 'Also, bare in mind that sometimes home/CPN visits can be quite inconvenient when you have young children.', 'Later appointment as 11am to early.', 'Just do the appointments according to times given to parents as it gets frustrating whilst waiting.', 'Come and see every day. ', 'On one occasion I was not made aware that my appointment could not be kept until I arrived at the centre.', 'Communication regarding appointments.  I rang to confirm an appointment time, Thurs AM and was told it was Fri PM.  When no one turned up Fri I rang again and was told it was actually Thurs PM and that I had missed it.', 'Be more open with information about appointments.', 'You cancelled my appointment twice without telling me. It's been nearly two months and I still haven't been seen. I feel very neglected by this service.', 'Appointment details given over phone - no physical evidence/reminder which could cause problems. ', 'Be more specific with time of visit, i.e. early or late morning; early or late afternoon', 'would like to know first thing in the morning if getting physio would have like it one time a day not three time week.'
+
+:::
+
+
+## Communication & involvement
+::: {.callout-note icon=false title="Patient contact with family/ carers" collapse=true}
+
+### Patient contact with family/ carers
+
+Comments relating to the contact that patients do/ can have with family, friends and/or carers. This includes the visiting arrangements at the service.
+
+Examples:
+
+Positive: 'It has been nice to have visitors.'
+
+Negative/ wishlist: 'Have more time off the ward with my family.', 'Not being able to have visitors during covid has been hard.', 'The chance to video call family was never offered.', 'With the current pandemic I understand it is hard to change any policies. However just having a family member being able to attend would of maybe helped.'
+
+:::
+
