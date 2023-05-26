@@ -6,7 +6,7 @@ comments: false
 ---
 
 The framework consists of the categories and subcategories that the automated model with assign the qualitative data to. The framework has multiple categories, each with their own set of sub-categories. 
-The current framework is displayed below:
+A broad overview of the current framework is displayed below. Fuller details are available on the Framework Details page.
 
 ![Qualitative framework as of March 2023](framework_1.png)
 
