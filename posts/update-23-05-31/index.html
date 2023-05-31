@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Estelle Phillips">
-<meta name="dcterms.date" content="2023-03-16">
+<meta name="author" content="YiWen Hon">
+<meta name="dcterms.date" content="2023-05-31">
 
-<title>PatientExperience-QDC website - Qualitative framework</title>
+<title>PatientExperience-QDC website - pxtextmining API now available</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../docs/_assets/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/_assets/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,13 +63,11 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Qualitative framework">
+<link rel="stylesheet" href="../../_assets/style/styles.css">
+<meta property="og:title" content="PatientExperience-QDC website - pxtextmining API now available">
 <meta property="og:description" content="">
-<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/framework/framework_1.png">
+<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-05-31/px_diagram.jpg">
 <meta property="og:site-name" content="PatientExperience-QDC website">
-<meta property="og:image:height" content="549">
-<meta property="og:image:width" content="1379">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -85,12 +83,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page"><i class="bi bi-book" role="img">
+    <a class="nav-link active" href="../../index.html" rel="" target="" aria-current="page"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">About PatientExperience-QDC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../updates.html" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../updates.html" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text">Updates</span></a>
   </li>  
@@ -129,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../framework/index.html">Qualitative Framework</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">pxtextmining API now available</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -143,13 +141,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homepage</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../background/background.html" class="sidebar-item-text sidebar-link">
+            <a href="../../background/background.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project background</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -158,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../background/phase_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../background/phase_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Phase 1 overview</span></a>
   </div>
 </li>
@@ -166,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../framework/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../framework/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Qualitative Framework</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -175,13 +173,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../framework/framework2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../framework/framework2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Framework development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../framework/framework3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../framework/framework3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Framework details</span></a>
   </div>
 </li>
@@ -189,7 +187,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../pxtextmining/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../pxtextmining/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Machine learning (pxtextmining)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -198,13 +196,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Performance metrics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Model selection</span></a>
   </div>
 </li>
@@ -212,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../dashboard/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../dashboard/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Experiences dashboard</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -221,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Analysis for Experiences Dashboard</span></a>
   </div>
 </li>
@@ -229,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project team</span></a>
   </div>
 </li>
@@ -239,15 +237,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-an-api" id="toc-what-is-an-api" class="nav-link active" data-scroll-target="#what-is-an-api">What is an API?</a></li>
+  <li><a href="#why-did-we-do-it" id="toc-why-did-we-do-it" class="nav-link" data-scroll-target="#why-did-we-do-it">Why did we do it?</a></li>
+  <li><a href="#how-did-we-do-it" id="toc-how-did-we-do-it" class="nav-link" data-scroll-target="#how-did-we-do-it">How did we do it?</a></li>
+  <li><a href="#whats-next" id="toc-whats-next" class="nav-link" data-scroll-target="#whats-next">What’s next?</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Qualitative framework</h1>
-</div>
+<h1 class="title">pxtextmining API now available</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+  </div>
+  </div>
 
 
 
@@ -256,14 +266,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Estelle Phillips </p>
+             <p>YiWen Hon </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 16, 2023</p>
+      <p class="date">May 31, 2023</p>
     </div>
   </div>
   
@@ -273,48 +283,36 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The framework consists of the categories and subcategories that the automated model with assign the qualitative data to. The framework has multiple categories, each with their own set of sub-categories. A broad overview of the current framework is displayed below. Fuller details are available on the Framework Details page.</p>
+<p>Our latest major project milestone is the release of a model API. This blog post will explain what this is, how we have achieved it, and what our next steps are.</p>
+<section id="what-is-an-api" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-an-api">What is an API?</h2>
+<p>API stands for “application programming interface”. Most of the digital services and platforms that we use have an API. It is essentially a gateway that allows access to information. For example, when you ask an Alexa or Siri what the weather is, it will communicate with a weather service API to obtain the information for you. When you get an email notification on your phone, this is because your email service provider is sending a notice via its API, to your phone.</p>
+<p>Still confused? <a href="https://youtu.be/s7wmiS2mSXY">This video</a> may help.</p>
+<p>The pxtextmining API allows people to utilise the machine learning models that we have trained for the project to label new text. It makes the model accessible over the internet, without any installation or downloads required. All that’s needed is a few lines of code. Examples are available on the <a href="https://cdu-data-science-team.github.io/pxtextmining/reference/API/API/">pxtextmining documentation website</a>.</p>
+</section>
+<section id="why-did-we-do-it" class="level2">
+<h2 class="anchored" data-anchor-id="why-did-we-do-it">Why did we do it?</h2>
+<p>The API was created to separate our R/Shiny-based experiencesdashboard frontend and the Python-based pxtextmining backend. This independence means more flexibility in the development of each. This also means that some participating trusts can utilise the model only, if they wish, and integrate it into their existing visualisation tools / dashboards for exploring patient feedback data.</p>
+<p>We also recognise that although the code and models for pxtextmining are available openly on github, many organisations may not have the technical resources, time, or capability to run it themselves. Making the model available via an API reduces the barrier to entry and ensures that the project outputs are more accessible.</p>
+</section>
+<section id="how-did-we-do-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-did-we-do-it">How did we do it?</h2>
+<p>The API is built using the open source [Python FastAPI package] (https://fastapi.tiangolo.com/lo/). Users of the API must format their data in JSON format, and submit this to the API endpoint via a POST request. This then gets cleaned and passed through the machine learning model, and the outputted labels are returned, also in JSON format. We utilised the Uvicorn library to test the API locally, and have ensured that the API is covered by unit tests. We are hosting the API on the Strategy Unit’s Rstudio Connect server. Deploying it was very simple, luckily! The diagram below shows how the API works.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="framework_1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Qualitative framework as of March 2023</figcaption>
+<p><img src="px_diagram.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Diagram of API</figcaption>
 </figure>
 </div>
-<p>When thinking about the categories and sub-categories, the categories can be thought of as the overarching heading grouping similar topics together in a meaningful way to help end users navigate the framework more easily. The sub-categories are more specific and better reflect the underlying data.</p>
-<p>Each sub-category has a description of what the data mapped there covers, for example:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="framework_2.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Further detail on the ‘Number &amp; deployment of staff’ subcategory</figcaption>
-</figure>
-</div>
-<p>Here are some examples of qualitative data that would map to the ‘Number &amp; deployment of staff’ sub-category described above:</p>
-<blockquote class="blockquote">
-<p>‘Lots of staff’</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>‘Staff shortages mean structured day activities can be cancelled at short notice &amp; there is too much time wasted hanging around waiting to see if they run or not.’</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>‘MORE STAFF PLEASE!!!!!!’</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>‘Have less managers doing same job.’</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>‘Staffing levels could improve. More recruitment, nursing assistants especially.’</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>‘Would be good to have cover for support in situations where staff are off for extended periods due to holidays and sickness.’</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>‘Don’t send trainee staff to people in crisis’</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>‘The ward should only have female staff. Staff recruitment spoils what the ward does well.’</p>
-</blockquote>
+</section>
+<section id="whats-next" class="level2">
+<h2 class="anchored" data-anchor-id="whats-next">What’s next?</h2>
+<p>The API currently uses a support vector classifier model which is quite small and fast. Even so, we have to balance the load on the server with waiting times, limiting the number of requests to 1000 at a time to prevent timeouts. We also have a transformer-based model which is very large and slow, taking several minutes to make predictions from text, which we have not implemented an API for. Our next step is to figure out how to do this without completely taking over the server’s resources, and impacting too much on the user experience.</p>
+<p>We also want to make sure that participating trusts are able to make use of the API, and help demystify it. Communication is key, and blog posts like this will hopefully help. We are also providing example scripts showing how to create API queries in R and Python, and have built a <a href="https://connect.strategyunitwm.nhs.uk/content/0049176a-56d7-40c9-bf07-26262e9ee53c">simple website</a> that shows the API and the model in action.</p>
+<p>The model that is used in the API is also still a work in progress, we know we have a lot of work to do to improve performance. But now that the technical infrastructure is in place, it should be relatively easy to update with new models, when we train them. If you’re interested in using the API, do get in touch!</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script type="text/javascript">
@@ -562,13 +560,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="CDU-data-science-team/PatientExperience-QDC" data-repo-id="R_kgDOI4C5Mw" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">This page is built with <a href="https://quarto.org/">Quarto</a> and is based on the <a href="https://github.com/craig-shenton/quarto-nhs-theme">NHS Theme by Craig Shenton</a></div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
