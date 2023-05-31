@@ -12,7 +12,7 @@
 <generator>quarto-1.3.361</generator>
 <lastBuildDate>Wed, 31 May 2023 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>pxtextmining API now available</title>
+  <title>pxtextmining API: enabling access to project outputs</title>
   <dc:creator>YiWen Hon</dc:creator>
   <link>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-05-31/index.html</link>
   <description><![CDATA[ 
@@ -33,7 +33,7 @@
 </section>
 <section id="how-did-we-do-it" class="level2">
 <h2 class="anchored" data-anchor-id="how-did-we-do-it">How did we do it?</h2>
-<p>The API is built using the open source [Python FastAPI package] (https://fastapi.tiangolo.com/lo/). Users of the API must format their data in JSON format, and submit this to the API endpoint via a POST request. This then gets cleaned and passed through the machine learning model, and the outputted labels are returned, also in JSON format. We utilised the Uvicorn library to test the API locally, and have ensured that the API is covered by unit tests. We are hosting the API on the Strategy Unit’s Rstudio Connect server. Deploying it was very simple, luckily! The diagram below shows how the API works.</p>
+<p>The API is built using the open source <a href="https://fastapi.tiangolo.com/lo/">Python FastAPI package</a>. Users of the API must format their data in JSON format, and submit this to the API endpoint via a POST request. This then gets cleaned and passed through the machine learning model, and the outputted labels are returned, also in JSON format. We utilised the <a href="https://www.uvicorn.org/">Uvicorn</a> library to test the API locally, and have ensured that the API is covered by unit tests. We are hosting the API on the Strategy Unit’s Rstudio Connect server. Deploying it was very simple, luckily! The diagram below shows how the API works.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-05-31/px_diagram.jpg" class="img-fluid figure-img"></p>
