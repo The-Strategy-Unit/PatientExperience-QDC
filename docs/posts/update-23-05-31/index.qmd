@@ -1,5 +1,5 @@
 ---
-title: "pxtextmining API now available"
+title: "pxtextmining API: enabling access to project outputs"
 author: "YiWen Hon"
 date: "2023-05-31"
 categories: [news]
@@ -25,7 +25,7 @@ We also recognise that although the code and models for pxtextmining are availab
 
 ## How did we do it?
 
-The API is built using the open source [Python FastAPI package] (https://fastapi.tiangolo.com/lo/). Users of the API must format their data in JSON format, and submit this to the API endpoint via a POST request. This then gets cleaned and passed through the machine learning model, and the outputted labels are returned, also in JSON format. We utilised the Uvicorn library to test the API locally, and have ensured that the API is covered by unit tests. We are hosting the API on the Strategy Unit’s Rstudio Connect server. Deploying it was very simple, luckily! The diagram below shows how the API works.
+The API is built using the open source [Python FastAPI package](https://fastapi.tiangolo.com/lo/). Users of the API must format their data in JSON format, and submit this to the API endpoint via a POST request. This then gets cleaned and passed through the machine learning model, and the outputted labels are returned, also in JSON format. We utilised the [Uvicorn](https://www.uvicorn.org/) library to test the API locally, and have ensured that the API is covered by unit tests. We are hosting the API on the Strategy Unit’s Rstudio Connect server. Deploying it was very simple, luckily! The diagram below shows how the API works.
 
 ![Diagram of API](px_diagram.jpg)
 
