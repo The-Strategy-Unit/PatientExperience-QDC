@@ -28,7 +28,7 @@
 </section>
 <section id="why-did-we-do-it" class="level2">
 <h2 class="anchored" data-anchor-id="why-did-we-do-it">Why did we do it?</h2>
-<p>The API was created to separate our R/Shiny-based experiencesdashboard frontend and the Python-based pxtextmining backend. This independence means more flexibility in the development of each. This also means that some participating trusts can utilise the model only, if they wish, and integrate it into their existing visualisation tools / dashboards for exploring patient feedback data.</p>
+<p>The API was created to separate our R/Shiny-based experiencesdashboard frontend and the Python-based pxtextmining backend. This independence means more flexibility in the development of each. This also means that some participating trusts can utilise the model only, if they wish, and integrate it into their existing visualisation tools/dashboards for exploring patient feedback data.</p>
 <p>We also recognise that although the code and models for pxtextmining are available openly on github, many organisations may not have the technical resources, time, or capability to run it themselves. Making the model available via an API reduces the barrier to entry and ensures that the project outputs are more accessible.</p>
 </section>
 <section id="how-did-we-do-it" class="level2">
@@ -43,7 +43,7 @@
 </section>
 <section id="whats-next" class="level2">
 <h2 class="anchored" data-anchor-id="whats-next">What’s next?</h2>
-<p>The API currently uses a support vector classifier model which is quite small and fast. Even so, we have to balance the load on the server with waiting times, limiting the number of requests to 1000 at a time to prevent timeouts. We also have a transformer-based model which is very large and slow, taking several minutes to make predictions from text, which we have not implemented an API for. Our next step is to figure out how to do this without completely taking over the server’s resources, and impacting too much on the user experience.</p>
+<p>The API currently uses a <a href="https://youtu.be/efR1C6CvhmE">support vector classifier</a> model which is quite small and fast. Even so, we have to balance the load on the server with waiting times, limiting the number of requests to 1000 at a time to prevent timeouts. We also have a <a href="https://youtu.be/SZorAJ4I-sA">transformer-based model</a> which is very large and slow, taking several minutes to make predictions from text, which we have not implemented an API for. Our next step is to figure out how to do this without completely taking over the server’s resources, and impacting too much on the user experience.</p>
 <p>We also want to make sure that participating trusts are able to make use of the API, and help demystify it. Communication is key, and blog posts like this will hopefully help. We are also providing example scripts showing how to create API queries in R and Python, and have built a <a href="https://connect.strategyunitwm.nhs.uk/content/0049176a-56d7-40c9-bf07-26262e9ee53c">simple website</a> that shows the API and the model in action.</p>
 <p>The model that is used in the API is also still a work in progress, we know we have a lot of work to do to improve performance. But now that the technical infrastructure is in place, it should be relatively easy to update with new models, when we train them. If you’re interested in using the API, do get in touch!</p>
 
