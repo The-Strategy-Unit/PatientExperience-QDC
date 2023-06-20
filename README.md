@@ -10,5 +10,5 @@ Distributed under a MIT License. _See [LICENSE.md](/LICENSE) for more informatio
 
 ## About
 
-Project contact email: [cdudatascience@nottshc.nhs.uk](mailto:cdudatascience@nottshc.nhs.uk)
+Project contact email: [PHUdatascience@nottshc.nhs.uk](mailto:PHUdatascience@nottshc.nhs.uk)
 
