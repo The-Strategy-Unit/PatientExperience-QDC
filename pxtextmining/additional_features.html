@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="YiWen Hon">
 
-<title>PatientExperience-QDC website - Machine learning (pxtextmining)</title>
+<title>PatientExperience-QDC website - Additional features</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,8 +62,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Machine learning (pxtextmining)">
-<meta property="og:description" content="">
+<meta property="og:title" content="PatientExperience-QDC website - Additional features">
+<meta property="og:description" content="Training the model to take other information into account when processing text">
+<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/weather_features.PNG">
 <meta property="og:site-name" content="PatientExperience-QDC website">
 </head>
 
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pxtextmining/index.html">Machine learning (pxtextmining)</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pxtextmining/index.html">Machine learning (pxtextmining)</a></li><li class="breadcrumb-item"><a href="../pxtextmining/additional_features.html">Additional features</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -185,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../pxtextmining/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../pxtextmining/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Machine learning (pxtextmining)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -206,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/additional_features.html" class="sidebar-item-text sidebar-link">
+  <a href="../pxtextmining/additional_features.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Additional features</span></a>
   </div>
 </li>
@@ -248,19 +248,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Machine learning (pxtextmining)</h1>
+<h1 class="title">Additional features</h1>
+<p class="subtitle lead">Training the model to take other information into account when processing text</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>YiWen Hon </p>
-          </div>
-  </div>
     
   
     
@@ -269,15 +264,53 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>pxtextmining</strong> is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is <a href="https://github.com/CDU-data-science-team/pxtextmining">available on GitHub</a>.</p>
-<p>On a basic level, this is what is happening:</p>
-<ol type="1">
-<li><p>The dataset created using the qualitative framework is processed. This involves standardising capital letters to lowercase, or removing punctuation and numbers. The words are then converted into numbers, this process is called <em>vectorisation</em>. This is a necessary step to enable the models to handle the words.</p></li>
-<li><p>The processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the <a href="../pxtextmining/performance_metrics.html">performance</a> of the trained model.</p></li>
-<li><p>Different <a href="../pxtextmining/model_selection.html">model architectures and algorithms</a> will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.</p></li>
-<li><p>After rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.</p></li>
-<li><p>The best model will be connected to the experiencesdashboard frontend via an API.</p></li>
-</ol>
+<p>When training machine learning models, a key concept to grasp is that of ‘features’ and ‘targets’. The features are in the inputs to the model, and the targets are the intended outputted predictions of the model. For example, in a model that uses the atmospheric pressure, humidity, and temperature for today to predict the chance of rain for tomorrow, the atmospheric pressure, humidity and temperature would be the ‘features’, and the ‘target’ would be the chance of rain for tomorrow.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="weather_features.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Example of features and target for a weather model</figcaption>
+</figure>
+</div>
+<p>In the basic pxtextmining model, the ‘feature’ is the text of the patient feedback comments, whilst the ‘targets’ are the category labels for the text.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="basic_pxtextmining.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Basic pxtextmining model feature and target</figcaption>
+</figure>
+</div>
+<p>However, the meaning of patient feedback comments can vary depending on the question asked. Take the example below, where the answer “Nothing” has more negative connotations when answering the question in Scenario A, whereas it is more positive in Scenario B.</p>
+<pre><code>Scenario A: 
+Q: "What went well?" 
+A: "Nothing"
+
+Scenario B: 
+Q: "What could be improved?" 
+A: "Nothing"
+</code></pre>
+<p>As a result of this, we have opted to include “Question type” as one of the features of the pxtextmining model. From the data provided by participating trusts, we have found that the questions asked by NHS Trusts in their Friends and Family Test surveys tend to fall into one of three categories:</p>
+<ul>
+<li><p>Questions on positive aspects of the service, such as “What did we do well?”, “What was good?”, or “Was there anything you were particularly satisfied with?”</p></li>
+<li><p>Questions on negative aspects of the service, such as “What could we do better?” / “Is there anything we could have done better?” / “Was there anything you were dissatisfied with?”</p></li>
+<li><p>Mixed or general questions, such as “What feedback do you have for us?” / “Why did you give us this answer?” / “What were you satisfied/dissatisfied with?”</p></li>
+</ul>
+<p>Adding the question type as an additional feature to the model improved the macro F1 score by 0.05. We have incorporated this into the model that is available via the API. Users of the API must provide the following information in their request, when sending comments to be labelled by the model:</p>
+<ul>
+<li><code>comment_id</code>: Unique ID associated with the comment. This is not used as a feature by the model, but enables the model to match the labels provided by the model to the original input text.</li>
+<li><code>comment_text</code>: Text to be classified. This is used as one of the input features for the model.</li>
+<li><code>question_type</code>: The type of question asked to elicit the comment text, also used as an input feature for the model. Questions are different from trust to trust, but they all fall into one of three categories:
+<ul>
+<li><code>what_good</code>: Any variation on the question “What was good about the service?”, or “What did we do well?”</li>
+<li><code>could_improve</code>: Any variation on the question “Please tell us about anything that we could have done better”, or “How could we improve?”</li>
+<li><code>nonspecific</code>: Any other type of nonspecific question, e.g.&nbsp;“Please can you tell us why you gave your answer?”, or “What were you satisfied and/or dissatisfied with?”.</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="additional_pxtextmining.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Final pxtextmining model features and target</figcaption>
+</figure>
+</div>
+<p>Technical details on how we have achieved this are available in <a href="../posts/update-23-03-13/">this blogpost</a>.</p>
 
 
 
