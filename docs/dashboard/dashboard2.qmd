@@ -7,7 +7,7 @@ comments: false
 execute:
   echo: false
   warning: false
-  freeze: auto
+  freeze: true
 ---
 
 ## Introduction
