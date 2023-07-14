@@ -1,0 +1,47 @@
+---
+title: "Additional features"
+subtitle: "Training the model to take other information into account when processing text"
+comments: false
+---
+
+When training machine learning models, a key concept to grasp is that of 'features' and 'targets'. The features are in the inputs to the model, and the targets are the intended outputted predictions of the model. For example, in a model that uses the atmospheric pressure, humidity, and temperature for today to predict the chance of rain for tomorrow, the atmospheric pressure, humidity and temperature would be the 'features', and the 'target' would be the chance of rain for tomorrow. 
+
+![Example of features and target for a weather model](weather_features.PNG)
+
+In the basic pxtextmining model, the 'feature' is the text of the patient feedback comments, whilst the 'targets' are the category labels for the text. 
+
+![Basic pxtextmining model feature and target](basic_pxtextmining.PNG)
+
+However, the meaning of patient feedback comments can vary depending on the question asked. Take the example below, where the answer "Nothing" has more negative connotations when answering the question in Scenario A, whereas it is more positive in Scenario B. 
+
+```
+Scenario A: 
+Q: "What went well?" 
+A: "Nothing"
+
+Scenario B: 
+Q: "What could be improved?" 
+A: "Nothing"
+
+```
+
+As a result of this, we have opted to include "Question type" as one of the features of the pxtextmining model. From the data provided by participating trusts, we have found that the questions asked by NHS Trusts in their Friends and Family Test surveys tend to fall into one of three categories:
+
+- Questions on positive aspects of the service, such as "What did we do well?", "What was good?", or "Was there anything you were particularly satisfied with?"
+  
+- Questions on negative aspects of the service, such as "What could we do better?" / "Is there anything we could have done better?" / "Was there anything you were dissatisfied with?"
+
+- Mixed or general questions, such as "What feedback do you have for us?" / "Why did you give us this answer?" / "What were you satisfied/dissatisfied with?"
+
+Adding the question type as an additional feature to the model improved the macro F1 score by 0.05. We have incorporated this into the model that is available via the API. Users of the API must provide the following information in their request, when sending comments to be labelled by the model:
+
+- `comment_id`: Unique ID associated with the comment. This is not used as a feature by the model, but enables the model to match the labels provided by the model to the original input text.
+- `comment_text`: Text to be classified. This is used as one of the input features for the model.
+- `question_type`: The type of question asked to elicit the comment text, also used as an input feature for the model. Questions are different from trust to trust, but they all fall into one of three categories:
+  - `what_good`: Any variation on the question "What was good about the service?", or "What did we do well?"
+  - `could_improve`: Any variation on the question "Please tell us about anything that we could have done better", or "How could we improve?"
+  - `nonspecific`: Any other type of nonspecific question, e.g. "Please can you tell us why you gave your answer?", or "What were you satisfied and/or dissatisfied with?".
+  
+![Final pxtextmining model features and target](additional_pxtextmining.PNG)
+
+Technical details on how we have achieved this are available in [this blogpost](../posts/update-23-03-13/).
