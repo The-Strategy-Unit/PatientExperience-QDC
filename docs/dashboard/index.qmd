@@ -5,71 +5,107 @@ comments: false
 
 ## Introduction
 
-The [Experience dashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and present metrics and graphs to help clinical staffs and managers quickly gain insight from patient experience data.
+The [Experience dashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text data. A key focus of the dashboard is to present people with the categorisation of qualitative data
 
-The dashboard automates the labeling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trend in the data, download reports, etc.
+The dashboard automates the labelling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trends in the data, download reports, etc.
+
+*The functionalities highlighted here are based on version 0.7.2 of the experiences dashboard package. Please go [here](../posts/dashboard-update-23-07-18/index.qmd) to compare these changes to that of the previous version.*
 
 ## The structure
 
-The dashboard is built using [Shiny](https://shiny.rstudio.com/), an R package that makes it easy to build interactive web apps straight from R. The dashboard saves and load data from a database and gives users the ability to upload their unlabeled comment data in several formats for labeling. The dashboard processes feedback data and present several insight from the data using interactive tables, charts and other data format for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure.
+The dashboard is built using [golem](https://github.com/ThinkR-open/golem), an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure.
 
-![Fig 1. Dashboard structure](images/expdash_structure.png){fig-alt="Dashboard structure"}
+[![Fig 1. Dashboard structure](images/expdash_structure.png){fig-alt="Dashboard structure"}](images/expdash_structure.png)
 
-## Planned developments
+## The Features
 
-Below are the key features of the dashboard. We have a live demo of the experience dashboard [here](https://feedbackmatters.uk/rsconnect/qdc-demo/) and the source code is [here](https://github.com/CDU-data-science-team/experiencesdashboard). Figure 2 shows a screenshot of the sample dashboard design...
+Below are the key features of the dashboard. We have the source code [here](https://github.com/CDU-data-science-team/experiencesdashboard). Figure 2 below shows a screenshot of the dashboard landing page alongside all the feature tabs and the data drilling options.
 
-![Fig 2. Sample dashboard design](images/dashboard-1.svg){fig-alt="Dashboard structure"}
+In this section, I will discuss the key features of the dashboard.
 
-Some of the features listed below are already implemented in the demo while some are in planned developments, e.g. boolean searching in text search
+[![Fig 2. Dashboard landing page showing the feature tabs and the data drilling options](images/landing_page.jpg){fig-alt="Dashboard Landing page"}](images/landing_page.jpg)
 
-#### Data selection
+### Sidebar Selection
 
-From the sidebar section of the dashboard, Users can drill down using the hierarchy level within their data such as divisions, directorate and teams and they can also filter by dates. The dashboard features and visualization changes in line with the selection.
+From the sidebar section of the dashboard, users can drill down using the hierarchy levels within their data such as divisions, directorates and teams and they can also filter by dates and three different demographic features. The dashboard features and visualization changes in line with the selection from the sidebar. Note that the data filtering feature will depend on the presence of the appropriate columns in the data that is being uploaded.
 
-#### Data upload and management section
+### Data categorisation framework
+
+This tab contains a brief introduction of the data categorisation framework developed as part of this project and used to assign the sub-categories to the free text comments. see the [framework](../framework/index.qmd) for more details.
+
+### Data upload and management section
+
+[![Fig 3. Data Upload and Management tab](images/data_mgt.png){fig-alt="Data management tab"}](images/data_mgt.png)
 
 In this tab, users have the functionality to
 
--   *Assign label to new data*: Users can upload their data and once this data is uploaded the pxtextmining API is called to assign tags to the comments and the data is saved in the database.
+-   *Assign label to new data*: Users can upload their data and once this data is uploaded the pxtextmining API is called to assign sub-categories to the free comments and the data is saved in the database. Users can then refresh their browsers to assess the newly uploaded data alongside their existing data.
 
--   *Manage Data*: users have the functionality to edit and delete rows within their data right from the dashboard environment.
+-   *Manage Data*: Users can delete rows within their data right from the dashboard environment.
 
-#### Report builder
+-   *Download historical data*: Users can download the whole underline data currently loaded into the dashboard.
 
-There are four options to select and each adds sections to the report.
+-   *Download complex data*: We identify that there may be situations where the machine learning model might be wrong in the sub-categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below are the simple criteria used to flag a comment as a complex comment (if any are met):
+
+    1.  The comment has over 50 words
+
+    2.  The comment has over 3 labels attached
+
+    Users can download the data containing complex comments from this section of the dashboard.
+
+### Distribution of comments over time
+
+[![Fig 4. Comment Distribution over Time](images/trend-tab.png){fig-alt="Comment Distribution over Time"}](images/trend-tab.png)
+
+It shows a visual of the monthly distribution of comments in the sub-category/super-category levels. This visual should be used to help identify patterns in the data, particularly where there are clusters of comments around a particular sub-category.
+
+The plot is interactive and the box increases with the volume of comments. Clicking on any of the boxes will show the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories). The comments should be read to explore explanations for any pattern seen on the visual and to carry out any additional qualitative analysis as required.
+
+### Inter-relationship between sub-categories
+
+This shows an upset plot, which is a type of visualisation for analysing data with a large set (in our case sub-categories). The plot allows users to see the number of comments in the sub-categories association, i.e., you can see the sub-categories that occur together more/less often based on the number of comments they have in common. Users can't interact with this plot but they have the option to select two or three sub-categories to see the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories) they have in common.
+
+[![Fig 5. Tab showing Inter-relationship between sub-categories](images/upset.png){fig-alt="Tab showing Inter-relationship between sub-categories"}](images/upset.png)
+
+The visual should be used to identify sub-categories with relationship and the sub-category selection functionalities should be used to see the underlined comment and investigate the pattern. Please see our post on [using an upset plot to explore the relationship between large categorical data](../posts/upset_plot-23-07-18/index.qmd) to understand more about upset plots.
+
+### What people are telling us about
+
+This shows a table of the number of comments in each sub-category. Users can select a sub-category from the table to see all the comments relating to the selection.
+
+### Who we are hearing from
+
+Two types of charts are shown here for each demographic variable
+
+-   Distribution of the demographics in the sample.
+-   The average percentage of FFT score for each group in the demographic feature.
+
+### Comment Search
+
+Users can make a Boolean search for comments with specific keyword(s). The result of the search can be downloaded. The keywords used in the search are used as the filename when saving the data.
+
+### Summary/Report builder
+
+This tab contains few information and functionalities. These are
+
+[![Fig 6. Summary Tab](images/summary-tab.jpg){fig-alt="Summary Tab"}](images/summary-tab.jpg)
+
+##### Number of samples in filtered Selection
+
+This shows the total number of comments and responders in the current selection (based on the filter applied from the sidebar) compared to the total number of both respectively in the database (ignoring all the sidebar filters).
+
+##### SPC of the FFT score
+
+This shows the Statistical Process Control (SPC) chart of the FFT score. The SPC chart is simply a line graph showing the FFT score in chronological order, with the score on the vertical (y) axis, the date on the horizontal (x) axis and the average score shown as the centre line.
+
+##### Report Builder
+
+There are four options to select and each adds sections to the report (Word document) that is generated.
 
 -   \% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/topic
 
 -   Verbatim comments: the actual comments from the selected data
 
--   Sample demographics: the demographic graphs from the selected data
+-   Sample demographics: The demographic graphs of the selected data
 
 -   FFT graph: the FFT plot
-
-#### FFT
-
-This shows the Statistical Process Control (SPC) chart of the FFT score. The SPC chart is simply a line graph showing the FFT score in a chronological order, with the score on the vertical (y) axis, date on the horizontal (x) axis and the average score is shown as the centre line.
-
-![Fig 3. SPC chart of the FFT score](images/FFT graph.png){fig-alt="FFT graph"}
-
-#### Topics/weighting
-
-This shows a table and plot for the number of comments in each category and users can select a category from the table or plot and all the comments relating to that category are displayed.
-
-#### Comment search
-
-Users can make a boolen search for comments with specific keyword(s).
-
-### Overlap/Trend 
-
-*Trend in category*: shows the monthly percentage contribution of each category
-
-*Overlapping words*: This shows which categories occur together more/less often based on the count or correlation of comments frequencies within the categories. Users will also be able to interact with the plot to see the comments any two categories have in common.
-
-#### Demographic tab
-
-Two types of charts are shown here for each demographic variable
-
--   Distribution of demographics in the sample.
--   Average percentage of maximum FFT score for each category.
