@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Oluwasegun Apejoye">
-<meta name="dcterms.date" content="2023-07-15">
+<meta name="dcterms.date" content="2023-07-18">
 
-<title>PatientExperience-QDC website - Additional Analysis for Experiences Dashboard</title>
+<title>PatientExperience-QDC website - Experience Dashboard at Version 0.7.0: A data exploration tool</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../docs/_assets/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/_assets/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,12 +63,12 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Additional Analysis for Experiences Dashboard">
-<meta property="og:description" content="Patient Feedback Analysis">
-<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/dashboard/dashboard2_files/figure-html/unnamed-chunk-2-1.png">
+<link rel="stylesheet" href="../../_assets/style/styles.css">
+<meta property="og:title" content="PatientExperience-QDC website - Experience Dashboard at Version 0.7.0: A data exploration tool">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/images/landing_page.png">
 <meta property="og:site-name" content="PatientExperience-QDC website">
-<meta property="og:image:height" content="1536">
+<meta property="og:image:height" content="975">
 <meta property="og:image:width" content="1920">
 </head>
 
@@ -85,12 +85,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page"><i class="bi bi-book" role="img">
+    <a class="nav-link active" href="../../index.html" rel="" target="" aria-current="page"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">About PatientExperience-QDC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../updates.html" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../updates.html" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text">Updates</span></a>
   </li>  
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dashboard/index.html">Experiences dashboard</a></li><li class="breadcrumb-item"><a href="../dashboard/dashboard2.html">Additional Analysis for Experiences Dashboard</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Experience Dashboard at Version 0.7.0: A data exploration tool</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -143,13 +143,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homepage</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../background/background.html" class="sidebar-item-text sidebar-link">
+            <a href="../../background/background.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project background</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -158,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../background/phase_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../background/phase_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Phase 1 overview</span></a>
   </div>
 </li>
@@ -166,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../framework/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../framework/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Qualitative Framework</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -175,13 +175,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../framework/framework2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../framework/framework2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Framework development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../framework/framework3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../framework/framework3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Framework details</span></a>
   </div>
 </li>
@@ -189,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../pxtextmining/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../pxtextmining/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Machine learning (pxtextmining)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -198,19 +198,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Performance metrics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Model selection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/additional_features.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/additional_features.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional features</span></a>
   </div>
 </li>
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../dashboard/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../dashboard/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Experiences dashboard</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -227,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Analysis for Experiences Dashboard</span></a>
   </div>
 </li>
@@ -235,7 +235,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project team</span></a>
   </div>
 </li>
@@ -250,11 +250,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#overlapping-words" id="toc-overlapping-words" class="nav-link" data-scroll-target="#overlapping-words">1. Overlapping words</a></li>
-  <li><a href="#prominent-words-unique-to-each-category" id="toc-prominent-words-unique-to-each-category" class="nav-link" data-scroll-target="#prominent-words-unique-to-each-category">2. Prominent Words unique to each Category</a></li>
-  <li><a href="#word-co-occurrence-across-categories" id="toc-word-co-occurrence-across-categories" class="nav-link" data-scroll-target="#word-co-occurrence-across-categories">3. Word co-occurrence across categories</a></li>
-  <li><a href="#word-to-word-connections" id="toc-word-to-word-connections" class="nav-link" data-scroll-target="#word-to-word-connections">4. Word-to-word connections</a></li>
-  <li><a href="#highlight-complex-comments" id="toc-highlight-complex-comments" class="nav-link" data-scroll-target="#highlight-complex-comments">5. Highlight complex comments</a></li>
+  <li><a href="#new-or-updated-features" id="toc-new-or-updated-features" class="nav-link" data-scroll-target="#new-or-updated-features">New or updated features</a></li>
+  <li><a href="#future-work" id="toc-future-work" class="nav-link" data-scroll-target="#future-work">Future work</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -263,9 +260,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Additional Analysis for Experiences Dashboard</h1>
-<p class="subtitle lead">Patient Feedback Analysis</p>
-</div>
+<h1 class="title">Experience Dashboard at Version 0.7.0: A data exploration tool</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+    <div class="quarto-category">dashboard</div>
+  </div>
+  </div>
 
 
 
@@ -281,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 15, 2023</p>
+      <p class="date">July 18, 2023</p>
     </div>
   </div>
   
@@ -293,67 +293,30 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This page shows a sample report of some of the additional analyses and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.</p>
-<p>Please note that the data used for this report has been modified and the categories have been randomly assigned only for demonstration purposes. The aim of this sample report is to give you a feel of what will be delivered and not for a conclusion to be drawn.</p>
-<p><strong><em>These visuals can be seen as additional data exploration tools to facilitate and lead to more detailed qualitative analysis of the categorised data, rather than replacing the need to read the underlying comments.</em></strong></p>
+<p>Our first update on the dashboard was based on version 0.6 of the dashboard. And we noted then that we would be rolling out some features into the dashboard. We are glad to say that we implemented some changes and added new features, in version 0.7 series of the dashboard, which we believe have added some elegance to the dashboard and improved its usefulness as a data exploration and visualisation tool to help clinicians, ward managers, and general users identify the pattern in free text data and to access the underlying comments to explore explanations for any pattern seen on the visual.</p>
 </section>
-<section id="overlapping-words" class="level2">
-<h2 class="anchored" data-anchor-id="overlapping-words">1. Overlapping words</h2>
-<p>This shows relationships between the topics (the categories). It shows the categories that tend to be similar to each other in how they are assigned to comments i.e.&nbsp;how comments shared about one topic relates to another topic. These relationships are shown using the number of comments shared between the topics (comment frequencies) or the Pearson correlation of the comment frequencies. Of particular interest is the correlation among topics, which indicates how often they are assigned together to comments relative to how often they are assigned separately.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="dashboard2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="960"></p>
+<section id="new-or-updated-features" class="level2">
+<h2 class="anchored" data-anchor-id="new-or-updated-features">New or updated features</h2>
+<p>In this section, I will provide a high-level overview of the changes we made and the additional features we introduced.</p>
+<p><strong>Move from single-labelling to multi-labelling of comments:</strong> This is the main highlight of all the changes that we introduced. Multi-tagging of patient comments is a crucial part of this phase of the patient experience data categorisation project. The dashboard has always supported single labelled categories but we have now improved the dashboard to support multi-labelled sub-categories and categories (also called super-category in this post). The data format of the dashboard underlining data has also changed to accommodate these changes.</p>
+<p><strong>Adoption of the NHS Identity:</strong> We made every effort to change the general dashboard theme and visualisation colours to follow the <a href="https://www.england.nhs.uk/nhsidentity/">NHS Identity</a>. This was done to provide consistency between the dashboard and other NHS-related dashboards since the dashboard is targeted at NHS-related organisations. Note: This project is still open source and can be used by anyone as far as you follow the <a href="https://github.com/CDU-data-science-team/experiencesdashboard/blob/documentation/LICENSE.md">MIT Licence</a> under which this work is distributed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/landing_page.png"><img src="images/landing_page.png" class="img-fluid figure-img" alt="New Landing Page"></a></p>
+<figcaption class="figure-caption">Fig 1. New Landing Page</figcaption>
+</figure>
 </div>
-<div class="cell-output-display">
-<p><img src="dashboard2_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="960"></p>
-</div>
-</div>
-<p>We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the <em>Staff</em> topic shows a strong relationship to the <em>Communication &amp; Involvement</em> topic, this indicates comments relating to <em>Staff</em> often relate more to the <em>Communication &amp; Involvement</em> category compared to other categories.</p>
-<p>NOTE: The heatmap is available on the dashboard and users will be able to add the network graph to their report (available to download from the dashboard) if they find it more intuitive.</p>
+<p><strong>Update SPC Chart of the FFT Scores:</strong> We used the <a href="https://github.com/nhs-r-community/NHSRplotthedots">NHSR plotthedots package</a> to draw the SPC (statistical process control) chart. The now follows the principles laid out in the NHSE programme, <a href="https://www.england.nhs.uk/publication/making-data-count/">‘Making Data Count’</a>, and allows users to easily see change points, and identify when rules are breached.</p>
+<p><strong>Use Upset plot instead of HeatMap to visualise inter-relationships between sub-categories</strong>: Using an upset plot allows users to see the relationships and associations between the large sub-categories (over 40 different sub-categories) present in the data. <a href="../../posts/upset_plot-23-07-18/index.html">Read more here</a></p>
+<p><strong>QDC Framework</strong>: The landing page now contains a high-level overview of the data categorisation framework developed as part of this project and implemented to assign the sub-categories to the free text comments. see the <a href="../../framework/index.html">framework</a> for more details.</p>
+<p><strong>Visualise trends in sub-categories</strong>: We added a plot to visualise the distribution of comments over time.</p>
+<p><strong>Implement the Pxtextming API</strong>: We implemented the <a href="../../posts/update-23-05-31/index.html">pxtextmining API</a> for machining learning tasks (predicting the sub-categories). Using the API was a more efficient way to interact with the Python machine learning model compared to the previous implementation which requires installing the R version of the pxtextmining package, <code>pxtextmineR</code>, <code>reticulate</code> and downloading the actual Python models needed for the prediction.</p>
+<p><strong>Download complex comments</strong> <strong>and other data</strong>: We added the functionality to download the complex comment for further analysis. Also, users can now download the underline data serving the visualisation they interact with. They can also download all the historical data that serve the dashboard.</p>
+<p><strong>Filter with Demographic features</strong>: Users can now drill down into the data using three demographic features such as age, sex, and ethnicity. This alongside the location and date filter will allow users to drill down the data to their target population and analyse further.</p>
 </section>
-<section id="prominent-words-unique-to-each-category" class="level2">
-<h2 class="anchored" data-anchor-id="prominent-words-unique-to-each-category">2. Prominent Words unique to each Category</h2>
-<p>We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each topic/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 5 prominent words from each category. Note that some categories have less than 5 words. The <em>Travel &amp; Transport</em> and <em>Service location</em> have the same prominent words because of the high correlation between both categories as can be seen in the topic correlation network graph above.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="dashboard2_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="1152"></p>
-</div>
-</div>
-</section>
-<section id="word-co-occurrence-across-categories" class="level2">
-<h2 class="anchored" data-anchor-id="word-co-occurrence-across-categories">3. Word co-occurrence across categories</h2>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="dashboard2_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="1152"></p>
-</div>
-</div>
-<p>The Network graph above shows the top 5 words used in each category. The words <em>friendly</em> and <em>staff</em> have high present in comments labelled ‘Staff’. We also see how the “Mental Health Specifics” and “Medication” categories stand out compared to the linkage we see among other groups.</p>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="dashboard2_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>The above graph shows how the top-occurring words within all the comments combined are distributed across the categories. We can see that among the top 20 frequent words in all the comments combined, most occurred within comments tagged “Care received”. The words <em>staff, helpful and feel</em> account for most of the linkage between “Staff”, “Communication and Involvement” and “General” categories</p>
-</section>
-<section id="word-to-word-connections" class="level2">
-<h2 class="anchored" data-anchor-id="word-to-word-connections">4. Word-to-word connections</h2>
-<div class="cell">
-<div class="cell-output-display">
-<p><img src="dashboard2_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>The above network graph shows the directional linkage between the most common bigrams (pairs of consecutive words) in the whole data. It shows bigrams that occurred more than 5 times and where neither word was a stop word. The transparency of the arrows between the words is based on how common or rare the bigram is in the data.</p>
-<p><em>Friendly</em> formed a major node and we see common short phrases such as <em>Mental Health</em>, <em>friendly staff</em>, and <em>feel comfortable</em></p>
-</section>
-<section id="highlight-complex-comments" class="level2">
-<h2 class="anchored" data-anchor-id="highlight-complex-comments">5. Highlight complex comments</h2>
-<p>We identify there may be situations where the machine learning model might be wrong in the categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below is a sample criterion to highlight complex comments (if any are met):</p>
-<ol type="1">
-<li><p>comments with over 50 words</p></li>
-<li><p>comments with over 3 labels attached</p></li>
-</ol>
-<p>In this sample data, there is a total of <strong><em>36</em></strong> comments out of a total of <strong><em>1998</em></strong> comments that might need additional attention.</p>
-<p>The data of complex comments (if any) are now available to download from the dashboard as of version 0.7.0, so users can further interrogate the comments and the assigned categories.</p>
+<section id="future-work" class="level2">
+<h2 class="anchored" data-anchor-id="future-work">Future work</h2>
+<p>As we progress, we eagerly embrace the invaluable feedback from the dashboard users. Our commitment to agility remains steadfast, allowing us to efficiently incorporate and implement the essential updates inspired by users’ feedback, to make sure the dashboard consistently meets their evolving needs. We’ll continue to refine and enrich the dashboard’s features to achieve optimal performance and user satisfaction.</p>
 
 
 </section>
@@ -603,6 +566,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="CDU-data-science-team/PatientExperience-QDC" data-repo-id="R_kgDOI4C5Mw" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
