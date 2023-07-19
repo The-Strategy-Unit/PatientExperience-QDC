@@ -12,11 +12,11 @@ execute:
 
 ## Introduction
 
-This page shows a sample report of some of the additional analysis and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.
+This page shows a sample report of some of the additional analyses and graphs that will be available to download for users of the experience dashboard. This additional analysis might be much more useful for key staff working with the patient experience data and it aims to provide a more in-depth analysis of the comments so users can gain additional insights.
 
-Please note that the data use for this report has been modified and the categories have been randomly assigned only for demonstration purpose. The aim of this sample report is to give you a feel of what will be delivered and not for conclusion to be drawn.    
+Please note that the data used for this report has been modified and the categories have been randomly assigned only for demonstration purposes. The aim of this sample report is to give you a feel of what will be delivered and not for a conclusion to be drawn.
 
-**_These visuals can be seen as additional data exploration tools to facilitate and lead to more detailed qualitative analysis of the categorised data, rather than replacing the need to read the underlying comments._**
+***These visuals can be seen as additional data exploration tools to facilitate and lead to more detailed qualitative analysis of the categorised data, rather than replacing the need to read the underlying comments.***
 
 ```{r include=FALSE}
 library(dplyr)
@@ -71,13 +71,13 @@ filter_data |>
   
 ```
 
-We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the *Staff* topic shows a strong relationship to the *Communication & involvement* topic, this indicates comments relating to *Staff* often relate more to the *Communication & involvement* category compared to other categories.
+We used a Network graph and heatmap for this purpose. In this sample report, the Network graph is used to show the relationship based on the pairwise correlation and the heatmap shows the actual comment frequencies. We can see how the *Staff* topic shows a strong relationship to the *Communication & Involvement* topic, this indicates comments relating to *Staff* often relate more to the *Communication & Involvement* category compared to other categories.
 
 NOTE: The heatmap is available on the dashboard and users will be able to add the network graph to their report (available to download from the dashboard) if they find it more intuitive.
 
 ## 2. Prominent Words unique to each Category
 
-We’d expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each topic/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 5 prominent words from each category. Note that some categories have less than 5 words. The *Travel & Transport* and *Service location* have same prominent words because of the high correlation between both categories as can be seen in the topic correlation network graph above. 
+We'd expect the categories to differ in terms of topic and content, and therefore the frequency of words should differ between them also. The TF-IDF (term frequency-inverse document frequency) is used to quantify the relevance of words or phrases in a document amongst a collection of documents. Here we regard each topic/category as a document and we used the TF-IDF to find the prominent words peculiar to each of the categories. Below, we visualized the top 5 prominent words from each category. Note that some categories have less than 5 words. The *Travel & Transport* and *Service location* have the same prominent words because of the high correlation between both categories as can be seen in the topic correlation network graph above.
 
 ```{r fig.width=12, fig.height=15}
 tidy_comment_token <- tidy_filter_data |> 
@@ -111,7 +111,7 @@ tf_idf |>
   labs(y = NULL)
 ```
 
-## 3. Word co-occurence across categories
+## 3. Word co-occurrence across categories
 
 ```{r fig.width=12, fig.height=10}
 #' count bigrams from text data
@@ -197,14 +197,14 @@ The above network graph shows the directional linkage between the most common bi
 
 *Friendly* formed a major node and we see common short phrases such as *Mental Health*, *friendly staff*, and *feel comfortable*
 
-## 5. Highlight complex comments  
+## 5. Highlight complex comments
 
 We identify there may be situations where the machine learning model might be wrong in the categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below is a sample criterion to highlight complex comments (if any are met):
 
-1. comments with over 50 words
+1.  comments with over 50 words
 
-2. comments with over 3 label attached
- 
+2.  comments with over 3 labels attached
+
 ```{r results='asis'}
 
 long_words <- 50
@@ -226,6 +226,6 @@ total_comments <- filter_data |>
   
 ```
 
-In this sample data, there is a total of **_`r n_complex_comments`_** comments out of a total of **_`r total_comments`_** comments that might need additional attention. 
+In this sample data, there is a total of ***`r n_complex_comments`*** comments out of a total of ***`r total_comments`*** comments that might need additional attention.
 
-These complex comments will be available to download from the dashboard for users to further interrogate the comments and the assigned categories.
+The data of complex comments (if any) are now available to download from the dashboard as of version 0.7.0, so users can further interrogate the comments and the assigned categories.
