@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -247,11 +247,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#the-structure" id="toc-the-structure" class="nav-link" data-scroll-target="#the-structure">The structure</a></li>
-  <li><a href="#the-features" id="toc-the-features" class="nav-link" data-scroll-target="#the-features">The Features</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul>
-  <li><a href="#sidebar-selection" id="toc-sidebar-selection" class="nav-link" data-scroll-target="#sidebar-selection">Sidebar Selection</a></li>
+  <li><a href="#the-structure" id="toc-the-structure" class="nav-link" data-scroll-target="#the-structure">The structure</a></li>
+  </ul></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
+  <ul>
+  <li><a href="#new-trust-onboarding-process" id="toc-new-trust-onboarding-process" class="nav-link" data-scroll-target="#new-trust-onboarding-process">New Trust Onboarding Process</a></li>
+  <li><a href="#uploading-your-data" id="toc-uploading-your-data" class="nav-link" data-scroll-target="#uploading-your-data">Uploading your data</a></li>
+  </ul></li>
+  <li><a href="#using-the-dashboard" id="toc-using-the-dashboard" class="nav-link" data-scroll-target="#using-the-dashboard"><strong>Using the dashboard</strong></a>
+  <ul>
+  <li><a href="#data-selection" id="toc-data-selection" class="nav-link" data-scroll-target="#data-selection">Data Selection</a>
+  <ul class="collapse">
+  <li><a href="#sidebar-filters---affect-all-tabs" id="toc-sidebar-filters---affect-all-tabs" class="nav-link" data-scroll-target="#sidebar-filters---affect-all-tabs">Sidebar filters - affect all tabs</a></li>
+  <li><a href="#tab-specific-filters---affect-a-specific-tab" id="toc-tab-specific-filters---affect-a-specific-tab" class="nav-link" data-scroll-target="#tab-specific-filters---affect-a-specific-tab">Tab-specific filters - affect a specific tab</a></li>
+  </ul></li>
+  <li><a href="#feature-tabs" id="toc-feature-tabs" class="nav-link" data-scroll-target="#feature-tabs">Feature tabs</a>
+  <ul class="collapse">
   <li><a href="#data-categorisation-framework" id="toc-data-categorisation-framework" class="nav-link" data-scroll-target="#data-categorisation-framework">Data categorisation framework</a></li>
   <li><a href="#data-upload-and-management-section" id="toc-data-upload-and-management-section" class="nav-link" data-scroll-target="#data-upload-and-management-section">Data upload and management section</a></li>
   <li><a href="#distribution-of-comments-over-time" id="toc-distribution-of-comments-over-time" class="nav-link" data-scroll-target="#distribution-of-comments-over-time">Distribution of comments over time</a></li>
@@ -261,6 +274,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#comment-search" id="toc-comment-search" class="nav-link" data-scroll-target="#comment-search">Comment Search</a></li>
   <li><a href="#summaryreport-builder" id="toc-summaryreport-builder" class="nav-link" data-scroll-target="#summaryreport-builder">Summary/Report builder</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#what-next" id="toc-what-next" class="nav-link" data-scroll-target="#what-next">What Next?</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -284,15 +299,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The <a href="https://github.com/CDU-data-science-team/experiencesdashboard">Experience dashboard</a> is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the <a href="../pxtextmining/index.html">Pxtextmining</a>, to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text data. A key focus of the dashboard is to present people with the categorisation of qualitative data</p>
-<p>The dashboard automates the labelling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trends in the data, download reports, etc.</p>
-<p><em>The functionalities highlighted here are based on version 0.7.2 of the experiences dashboard package. Please go <a href="../posts/dashboard-update-23-07-18/index.html">here</a> to compare these changes to that of the previous version.</em></p>
-</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>The <a href="https://github.com/CDU-data-science-team/experiencesdashboard">Experience dashboard</a> is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the <a href="../pxtextmining/index.html">Pxtextmining</a>, to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text comments. A key focus of the dashboard is to present people with the categorisation of qualitative data.</p>
+<p>The dashboard automates the labelling/categorization of free text data (patient experience comments) using a multilabeling approach and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trends in the data, download reports, etc.</p>
+<p><em>The functionalities highlighted here are based on version 0.7.2 of the experiences dashboard package. Please go <a href="../posts/dashboard-update-23-07-18/index.html">here</a> to compare these changes to those of the previous version.</em></p>
 <section id="the-structure" class="level2">
 <h2 class="anchored" data-anchor-id="the-structure">The structure</h2>
-<p>The dashboard is built using <a href="https://github.com/ThinkR-open/golem">golem</a>, an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard’s structure.</p>
+<p>The dashboard is built using <a href="https://github.com/ThinkR-open/golem">golem</a>, an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard’s structure. We have the source code <a href="https://github.com/CDU-data-science-team/experiencesdashboard">here</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="images/expdash_structure.png"><img src="images/expdash_structure.png" class="img-fluid figure-img" alt="Dashboard structure"></a></p>
@@ -300,20 +314,61 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="the-features" class="level2">
-<h2 class="anchored" data-anchor-id="the-features">The Features</h2>
-<p>Below are the key features of the dashboard. We have the source code <a href="https://github.com/CDU-data-science-team/experiencesdashboard">here</a>. Figure 2 below shows a screenshot of the dashboard landing page alongside all the feature tabs and the data drilling options.</p>
+</section>
+<section id="getting-started" class="level1">
+<h1>Getting started</h1>
+<section id="new-trust-onboarding-process" class="level2">
+<h2 class="anchored" data-anchor-id="new-trust-onboarding-process">New Trust Onboarding Process</h2>
+<p>As a new user, to begin using the dashboard, you need to <a href="mailto:PHUdatascience@nottshc.nhs.uk?cc=chris.beeley1@nhs.net">reach out to the project</a> team so they can establish your organization’s version of the dashboard. The team will assess your request, arrange a meeting to discuss your requirements and provide an onboarding email enabling you to access the dashboard.</p>
+</section>
+<section id="uploading-your-data" class="level2">
+<h2 class="anchored" data-anchor-id="uploading-your-data">Uploading your data</h2>
+<p>To access the dashboard contents, you need to upload your data. It is a simple process:</p>
+<ol type="1">
+<li><p>Go to the “data upload and management” tab</p></li>
+<li><p>Click on the “upload new data” button</p></li>
+<li><p>Search for the file and click “Import data”</p></li>
+</ol>
+<p>There are a few things to note here. The data must pass the following checks:</p>
+<ol type="1">
+<li><p><em>Column names:</em> They should follow the names used in the <a href="https://github.com/CDU-data-science-team/experiencesdashboard/raw/main/data-raw/New%20general%20trust%20template.xlsx">“general_trust_template”</a>. Columns with names other than these are ignored by the dashboard.</p></li>
+<li><p><em>Compulsory columns</em>: the following columns must be present in your data no matter your Trust configuration: <strong>“date”, “location_1”, “question_1”, “fft_score”</strong></p></li>
+<li><p><em>Additional Columns</em>: Your data must contain other columns depending on your Trust configuration agreed upon during onboarding. e.g.&nbsp;if you indicated you would like to filter using demographic features such as Sex, and Age, then the “sex” and “age” column must be present in your uploaded data. Likewise, if you indicated you needed to filter using the 3 clinical locations, then the “location_1”, “location_2”, and “location_3” columns must be present in your data.</p></li>
+<li><p><em>File extension:</em> The following file extensions can be used to upload data: .csv, .txt, .xls, .xlsx, .rds, .fst, .sas7bdat, .sav. However, we recommend using .xlsx (Excel format)</p></li>
+<li><p><em>Date format:</em> As much as possible, the date format should be in dd/mm/yyyy e.g.&nbsp;30/09/2021, 27/10/2022.</p></li>
+</ol>
+</section>
+</section>
+<section id="using-the-dashboard" class="level1">
+<h1><strong>Using the dashboard</strong></h1>
+<p>Below are the key features of the dashboard. Figure 2 below shows a screenshot of the dashboard landing page alongside all the feature tabs and the data selection options.</p>
 <p>In this section, I will discuss the key features of the dashboard.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/landing_page.jpg"><img src="images/landing_page.jpg" class="img-fluid figure-img" alt="Dashboard Landing page"></a></p>
+<p><img src="images/landing_page.jpg" class="img-fluid figure-img" alt="Dashboard Landing page"></p>
 <figcaption class="figure-caption">Fig 2. Dashboard landing page showing the feature tabs and the data drilling options</figcaption>
 </figure>
 </div>
-<section id="sidebar-selection" class="level3">
-<h3 class="anchored" data-anchor-id="sidebar-selection">Sidebar Selection</h3>
-<p>From the sidebar section of the dashboard, users can drill down using the hierarchy levels within their data such as divisions, directorates and teams and they can also filter by dates and three different demographic features. The dashboard features and visualization changes in line with the selection from the sidebar. Note that the data filtering feature will depend on the presence of the appropriate columns in the data that is being uploaded.</p>
+<section id="data-selection" class="level2">
+<h2 class="anchored" data-anchor-id="data-selection">Data Selection</h2>
+<section id="sidebar-filters---affect-all-tabs" class="level3">
+<h3 class="anchored" data-anchor-id="sidebar-filters---affect-all-tabs">Sidebar filters - affect all tabs</h3>
+<p>From the sidebar section of the dashboard, users can drill down using the hierarchy levels within their data such as divisions, directorates and teams and they can also filter by dates and three different demographic features. All the dashboard features and visualizations change in line with the selection from the sidebar.</p>
+<p>Note that the data filtering feature you will see on your dashboard will depend on the presence of the appropriate columns in the data that is being uploaded.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="images/sidebar-filter.jpg"><img src="images/sidebar-filter.jpg" class="img-fluid figure-img" alt="Sidebar filter" width="256"></a></p>
+<figcaption class="figure-caption">Sidebar filter - The filter affects the dashboard contents on all of the feature tabs</figcaption>
+</figure>
+</div>
 </section>
+<section id="tab-specific-filters---affect-a-specific-tab" class="level3">
+<h3 class="anchored" data-anchor-id="tab-specific-filters---affect-a-specific-tab">Tab-specific filters - affect a specific tab</h3>
+<p>Some of the feature tabs (such as the “Distribution of comments over time” and “Inter-relationship between sub-categories” tab) have additional data filtering features that allow you to further drill down into the data and visualise smaller samples of the data in that particular tab. <em>These tab-specific filters don’t affect the data that is viewed in other feature tabs of the dashboard.</em></p>
+</section>
+</section>
+<section id="feature-tabs" class="level2">
+<h2 class="anchored" data-anchor-id="feature-tabs">Feature tabs</h2>
 <section id="data-categorisation-framework" class="level3">
 <h3 class="anchored" data-anchor-id="data-categorisation-framework">Data categorisation framework</h3>
 <p>This tab contains a brief introduction of the data categorisation framework developed as part of this project and used to assign the sub-categories to the free text comments. see the <a href="../framework/index.html">framework</a> for more details.</p>
@@ -352,7 +407,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="inter-relationship-between-sub-categories" class="level3">
 <h3 class="anchored" data-anchor-id="inter-relationship-between-sub-categories">Inter-relationship between sub-categories</h3>
-<p>This shows an upset plot, which is a type of visualisation for analysing data with a large set (in our case sub-categories). The plot allows users to see the number of comments in the sub-categories association, i.e., you can see the sub-categories that occur together more/less often based on the number of comments they have in common. Users can’t interact with this plot but they have the option to select two or three sub-categories to see the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories) they have in common.</p>
+<p>This shows an upset plot, which is a type of visualisation for analysing data with a large set (in our case sub-categories). The plot allows users to see the number of comments in the sub-categories association, i.e., you can see the sub-categories that occur together more/less often based on the number of comments they have in common. Users can’t interact with this plot but they have the option to scroll down and select two or three sub-categories to see the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories) they have in common.</p>
+<p>There are two sub-tabs in this tab that allow you to view the relationship within a category (e.g.&nbsp;staff) or across all the categories. The column bar on the plot shows the total number of comments in each relationship. A selection feature is provided to set the minimum number of comments a relationship needs to have in other to show on the pot.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="images/upset.png"><img src="images/upset.png" class="img-fluid figure-img" alt="Tab showing Inter-relationship between sub-categories"></a></p>
@@ -360,6 +416,9 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>The visual should be used to identify sub-categories with relationship and the sub-category selection functionalities should be used to see the underlined comment and investigate the pattern. Please see our post on <a href="../posts/upset_plot-23-07-18/index.html">using an upset plot to explore the relationship between large categorical data</a> to understand more about upset plots.</p>
+<p><strong><em>There is a known issue with the inter-relationship plots not fitting the screen for users on a small screen. Here is a quick fix:</em></strong></p>
+<p><strong><em>a. Please access your browser setting (three dots (…) at the top right of your browser)</em></strong></p>
+<p><strong><em>b. Zoom out to 75% or 80%</em></strong></p>
 </section>
 <section id="what-people-are-telling-us-about" class="level3">
 <h3 class="anchored" data-anchor-id="what-people-are-telling-us-about">What people are telling us about</h3>
@@ -388,7 +447,13 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="number-of-samples-in-filtered-selection" class="level5">
 <h5 class="anchored" data-anchor-id="number-of-samples-in-filtered-selection">Number of samples in filtered Selection</h5>
-<p>This shows the total number of comments and responders in the current selection (based on the filter applied from the sidebar) compared to the total number of both respectively in the database (ignoring all the sidebar filters).</p>
+<p>Come here to quickly see the volume of comments that are visualised in the dashboard. The tab shows the total number of comments/responders in the current selection (based on the filter applied from the sidebar) and the total number of comments/responders in the database (ignoring all the sidebar filters). The figure in the “current selection” represents the actual data that you are viewing in the dashboard. If you didn’t select any filter from the sidebar, then the “database” figures will be the same as that of the “current selection” figures.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/selection summary.jpg"><img src="images/selection summary.jpg" class="img-fluid figure-img" alt="Numbers of comments and responders in current selection"></a></p>
+<figcaption class="figure-caption">Fig 7. Selection Summary</figcaption>
+</figure>
+</div>
 </section>
 <section id="spc-of-the-fft-score" class="level5">
 <h5 class="anchored" data-anchor-id="spc-of-the-fft-score">SPC of the FFT score</h5>
@@ -396,17 +461,23 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="report-builder" class="level5">
 <h5 class="anchored" data-anchor-id="report-builder">Report Builder</h5>
-<p>There are four options to select and each adds sections to the report (Word document) that is generated.</p>
+<p>There are four options to select, each adding sections to the generated report (Word document).</p>
 <ul>
 <li><p>% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/topic</p></li>
 <li><p>Verbatim comments: the actual comments from the selected data</p></li>
 <li><p>Sample demographics: The demographic graphs of the selected data</p></li>
 <li><p>FFT graph: the FFT plot</p></li>
 </ul>
-
-
 </section>
 </section>
+</section>
+</section>
+<section id="what-next" class="level1">
+<h1>What Next?</h1>
+<p>We are constantly improving the dashboard to better serve our users. As we work on enhancing its features, we would greatly appreciate your feedback. How have you utilized the dashboard? What benefits have you gained from it? Are there any changes or adjustments you would recommend? Additionally, what new features would you like to see added? Your input will help us make the dashboard even more effective and useful.</p>
+<p>Please contact us via PHUdatascience@nottshc.nhs.uk (and cc chris.beeley1@nhs.net)</p>
+
+
 </section>
 
 </main> <!-- /main -->

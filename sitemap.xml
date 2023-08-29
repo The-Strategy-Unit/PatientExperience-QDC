@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/dashboard/dashboard2.html</loc>
-    <lastmod>2023-07-19T12:20:44.255Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/index.html</loc>
-    <lastmod>2023-07-19T12:20:43.123Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/upset_plot-23-07-18/index.html</loc>
-    <lastmod>2023-07-19T12:20:41.615Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/updates.html</loc>
-    <lastmod>2023-07-19T12:20:40.023Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/additional_features.html</loc>
-    <lastmod>2023-07-19T12:20:38.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/index.html</loc>
-    <lastmod>2023-07-19T12:20:37.527Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/background/phase_1.html</loc>
-    <lastmod>2023-07-19T12:20:36.343Z</lastmod>
-  </url>
-  <url>
     <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/framework/framework3.html</loc>
-    <lastmod>2023-07-19T12:20:34.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/project_team.html</loc>
-    <lastmod>2023-07-19T12:20:30.935Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/index.html</loc>
-    <lastmod>2023-07-19T12:20:30.263Z</lastmod>
+    <lastmod>2023-08-29T16:15:16.503Z</lastmod>
   </url>
   <url>
     <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/framework/index.html</loc>
-    <lastmod>2023-07-19T12:20:31.355Z</lastmod>
+    <lastmod>2023-08-29T16:15:13.006Z</lastmod>
   </url>
   <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/framework/framework2.html</loc>
-    <lastmod>2023-07-19T12:20:35.179Z</lastmod>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/dashboard/dashboard2.html</loc>
+    <lastmod>2023-08-29T16:15:12.026Z</lastmod>
   </url>
   <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/background/background.html</loc>
-    <lastmod>2023-07-19T12:20:37.147Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/model_selection.html</loc>
-    <lastmod>2023-07-19T12:20:37.991Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/performance_metrics.html</loc>
-    <lastmod>2023-07-19T12:20:39.343Z</lastmod>
-  </url>
-  <url>
-    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-05-31/index.html</loc>
-    <lastmod>2023-07-19T12:20:40.783Z</lastmod>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-03-13/index.html</loc>
+    <lastmod>2023-08-29T16:15:10.814Z</lastmod>
   </url>
   <url>
     <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/index.html</loc>
-    <lastmod>2023-07-19T12:20:42.447Z</lastmod>
+    <lastmod>2023-08-29T16:15:08.118Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/model_selection.html</loc>
+    <lastmod>2023-08-29T16:15:06.482Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/index.html</loc>
+    <lastmod>2023-08-29T16:15:05.262Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/index.html</loc>
+    <lastmod>2023-08-29T16:15:04.470Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/background/background.html</loc>
+    <lastmod>2023-08-29T16:15:03.810Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/background/phase_1.html</loc>
+    <lastmod>2023-08-29T16:15:02.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/project_team.html</loc>
+    <lastmod>2023-08-29T16:15:04.126Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/additional_features.html</loc>
+    <lastmod>2023-08-29T16:15:04.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/pxtextmining/performance_metrics.html</loc>
+    <lastmod>2023-08-29T16:15:06.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-05-31/index.html</loc>
+    <lastmod>2023-08-29T16:15:07.358Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/upset_plot-23-07-18/index.html</loc>
+    <lastmod>2023-08-29T16:15:09.934Z</lastmod>
   </url>
   <url>
     <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/dashboard/index.html</loc>
-    <lastmod>2023-07-19T12:20:43.711Z</lastmod>
+    <lastmod>2023-08-29T16:15:11.502Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/updates.html</loc>
+    <lastmod>2023-08-29T16:15:12.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://CDU-data-science-team.github.io/PatientExperience-QDC/framework/framework2.html</loc>
+    <lastmod>2023-08-29T16:15:13.398Z</lastmod>
   </url>
 </urlset>
