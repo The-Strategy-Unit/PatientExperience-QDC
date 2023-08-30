@@ -3,31 +3,71 @@ title: "Dashboard"
 comments: false
 ---
 
-## Introduction
+# Introduction
 
-The [Experience dashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text data. A key focus of the dashboard is to present people with the categorisation of qualitative data
+The [Experience dashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text comments. A key focus of the dashboard is to present people with the categorisation of qualitative data.
 
-The dashboard automates the labelling/categorization of new data and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trends in the data, download reports, etc.
+The dashboard automates the labelling/categorization of free text data (patient experience comments) using a multilabeling approach and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trends in the data, download reports, etc.
 
-*The functionalities highlighted here are based on version 0.7.2 of the experiences dashboard package. Please go [here](../posts/dashboard-update-23-07-18/index.qmd) to compare these changes to that of the previous version.*
+*The functionalities highlighted here are based on version 0.7.2 of the experiences dashboard package. Please go [here](../posts/dashboard-update-23-07-18/index.qmd) to compare these changes to those of the previous version.*
 
 ## The structure
 
-The dashboard is built using [golem](https://github.com/ThinkR-open/golem), an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure.
+The dashboard is built using [golem](https://github.com/ThinkR-open/golem), an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure. We have the source code [here](https://github.com/CDU-data-science-team/experiencesdashboard).
 
 [![Fig 1. Dashboard structure](images/expdash_structure.png){fig-alt="Dashboard structure"}](images/expdash_structure.png)
 
-## The Features
+# Getting started
 
-Below are the key features of the dashboard. We have the source code [here](https://github.com/CDU-data-science-team/experiencesdashboard). Figure 2 below shows a screenshot of the dashboard landing page alongside all the feature tabs and the data drilling options.
+## New Trust Onboarding Process
+
+As a new user, to begin using the dashboard, you need to [reach out to the project](mailto:PHUdatascience@nottshc.nhs.uk?cc=chris.beeley1@nhs.net) team so they can establish your organization's version of the dashboard. The team will assess your request, arrange a meeting to discuss your requirements and provide an onboarding email enabling you to access the dashboard.
+
+## Uploading your data
+
+To access the dashboard contents, you need to upload your data. It is a simple process:
+
+1.  Go to the "data upload and management" tab
+
+2.  Click on the "upload new data" button
+
+3.  Search for the file and click "Import data"
+
+There are a few things to note here. The data must pass the following checks:
+
+1.  *Column names:* They should follow the names used in the ["general_trust_template"](https://github.com/CDU-data-science-team/experiencesdashboard/raw/main/data-raw/New%20general%20trust%20template.xlsx). Columns with names other than these are ignored by the dashboard.
+
+2.  *Compulsory columns*: the following columns must be present in your data no matter your Trust configuration: **"date", "location_1", "question_1", "fft_score"**
+
+3.  *Additional Columns*: Your data must contain other columns depending on your Trust configuration agreed upon during onboarding. e.g. if you indicated you would like to filter using demographic features such as Sex, and Age, then the "sex" and "age" column must be present in your uploaded data. Likewise, if you indicated you needed to filter using the 3 clinical locations, then the "location_1", "location_2", and "location_3" columns must be present in your data.
+
+4.  *File extension:* The following file extensions can be used to upload data: .csv, .txt, .xls, .xlsx, .rds, .fst, .sas7bdat, .sav. However, we recommend using .xlsx (Excel format)
+
+5.  *Date format:* As much as possible, the date format should be in dd/mm/yyyy e.g. 30/09/2021, 27/10/2022.
+
+# **Using the dashboard**
+
+Below are the key features of the dashboard. Figure 2 below shows a screenshot of the dashboard landing page alongside all the feature tabs and the data selection options.
 
 In this section, I will discuss the key features of the dashboard.
 
-[![Fig 2. Dashboard landing page showing the feature tabs and the data drilling options](images/landing_page.jpg){fig-alt="Dashboard Landing page"}](images/landing_page.jpg)
+![Fig 2. Dashboard landing page showing the feature tabs and the data drilling options](images/landing_page.jpg){fig-alt="Dashboard Landing page"}
 
-### Sidebar Selection
+## Data Selection
 
-From the sidebar section of the dashboard, users can drill down using the hierarchy levels within their data such as divisions, directorates and teams and they can also filter by dates and three different demographic features. The dashboard features and visualization changes in line with the selection from the sidebar. Note that the data filtering feature will depend on the presence of the appropriate columns in the data that is being uploaded.
+### Sidebar filters - affect all tabs
+
+From the sidebar section of the dashboard, users can drill down using the hierarchy levels within their data such as divisions, directorates and teams and they can also filter by dates and three different demographic features. All the dashboard features and visualizations change in line with the selection from the sidebar.
+
+Note that the data filtering feature you will see on your dashboard will depend on the presence of the appropriate columns in the data that is being uploaded.
+
+[![Sidebar filter - The filter affects the dashboard contents on all of the feature tabs](images/sidebar-filter.jpg){fig-alt="Sidebar filter" fig-align="left" width="256"}](images/sidebar-filter.jpg)
+
+### Tab-specific filters - affect a specific tab
+
+Some of the feature tabs (such as the "Distribution of comments over time" and "Inter-relationship between sub-categories" tab) have additional data filtering features that allow you to further drill down into the data and visualise smaller samples of the data in that particular tab. *These tab-specific filters don't affect the data that is viewed in other feature tabs of the dashboard.*
+
+## Feature tabs
 
 ### Data categorisation framework
 
@@ -63,11 +103,19 @@ The plot is interactive and the box increases with the volume of comments. Click
 
 ### Inter-relationship between sub-categories
 
-This shows an upset plot, which is a type of visualisation for analysing data with a large set (in our case sub-categories). The plot allows users to see the number of comments in the sub-categories association, i.e., you can see the sub-categories that occur together more/less often based on the number of comments they have in common. Users can't interact with this plot but they have the option to select two or three sub-categories to see the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories) they have in common.
+This shows an upset plot, which is a type of visualisation for analysing data with a large set (in our case sub-categories). The plot allows users to see the number of comments in the sub-categories association, i.e., you can see the sub-categories that occur together more/less often based on the number of comments they have in common. Users can't interact with this plot but they have the option to scroll down and select two or three sub-categories to see the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories) they have in common.
+
+There are two sub-tabs in this tab that allow you to view the relationship within a category (e.g. staff) or across all the categories. The column bar on the plot shows the total number of comments in each relationship. A selection feature is provided to set the minimum number of comments a relationship needs to have in other to show on the pot.
 
 [![Fig 5. Tab showing Inter-relationship between sub-categories](images/upset.png){fig-alt="Tab showing Inter-relationship between sub-categories"}](images/upset.png)
 
 The visual should be used to identify sub-categories with relationship and the sub-category selection functionalities should be used to see the underlined comment and investigate the pattern. Please see our post on [using an upset plot to explore the relationship between large categorical data](../posts/upset_plot-23-07-18/index.qmd) to understand more about upset plots.
+
+***There is a known issue with the inter-relationship plots not fitting the screen for users on a small screen. Here is a quick fix:***
+
+***a. Please access your browser setting (three dots (...) at the top right of your browser)***
+
+***b. Zoom out to 75% or 80%***
 
 ### What people are telling us about
 
@@ -92,7 +140,9 @@ This tab contains few information and functionalities. These are
 
 ##### Number of samples in filtered Selection
 
-This shows the total number of comments and responders in the current selection (based on the filter applied from the sidebar) compared to the total number of both respectively in the database (ignoring all the sidebar filters).
+Come here to quickly see the volume of comments that are visualised in the dashboard. The tab shows the total number of comments/responders in the current selection (based on the filter applied from the sidebar) and the total number of comments/responders in the database (ignoring all the sidebar filters). The figure in the "current selection" represents the actual data that you are viewing in the dashboard. If you didn't select any filter from the sidebar, then the "database" figures will be the same as that of the "current selection" figures.
+
+[![Fig 7. Selection Summary](images/selection%20summary.jpg){fig-alt="Numbers of comments and responders in current selection"}](images/selection%20summary.jpg)
 
 ##### SPC of the FFT score
 
@@ -100,7 +150,7 @@ This shows the Statistical Process Control (SPC) chart of the FFT score. The SPC
 
 ##### Report Builder
 
-There are four options to select and each adds sections to the report (Word document) that is generated.
+There are four options to select, each adding sections to the generated report (Word document).
 
 -   \% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/topic
 
@@ -109,3 +159,9 @@ There are four options to select and each adds sections to the report (Word docu
 -   Sample demographics: The demographic graphs of the selected data
 
 -   FFT graph: the FFT plot
+
+# What Next?
+
+We are constantly improving the dashboard to better serve our users. As we work on enhancing its features, we would greatly appreciate your feedback. How have you utilized the dashboard? What benefits have you gained from it? Are there any changes or adjustments you would recommend? Additionally, what new features would you like to see added? Your input will help us make the dashboard even more effective and useful.
+
+Please contact us via PHUdatascience\@nottshc.nhs.uk (and cc chris.beeley1\@nhs.net)
