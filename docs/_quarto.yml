@@ -64,6 +64,7 @@ website:
           - pxtextmining/performance_metrics.qmd
           - pxtextmining/model_selection.qmd
           - pxtextmining/additional_features.qmd
+          - pxtextmining/project_outcomes.qmd
       - section: Experiences dashboard
         file: dashboard/index.qmd
         contents:
