@@ -209,6 +209,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Additional features</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pxtextmining/project_outcomes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Project outcomes</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -245,7 +251,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#how-the-framework-was-built" id="toc-how-the-framework-was-built" class="nav-link active" data-scroll-target="#how-the-framework-was-built">How the framework was built</a></li>
-  <li><a href="#further-development-to-the-framework" id="toc-further-development-to-the-framework" class="nav-link" data-scroll-target="#further-development-to-the-framework">Further development to the framework</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -271,19 +276,22 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="how-the-framework-was-built" class="level2">
 <h2 class="anchored" data-anchor-id="how-the-framework-was-built">How the framework was built</h2>
-<p>The inclusion of each sub-category in the framework is based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality improvement teams across different types of 19 NHS Trusts and exploration of pre-existing frameworks including the one used in the phase 1 of this project. Crucially following on from this research the framework was built using a ground-up qualitative inductive coding approach. This consisted of a qualitative analyst manually reading a large volume of patient experience qualitative data and devising categories as they emerged in the data. This approach has meant that the sub-categories are:</p>
+<p>The inclusion of each sub-category in the framework was based on a robust evidence-based rationale, drawing on multiple strands of work, including research with patient experience and quality improvement teams across different types of 19 NHS Trusts, exploration of pre-existing frameworks including the one used in the phase 1 of this project, manual qualitative inductive coding, and manual data labelling.</p>
+<p>The initial version of the framework was built using a ground-up qualitative inductive coding approach. This consisted of a qualitative analyst manually reading a large volume of patient experience qualitative data and devising categories as they emerged in the data. This approach has meant that the sub-categories were:</p>
 <ul>
-<li><p>All seen in patient experience qualitative data</p></li>
-<li><p>Reflective of the issues patients themselves raise, how they present their experiences and the language they use (rather than attempting to fit experiences into pre-defined categories which would be a deductive rather than an inductive approach)</p></li>
-<li><p>Considered to be distinct enough to form a unique sub-category in terms of vocabulary used and emphasis, thereby aiding their viability for an automated model</p></li>
-<li><p>Collectively able to result in an overall framework which makes comprehensive use of the data</p></li>
+<li>All seen in patient experience qualitative data.</li>
+<li>Reflective of the issues patients themselves raise, how they present their experiences and the language they use (rather than attempting to fit experiences into pre-defined categories which would be a deductive rather than an inductive approach).</li>
+<li>Considered to be distinct enough to form a unique sub-category in terms of vocabulary used and emphasis, thereby aiding their viability for an automated model.</li>
+<li>Collectively able to result in an overall framework which makes comprehensive use of the data.</li>
 </ul>
-</section>
-<section id="further-development-to-the-framework" class="level2">
-<h2 class="anchored" data-anchor-id="further-development-to-the-framework">Further development to the framework</h2>
-<p>A large volume of qualitative data from across different trust types is being manually labelled by qualitative analysts (i.e., being assigned to the relevant sub-categories), to produce the dataset that will be used to train and test the machine learning model.</p>
-<p>As this labelling occurs and quality assurance of the labelling is carried out the qualitative analysts will be vigilant for any emerging topics which have not already been seen in the data so new sub-categories can be added as required. Small amendments may also be made to the existing sub-category names and/or descriptions to ensure these remain well aligned to the qualitative data and reflect any nuances seen across different trust types.</p>
-<p>As the work progresses decisions may need to be made around whether it makes sense to merge any of the sub-categories, particularly if they are low in volume as this will impact how well the model is able to identify them. Similarly, before the framework is finalised changes may be made to the category names, along with which sub-categories sit under each category. This will be guided by what is seen in the data and input from partner organisations.</p>
+<p>As the project progressed a large volume of qualitative data from across different trust types was manually labelled by qualitative analysts (i.e., assigned to the relevant sub-categories), to produce the dataset that was used to train and test the machine learning model. During this time further iterations were made to the framework as follows:</p>
+<ul>
+<li>A new sub-category was added as qualitative analysts identified that an additional topic was emerging in the data which had not already been seen.</li>
+<li>Small amendments were made to category/ sub-category names and descriptions to ensure they remained well aligned to the qualitative data and reflected any nuances seen across different trust types.</li>
+<li>Some sub-categories were merged because they were low in volume (negatively impacting the models’ ability to identify them), there was a high degree of overlap with other sub-topics and/or thematic similarity in content.</li>
+<li>Some sub-categories were removed because they were extremely low volume (negatively impacting the models’ ability to identify them), the content was already sufficiently captured by other sub-categories, there was a lack of thematic coherence across comments, or the model did not perform well enough for them to be included.</li>
+</ul>
+<p>Due to the way that it was built the final framework is one that is qualitatively grounded in the data, but also works well from a data science perspective.</p>
 
 
 </section>
