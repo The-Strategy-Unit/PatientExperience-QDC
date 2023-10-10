@@ -1,35 +1,39 @@
 ---
 title: "Qualitative framework"
 author: "Estelle Phillips"
-date: "2023-03-16"
+date: "2023-10-10"
 comments: false
 ---
 
-The framework consists of the categories and subcategories that the automated model with assign the qualitative data to. The framework has multiple categories, each with their own set of sub-categories. 
-A broad overview of the current framework is displayed below. Fuller details are available on the Framework Details page.
+The framework consists of the categories and subcategories that the automated model will assign the qualitative data to. The framework has multiple categories, each with their own set of sub-categories. A broad overview of the framework is displayed below. Fuller details are available on the Framework details page.
 
-![Qualitative framework as of March 2023](framework_1.png)
+![Final version of the qualitative framework](framework_1.png)
 
-When thinking about the categories and sub-categories, the categories can be thought of as the overarching heading grouping similar topics together in a meaningful way to help end users navigate the framework more easily. The sub-categories are more specific and better reflect the underlying data. 
+When thinking about the categories and sub-categories, the categories can be thought of as the overarching heading, grouping similar or related topics together in a meaningful way to help end users navigate the framework more easily. The sub-categories are more specific and better reflect the underlying data. 
 
 Each sub-category has a description of what the data mapped there covers, for example:
 
-![Further detail on the 'Number & deployment of staff' subcategory](framework_2.png)
+| **Category**                      | **Sub-category**                          | **Sub-category description**                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------------------- |
+| Environment, equipment & catering | Cleanliness, tidiness & infection control | Comments relating to the cleanliness and tidiness of the environment and equipment (for example wards, rooms, toilets, furniture). It also incorporates how timely, efficient, and thorough cleaning/ maintenance staff are in addressing related issues, and the frequency of cleaning. Includes feedback on the rules to prevent the spread of infection e.g., use of PPE/ face masks, and adherence to guidelines in relation to this. |
 
-Here are some examples of qualitative data that would map to the ‘Number & deployment of staff’ sub-category described above:
 
-> 'Lots of staff'
 
-> 'Staff shortages mean structured day activities can be cancelled at short notice & there is too much time wasted hanging around waiting to see if they run or not.'
+Here are some examples of qualitative data that would map to the ‘Cleanliness, tidiness & infection control’ sub-category described above:
 
-> 'MORE STAFF PLEASE!!!!!!'
 
-> 'Have less managers doing same job.'
+> 'the cleaning lady was thorough' 
 
-> 'Staffing levels could improve. More recruitment, nursing assistants especially.'
+> 'Ward is well organised ,kept clean and tidy'
 
-> 'Would be good to have cover for support in situations where staff are off for extended periods due to holidays and sickness.'
+> 'Nice ward was clean and tidy. Toilets was clean and the bay in general.'
 
-> ‘Don't send trainee staff to people in crisis'
+> 'The ambulance was very clean.'
 
-> 'The ward should only have female staff. Staff recruitment spoils what the ward does well.'
+> 'Cleaner ward - dirty.’
+
+> 'Wiping bed tables , did this myself as was not done during my 3 day stay.'
+
+> 'it was unclean & when I complained about silver fish in the bathroom was told the maintenance men wouldn't come out for them', 
+
+> 'Masks not effective & not worn correctly. No social distancing.'
