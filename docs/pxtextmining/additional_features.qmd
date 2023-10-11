@@ -1,5 +1,5 @@
 ---
-title: "Additional features"
+title: "Project development: Additional features"
 subtitle: "Training the model to take other information into account when processing text"
 comments: false
 ---
