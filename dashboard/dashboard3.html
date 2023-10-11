@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Estelle Phillips">
+<meta name="dcterms.date" content="2023-10-11">
 
-<title>PatientExperience-QDC website - Project development: Model selection</title>
+<title>PatientExperience-QDC website - Good practice guidance</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Project development: Model selection">
-<meta property="og:description" content="Which machine learning algorithm should we use?">
+<meta property="og:title" content="PatientExperience-QDC website - Good practice guidance">
+<meta property="og:description" content="How to use the dashboard to improve your use of qualitative data">
 <meta property="og:site-name" content="PatientExperience-QDC website">
 </head>
 
@@ -124,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pxtextmining/index.html">Machine learning (pxtextmining)</a></li><li class="breadcrumb-item"><a href="../pxtextmining/model_selection.html">Project development: Model selection</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dashboard/index.html">Experiences dashboard</a></li><li class="breadcrumb-item"><a href="../dashboard/dashboard3.html">Good practice guidance</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -199,7 +201,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link active">
+  <a href="../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project development: Model selection</span></a>
   </div>
 </li>
@@ -240,7 +242,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dashboard/dashboard3.html" class="sidebar-item-text sidebar-link">
+  <a href="../dashboard/dashboard3.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Good practice guidance</span></a>
   </div>
 </li>
@@ -262,7 +264,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link active" data-scroll-target="#bibliography">Bibliography</a></li>
+  <li><a href="#what-the-dashboard-does" id="toc-what-the-dashboard-does" class="nav-link active" data-scroll-target="#what-the-dashboard-does">What the dashboard does</a></li>
+  <li><a href="#what-the-dashboard-does-not-do" id="toc-what-the-dashboard-does-not-do" class="nav-link" data-scroll-target="#what-the-dashboard-does-not-do">What the dashboard does <strong>not</strong> do</a></li>
+  <li><a href="#qualitative-caveats-and-tips" id="toc-qualitative-caveats-and-tips" class="nav-link" data-scroll-target="#qualitative-caveats-and-tips">Qualitative caveats and tips</a>
+  <ul>
+  <li><a href="#why-should-i-move-beyond-the-quantification-of-qualitative-data" id="toc-why-should-i-move-beyond-the-quantification-of-qualitative-data" class="nav-link" data-scroll-target="#why-should-i-move-beyond-the-quantification-of-qualitative-data">Why should I move beyond the quantification of qualitative data?</a></li>
+  <li><a href="#what-is-the-value-of-the-not-assigned-sub-category" id="toc-what-is-the-value-of-the-not-assigned-sub-category" class="nav-link" data-scroll-target="#what-is-the-value-of-the-not-assigned-sub-category">What is the value of the ‘Not assigned’ sub-category?</a></li>
+  <li><a href="#how-can-i-identify-topics-not-in-the-sub-category-framework" id="toc-how-can-i-identify-topics-not-in-the-sub-category-framework" class="nav-link" data-scroll-target="#how-can-i-identify-topics-not-in-the-sub-category-framework">How can I identify topics not in the sub-category framework?</a></li>
+  </ul></li>
+  <li><a href="#practical-advice-for-using-the-categorised-data" id="toc-practical-advice-for-using-the-categorised-data" class="nav-link" data-scroll-target="#practical-advice-for-using-the-categorised-data">Practical advice for using the categorised data</a>
+  <ul>
+  <li><a href="#how-can-i-deal-with-large-volumes-of-categorised-data" id="toc-how-can-i-deal-with-large-volumes-of-categorised-data" class="nav-link" data-scroll-target="#how-can-i-deal-with-large-volumes-of-categorised-data">How can I deal with large volumes of categorised data?</a></li>
+  <li><a href="#how-can-i-move-beyond-reading-to-qualitative-analysis" id="toc-how-can-i-move-beyond-reading-to-qualitative-analysis" class="nav-link" data-scroll-target="#how-can-i-move-beyond-reading-to-qualitative-analysis">How can I move beyond reading to qualitative analysis?</a></li>
+  <li><a href="#how-can-i-report-qualitative-analysis-findings" id="toc-how-can-i-report-qualitative-analysis-findings" class="nav-link" data-scroll-target="#how-can-i-report-qualitative-analysis-findings">How can I report qualitative analysis findings?</a></li>
+  </ul></li>
+  <li><a href="#further-training" id="toc-further-training" class="nav-link" data-scroll-target="#further-training">Further training</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -271,15 +287,27 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project development: Model selection</h1>
-<p class="subtitle lead">Which machine learning algorithm should we use?</p>
+<h1 class="title">Good practice guidance</h1>
+<p class="subtitle lead">How to use the dashboard to improve your use of qualitative data</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Estelle Phillips </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 11, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -287,25 +315,119 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>How do we decide which machine learning model architecture to try? There are hundreds of different types of models out there which utilise different algorithms to fit the data. As a former librarian the obvious starting point was to do a quick review of the available literature.</p>
-<p>The main points of consideration when selecting a model are appropriateness for the task at hand, and the tradeoff between resource consumption and performance. For example, our multilabel dataset is very imbalanced, and the aim is to predict minority classes with good precision. Additionally, many of the most advanced algorithms at the forefront of this field also require huge computational resources - GPT-3 cost approximately US$4.6 million to train[1]</p>
-<p>Simple and computationally efficient algorithms like Naive Bayes, K Nearest Neighbours and Support Vector Machine may be a useful place to start and this is where we will begin our efforts, to establish a baseline.[2] Decision Trees/Random Forests might also be a useful starting point.[3]</p>
-<p>Neural network approaches such as Convolutional Neural Network (CNN) or Recurrent Neural Networks (RNN) such as Long Short Term Memory (LSTM) or Gated Recurrent Unit (GRU) could be tried. These could also be combined using ensemble methods.[4] Some research has shown that CNNs with Attention, or Bidirectional GRU even outperformed pretrained transformer models like BERT in some contexts.[5] Given that the training time for a CNN on the same NLP task as BERT was over 90% faster this may be a tradeoff that is necessary given the resources available for this project.[6]</p>
-<p>Most cutting edge research in natural language processing for text classification focuses on the use of pretrained transformers, like BERT and its various relations including RoBERTa, DistilBERT, XLNet and ALBERT.[7] This is then finetuned to the specific classification task.[8] These can take a long time to train; for example, XLNet appeared to perform best on a highly unbalanced multilabel dataset but took twice as much time (22 hours) to finetune compared to RoBERTa and ELECTRA so this is something to bear in mind when conducting model training and selection.[9]</p>
-<p>As well as selecting model architecture, text preprocessing is another area that will require some experimentation. For example, the finetuning of token length, or type of word embedding used can impact on performance significantly.[5] However, in some cases, pre-processing text can also only result in marginal improvements to the F-measure when compared to text ‘as is’.[10] Using pretrained word embeddings such as GloVe or BioWordVec can improve the speed of training, although there is the risk of losing some words in the dataset that are not in the embedding vocabulary.[6]</p>
-<p>We will try several different model architectures, recording the performance of each one using established performance metrics. The best model will be saved and made available for use via an API.</p>
-<section id="bibliography" class="level2">
-<h2 class="anchored" data-anchor-id="bibliography">Bibliography</h2>
-<p>[1] Li, Chuan, ‘OpenAI’s GPT-3 Language Model: A Technical Overview’, Jun.&nbsp;03, 2020. https://lambdalabs.com/blog/demystifying-gpt-3 (accessed Feb.&nbsp;07, 2023).</p>
-<p>[2] A. I. Kadhim, ‘Survey on supervised machine learning techniques for automatic text classification’, Artif Intell Rev, vol.&nbsp;52, no. 1, pp.&nbsp;273–292, Jun.&nbsp;2019, doi: 10.1007/s10462-018-09677-1.</p>
-<p>[3] M.-L. Zhang and Z.-H. Zhou, ‘A Review on Multi-Label Learning Algorithms’, IEEE Trans. Knowl. Data Eng., vol.&nbsp;26, no. 8, pp.&nbsp;1819–1837, Aug.&nbsp;2014, doi: 10.1109/TKDE.2013.39.</p>
-<p>[4] J. Langton, K. Srihasam, and J. Jiang, ‘Comparison of Machine Learning Methods for Multi-label Classification of Nursing Education and Licensure Exam Questions’, in Proceedings of the 3rd Clinical Natural Language Processing Workshop, Online, Nov.&nbsp;2020, pp.&nbsp;85–93. doi: 10.18653/v1/2020.clinicalnlp-1.10.</p>
-<p>[5] V. Yogarajan, J. Montiel, T. Smith, and B. Pfahringer, ‘Transformers for Multi-label Classification of Medical Text: An Empirical Comparison’, in Artificial Intelligence in Medicine, vol.&nbsp;12721, A. Tucker, P. Henriques Abreu, J. Cardoso, P. Pereira Rodrigues, and D. Riaño, Eds. Cham: Springer International Publishing, 2021, pp.&nbsp;114–123. doi: 10.1007/978-3-030-77211-6_12.</p>
-<p>[6] H. Lu, L. Ehwerhemuepha, and C. Rakovski, ‘A comparative study on deep learning models for text classification of unstructured medical notes with various levels of class imbalance’, BMC Medical Research Methodology, vol.&nbsp;22, no. 1, p.&nbsp;181, Jul.&nbsp;2022, doi: 10.1186/s12874-022-01665-y.</p>
-<p>[7] S. Casola, I. Lauriola, and A. Lavelli, ‘Pre-trained transformers: an empirical comparison’, Machine Learning with Applications, vol.&nbsp;9, p.&nbsp;100334, Sep.&nbsp;2022, doi: 10.1016/j.mlwa.2022.100334.</p>
-<p>[8] A. K. B. Singh, M. Guntu, A. R. Bhimireddy, J. W. Gichoya, and S. Purkayastha, ‘Multi-label natural language processing to identify diagnosis and procedure codes from MIMIC-III inpatient notes’.</p>
-<p>[9] A. Haghighian Roudsari, J. Afshar, W. Lee, and S. Lee, ‘PatentNet: multi-label classification of patent documents using deep learning based language understanding’, Scientometrics, vol.&nbsp;127, no. 1, pp.&nbsp;207–231, Jan.&nbsp;2022, doi: 10.1007/s11192-021-04179-4.</p>
-<p>[10] V. Yogarajan, J. Montiel, T. Smith, and B. Pfahringer, ‘Seeing The Whole Patient: Using Multi-Label Medical Text Classification Techniques to Enhance Predictions of Medical Codes’. arXiv, Mar.&nbsp;28, 2020. Accessed: Jan.&nbsp;30, 2023. [Online]. Available: http://arxiv.org/abs/2004.00430</p>
+<p>This section provides information on good practice when working with qualitative data, as well as practical tips, and advice to help you maximise your use of the qualitative comments that the dashboard draws on. The dashboard should be used to facilitate initial exploration of your qualitative data, before drawing fuller insight from the underlying qualitative comments. We recommend you use the dashboard as a data discovery tool.</p>
+<section id="what-the-dashboard-does" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-dashboard-does">What the dashboard does</h3>
+<ul>
+<li><p>Categorises large volumes of qualitative comments, organising them into more manageable batches i.e., sub-categories. This is often the starting point of qualitative analysis even when done manually, so the tool saves you time by doing this initial sorting for you.</p></li>
+<li><p>Provides visuals and functionality to help you start exploring your data and identify possible patterns, or areas of particular interest.</p></li>
+<li><p>Displays the underlying qualitative comments which you can then read and/or use for more in-depth qualitative analysis to derive actionable insights.</p></li>
+</ul>
+</section>
+<section id="what-the-dashboard-does-not-do" class="level3">
+<h3 class="anchored" data-anchor-id="what-the-dashboard-does-not-do">What the dashboard does <strong>not</strong> do</h3>
+<ul>
+<li><p>Replace the need to read the underlying qualitative comments.</p></li>
+<li><p>Apply human interpretation or contextual knowledge about your Trust.</p></li>
+<li><p>Carry out the detailed qualitative analysis required to maximise the usefulness of the data and meaningfully listen to all of the feedback fully.</p></li>
+</ul>
+</section>
+<section id="qualitative-caveats-and-tips" class="level1">
+<h1>Qualitative caveats and tips</h1>
+<section id="why-should-i-move-beyond-the-quantification-of-qualitative-data" class="level2">
+<h2 class="anchored" data-anchor-id="why-should-i-move-beyond-the-quantification-of-qualitative-data">Why should I move beyond the quantification of qualitative data?</h2>
+<p>Whilst looking at the volumes of data for sub-categories can be a useful starting point to understanding your data, you will miss qualitative findings and/or misinterpret the data if you rely on the number of comments. You should take care not to oversimplify by assuming that the sub-categories with the most data categorised within them, are the most important and impactful, or that sub-categories with a low volume of data aren’t worth further exploration. In relation to this:</p>
+<ul>
+<li><p>We know that the Friends &amp; Family test qualitative data is heavily skewed towards certain sub-categories, in particular ‘Staff manner &amp; personal attributes’ and ‘Positive experience &amp; gratitude’ so these will likely always show up in the greatest volumes.</p></li>
+<li><p>Issues raised in comments are not necessarily only experienced by the people mentioning them, for example only two people might say that food is consistently cold by the time it gets to a ward, but the reality is that this is very likely happening for everyone on the ward, not just the two people who mentioned it. In this way even a single comment could lead to improvements for multiple people.</p></li>
+<li><p>Experiences which relate to a small sub-set of people, will never show up in high volumes but can have a significant impact on these people, just focusing on high volumes means their experiences will constantly be overlooked. This is especially important when aiming to include the feedback from small populations and communities with protected characteristics for example.</p></li>
+</ul>
+</section>
+<section id="what-is-the-value-of-the-not-assigned-sub-category" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-value-of-the-not-assigned-sub-category">What is the value of the ‘Not assigned’ sub-category?</h2>
+<p>There may be some cases where a comment contains information which the model does not recognise as being relevant to any of the other sub-categories, in these cases it will categorise the comment as ‘Not assigned’. It is important to check the comments placed here as this is where you are likely to find comments on less frequently raised or rare topics. These topics can be very important to pay attention to.</p>
+</section>
+<section id="how-can-i-identify-topics-not-in-the-sub-category-framework" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-identify-topics-not-in-the-sub-category-framework">How can I identify topics not in the sub-category framework?</h2>
+<p>We know that there are a small number of topics which occasionally appear in the data but don’t have a sub-category. If they exist within your data, the comment search functionality in the dashboard could be used to help identify these. Examples of these infrequent topics as well as some suggested search terms are outlined in the table below.</p>
+<div id="tbl-searchterms" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1: Infrequent topics and potential search terms</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Topic</strong></th>
+<th><strong>Potential search terms</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Patient appearance &amp; grooming</td>
+<td>Clothes, dressed, gown, hair, shower(s), wash</td>
+</tr>
+<tr class="even">
+<td>Equality, diversity &amp; inclusion</td>
+<td>Adjustments, ADHD, age, autistic, deaf, disabled, disability, disabilities, gender, hearing, language, mobility</td>
+</tr>
+<tr class="odd">
+<td>Patient records</td>
+<td>Accurate, confidentiality, notes, paperwork, record(s), system, updated</td>
+</tr>
+<tr class="even">
+<td>Admission</td>
+<td>Admission, admissions, admitted</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="practical-advice-for-using-the-categorised-data" class="level1">
+<h1>Practical advice for using the categorised data</h1>
+<section id="how-can-i-deal-with-large-volumes-of-categorised-data" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-deal-with-large-volumes-of-categorised-data">How can I deal with large volumes of categorised data?</h2>
+<p>Large volumes of qualitative data can be overwhelming which creates a barrier to making use of it, a strategy to help with this is distributing sub-sets of comments to the most appropriate areas of your organisation where people are best placed to make practical use of the data. For example:</p>
+<ul>
+<li><p>As the ‘Positive experience &amp; gratitude’ sub-category captures information which is very ‘thin’ (e.g., lacks detail), it is suggested that there is little value in additional analysis of the comments. A better use case here is to simply distribute it to relevant teams as feedback which can be shared with staff and celebrated.</p></li>
+<li><p>Comments mapped to the ‘Environment, facilities &amp; equipment’ sub-categories could be shared with Estates &amp; Facilities given they often identify areas that need maintenance or could be fixed.</p></li>
+<li><p>Other sub-categories such as ‘Funding &amp; use of financial resources’ may be most usefully received by senior management. Some of the ‘Staff’ sub-categories such as ‘Number &amp; deployment of staff’ and ‘Competence &amp; training’ may be most useful to HR or managers.</p></li>
+</ul>
+<p>If you have limited resource to look at the qualitative data and don’t know where to start, you may wish to consider the following to decide which sub-categories to explore in more depth:</p>
+<ul>
+<li><p>Prioritise those of particular interest for your Trust. For example, looking at the qualitative comments for relevant sub-categories where findings from other surveys, quantative analysis, research or information from staff indicate there is an issue.</p></li>
+<li><p>Where there are sub-categories you are surprised to see data appearing against, even if comments are low in volume. This could tell you something you didn’t know before.</p></li>
+<li><p>Use the visuals and filters in the dashboard to identify if there are any changes in the volume of information you are seeing for sub-categories, service areas or demographic groups. Explore what makes you curious.</p></li>
+<li><p>Use the inter-relationship between sub-categories functionality in the dashboard to identify sub-categories where there are indications that the comment content may overlap, then look at these in conjunction with each other.</p></li>
+<li><p>Rotate which sub-categories you look at in depth, e.g., you could focus on a different one each month.</p></li>
+</ul>
+</section>
+<section id="how-can-i-move-beyond-reading-to-qualitative-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-move-beyond-reading-to-qualitative-analysis">How can I move beyond reading to qualitative analysis?</h2>
+<p>Ideally your organisation will have access to the necessary resource and qualitative analysis skills to move beyond simply reading and quantifying comments to apply a more suitable analytical approach. Here it can be useful to consider the following when looking at comments for a sub-category:</p>
+<ul>
+<li><p>Whether there is variation in what people are saying and if there is a split between negative and positive comments. Look for the reasons for these differences. Use any insights around what sits behind differences to report on where and how improvements could be made. Adding what you know about the context of the feedback can support with its use, e.g., did the feedback collected about a particular sub-category rise in volume notably after a change was made in that particular ward or pathway.</p></li>
+<li><p>Identify where people are having good experiences, with examples that can be celebrated and used to provide positive feedback to staff. These could be individual comments or where you are seeing patterns of consistently good feedback.</p></li>
+<li><p>Identify the characteristics that lead to good experiences for people that can be shared within the Trust to promote good practice and provide evidence to boards, departments, and staff around what is working well and why. Consider whether the things that are working well could be transferable to other settings or spread wider.</p></li>
+</ul>
+</section>
+<section id="how-can-i-report-qualitative-analysis-findings" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-i-report-qualitative-analysis-findings">How can I report qualitative analysis findings?</h2>
+<p>Once qualitative comments have been read and/or analysed the following are useful prompts to include in reporting, with a view to improving patient experiences and promoting good practice within your Trust:</p>
+<ul>
+<li><p>For each sub-category you have looked at what the data tells you about a topic and what conclusions you have drawn from it.</p></li>
+<li><p>Any action steps you could take and how they could be achieved.</p></li>
+<li><p>Who would need to be involved and who would be responsible for taking the actions forward.</p></li>
+</ul>
+<p>This kind of information could be reported to and discussed at relevant staff meetings and/or the Trust board. Analysing and presenting information in the ways described above is good practice when working with qualitative data, as opposed to simply presenting quantified volumes of data for categories/sub-categories.</p>
+<p>When presenting and reporting qualitative findings in more depth you should look to describe findings in words, not numbers and use examples/ quotes to substantiate findings. Within qualitative reporting it is also valid to draw findings from one comment e.g., if what has been described is likely to happen again or have an impact for more people that the one person who shared the feedback.</p>
+</section>
+</section>
+<section id="further-training" class="level1">
+<h1>Further training</h1>
+<p>Further training on qualitative analysis and best use of qualitative data, is available to NHS staff here: <a href="https://future.nhs.uk/system/login?nextURL=%2Fconnect%2Eti%2FMDC%2Fview%3FobjectId%3D23040240">Training info (including slides &amp; recordings) - Making Data Count - FutureNHS Collaboration Platform</a> The relevant slides and recordings can be found in the ‘Making Data Count - Step 9 Making Qualitative Data Count’ section and you can also sign-up to attend upcoming live re-runs of the training by searching for dates on the Calendar.</p>
 
 
 </section>
@@ -555,6 +677,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="CDU-data-science-team/PatientExperience-QDC" data-repo-id="R_kgDOI4C5Mw" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">
