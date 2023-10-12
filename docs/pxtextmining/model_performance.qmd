@@ -70,9 +70,9 @@ Accuracy: 0.85
 
 |                 | Precision | Recall | F1 Score | Support |
 | --------------- | --------- | ------ | -------- | ------- |
-| Negative        | 0.87      | 0.81   | 0.84     | 805     |
-| Neutral / mixed | 0.52      | 0.71   | 0.6      | 551     |
 | Positive        | 0.95      | 0.9    | 0.92     | 2587    |
+| Neutral / mixed | 0.52      | 0.71   | 0.6      | 551     |
+| Negative        | 0.87      | 0.81   | 0.84     | 805     |
 
 
 ![Confusion matrix using counts](confusion_matrix_3_counts.png)
@@ -87,13 +87,11 @@ Accuracy: 0.7
 
 |                 | Precision | Recall | F1 Score | Support |
 | --------------- | --------- | ------ | -------- | ------- |
-| Negative        | 0.79      | 0.68   | 0.73     | 639     |
-| Neutral / mixed | 0.52      | 0.71   | 0.6      | 551     |
-| Positive        | 0.63      | 0.52   | 0.57     | 841     |
-| Very negative   | 0.52      | 0.64   | 0.57     | 166     |
 | Very positive   | 0.8       | 0.79   | 0.8      | 1746    |
-
-
+| Positive        | 0.63      | 0.52   | 0.57     | 841     |
+| Neutral / mixed | 0.52      | 0.71   | 0.6      | 551     |
+| Negative        | 0.79      | 0.68   | 0.73     | 639     |
+| Very negative   | 0.52      | 0.64   | 0.57     | 166     |
 
 
 ![Confusion matrix using counts](confusion_matrix_5_counts.png)
