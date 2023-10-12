@@ -26,7 +26,7 @@ website:
       - text: "About PatientExperience-QDC"
         icon: "book"
         href: index.qmd
-      - text: "Updates"
+      - text: "Blogposts"
         icon: "rss"
         href: updates.qmd
 
