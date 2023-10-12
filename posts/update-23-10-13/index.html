@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="YiWen Hon">
+<meta name="dcterms.date" content="2023-10-13">
 
-<title>PatientExperience-QDC website - Machine learning (pxtextmining)</title>
+<title>PatientExperience-QDC website - Ensembling models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../docs/_assets/favicon.ico" rel="icon">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../docs/_assets/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,10 +63,13 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Machine learning (pxtextmining)">
+<link rel="stylesheet" href="../../_assets/style/styles.css">
+<meta property="og:title" content="PatientExperience-QDC website - Ensembling models">
 <meta property="og:description" content="">
+<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-13/ensemble.png">
 <meta property="og:site-name" content="PatientExperience-QDC website">
+<meta property="og:image:height" content="2023">
+<meta property="og:image:width" content="1913">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -81,12 +85,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" rel="" target="" aria-current="page"><i class="bi bi-book" role="img">
+    <a class="nav-link active" href="../../index.html" rel="" target="" aria-current="page"><i class="bi bi-book" role="img">
 </i> 
  <span class="menu-text">About PatientExperience-QDC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../updates.html" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../updates.html" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text">Updates</span></a>
   </li>  
@@ -125,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pxtextmining/index.html">Machine learning (pxtextmining)</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Ensembling models</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -139,13 +143,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homepage</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../background/background.html" class="sidebar-item-text sidebar-link">
+            <a href="../../background/background.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project background</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -154,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../background/phase_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../background/phase_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Phase 1 overview</span></a>
   </div>
 </li>
@@ -162,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../framework/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../framework/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Qualitative Framework</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -171,13 +175,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../framework/framework2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../framework/framework2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Framework development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../framework/framework3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../framework/framework3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Framework details</span></a>
   </div>
 </li>
@@ -185,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../pxtextmining/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../pxtextmining/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Machine learning (pxtextmining)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -194,37 +198,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project development: Performance metrics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project development: Model selection</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/additional_features.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/additional_features.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project development: Additional features</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/model_performance.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/model_performance.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project outcomes: Model performance</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/using_models.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/using_models.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project outcomes: Using the models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/pxtextmining_learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pxtextmining/pxtextmining_learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project outcomes: Key takeaways</span></a>
   </div>
 </li>
@@ -232,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../dashboard/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../dashboard/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Experiences dashboard</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -241,13 +245,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dashboard/dashboard2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Additional Analysis for Experiences Dashboard</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../dashboard/dashboard3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../dashboard/dashboard3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Good practice guidance</span></a>
   </div>
 </li>
@@ -255,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project_team.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project_team.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project team</span></a>
   </div>
 </li>
@@ -272,8 +276,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Machine learning (pxtextmining)</h1>
-</div>
+<h1 class="title">Ensembling models</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">news</div>
+  </div>
+  </div>
 
 
 
@@ -286,6 +293,12 @@ ul.task-list li input[type="checkbox"] {
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 13, 2023</p>
+    </div>
+  </div>
   
     
   </div>
@@ -293,15 +306,20 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>pxtextmining</strong> is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is <a href="https://github.com/CDU-data-science-team/pxtextmining">available on GitHub</a>.</p>
-<p>On a basic level, this is what is happening:</p>
-<ol type="1">
-<li><p>The dataset created using the qualitative framework is processed. This involves standardising capital letters to lowercase, or removing punctuation and numbers. The words are then converted into numbers, this process is called <em>vectorisation</em>. This is a necessary step to enable the models to handle the words.</p></li>
-<li><p>The processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the <a href="../pxtextmining/performance_metrics.html">performance</a> of the trained model.</p></li>
-<li><p>Different <a href="../pxtextmining/model_selection.html">model architectures and algorithms</a> will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.</p></li>
-<li><p>After rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.</p></li>
-<li><p>The best model will be connected to the experiencesdashboard frontend via an API.</p></li>
-</ol>
+<p>We found that there are three different model architectures / algorithms that produced a reasonable performance for predicting the themes: XGBoost, Distilbert, and Support Vector Machine. We decided to combine the three models together, in order to build upon their individual strengths and improve overall performance. In data science terminology, this is called “ensembling”.</p>
+<p>We tried three different methods of ensembling:</p>
+<ul>
+<li>Taking all the predicted labels from each model. If Models A and B predicted the label “Safety &amp; security” and Model C predicted the label “Feeling safe”, we would take both “Safety &amp; security” and “Feeling safe” as the predicted labels for the text. This method resulted in a higher recall score but lower precision.</li>
+<li>Taking predicted labels only if at least two models predicted it. This is called “Hard voting” in data science terminology. If Models A and B predicted the label “Safety &amp; security” and Model C predicted the label “Feeling safe”, we would take only “Safety &amp; security” as the predicted label for the text. This is because “Feeling safe” was predicted by only one model. This method did not increase performance.</li>
+<li>Taking the predicted probabilities from each model and averaging them. This is called “Soft voting” in data science terminology. For example, if Models A, B, and C predicted the probability of the text belonging to the class “Feeling safe” as 0.2, 0.9 and 0.8 respectively, the average would be 0.63. This method worked the best, particularly when the threshold for accepting a predicted label was lowered to 0.3. This offered the best balance between precision and recall.</li>
+</ul>
+<p>We have opted for method 3, as it offered the best balance between improving precision and recall. However, it also takes a longer time as we need to wait for all three models to make their predictions before we combine them. We are using this method with the slower “wait” API.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="ensemble.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Diagram showing how models are ensembled</figcaption>
+</figure>
+</div>
 
 
 
@@ -550,6 +568,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="CDU-data-science-team/PatientExperience-QDC" data-repo-id="R_kgDOI4C5Mw" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

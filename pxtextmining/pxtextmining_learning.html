@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="YiWen Hon">
 
-<title>PatientExperience-QDC website - Machine learning (pxtextmining)</title>
+<title>PatientExperience-QDC website - Project outcomes: Key takeaways</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -63,8 +62,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Machine learning (pxtextmining)">
-<meta property="og:description" content="">
+<meta property="og:title" content="PatientExperience-QDC website - Project outcomes: Key takeaways">
+<meta property="og:description" content="What didn’t work, and potential developments">
 <meta property="og:site-name" content="PatientExperience-QDC website">
 </head>
 
@@ -125,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pxtextmining/index.html">Machine learning (pxtextmining)</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pxtextmining/index.html">Machine learning (pxtextmining)</a></li><li class="breadcrumb-item"><a href="../pxtextmining/pxtextmining_learning.html">Project outcomes: Key takeaways</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -185,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../pxtextmining/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../pxtextmining/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Machine learning (pxtextmining)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -224,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pxtextmining/pxtextmining_learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../pxtextmining/pxtextmining_learning.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Project outcomes: Key takeaways</span></a>
   </div>
 </li>
@@ -265,26 +264,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#other-things-to-try-in-future" id="toc-other-things-to-try-in-future" class="nav-link active" data-scroll-target="#other-things-to-try-in-future">Other things to try in future</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Machine learning (pxtextmining)</h1>
+<h1 class="title">Project outcomes: Key takeaways</h1>
+<p class="subtitle lead">What didn’t work, and potential developments</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>YiWen Hon </p>
-          </div>
-  </div>
     
   
     
@@ -293,17 +293,26 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>pxtextmining</strong> is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is <a href="https://github.com/CDU-data-science-team/pxtextmining">available on GitHub</a>.</p>
-<p>On a basic level, this is what is happening:</p>
-<ol type="1">
-<li><p>The dataset created using the qualitative framework is processed. This involves standardising capital letters to lowercase, or removing punctuation and numbers. The words are then converted into numbers, this process is called <em>vectorisation</em>. This is a necessary step to enable the models to handle the words.</p></li>
-<li><p>The processed dataset is split into two parts, a training and a test set, usually in a ratio of about 3:1. The model is then trained on the training set. The test set is set aside completely and only used at the end to evaluate the <a href="../pxtextmining/performance_metrics.html">performance</a> of the trained model.</p></li>
-<li><p>Different <a href="../pxtextmining/model_selection.html">model architectures and algorithms</a> will be tried, each attempting to learn patterns from the dataset. The models will also be fine-tuned to improve performance. A full discussion of the model types explored will be posted on this website.</p></li>
-<li><p>After rigorous testing and experimentation, the model that is able to predict labels for patient comments most effectively will be selected and saved. This model will be used to label any new text comments that it receives.</p></li>
-<li><p>The best model will be connected to the experiencesdashboard frontend via an API.</p></li>
-</ol>
+<p>Multinomial Naive Bayes, Random Forest Classifier, and K Nearest Neighbours models showed very poor performance.</p>
+<p>For the sklearn models, we only tried spacy and TF-IDF vectorizers. Of the two, TF-IDF produced the best results. Perhaps another vectorizer would have been more effective? Previous work has shown that using pretrained embeddings generally performs poorly on this type of text due to its specialised vocabulary. However, it would have been interesting to also use some other type of vectorizer on the text - perhaps using the custom embeddings generated by the first few layers of the Distilbert model.</p>
+<p>We only tried the Distilbert pretrained model, one of the smallest LLMs, due to lack of hardware resources. Perhaps another transformer model would be more effective? There have been big developments in LLMs in recent months, it would be worth trying Llama2 for example. In future iterations of this project, more resources should be committed to the hardware aspects - we need a VM ideally with a GPU, if we want to utilise these exciting new technologies.</p>
+<p>Other things that we tried, which did not make it into the final productionized version of the model:</p>
+<ul>
+<li><p>Rules based boosting of probabilities. This idea was suggested to us by Dan Schofield from NHS England. We did implement it, and it did successfully boost performance in a few categories! However, our stakeholders were not very keen on this idea from a qualitative perspective, so we have not implemented it in the final project outcome. The functionality to implement this is still in the package, however. It works by boosting the probability of a category if specific words are found in the text.</p></li>
+<li><p>Adjusting the classification threshold. We had productive discussions with our stakeholders about the precision-recall tradeoff, and found that on the whole trusts prioritised recall over precision, as they were more concerned about potentially missing labels, rather than incorrectly labelled text. We tried to maintain a balance by using the F1 score as well. We incorporated the ability to manually adjust the threshold used for each category into the code, or to use a precision-recall curve to identify the threshold producing the best F1 score. Ultimately we haven’t implemented this in the final model as we didn’t find it was that useful (and also we ran out of time).</p></li>
+</ul>
+<section id="other-things-to-try-in-future" class="level2">
+<h2 class="anchored" data-anchor-id="other-things-to-try-in-future">Other things to try in future</h2>
+<ul>
+<li><p>Andreas, who worked on phase 1 of the project, shared this paper with us - would be worth dedicating a couple of weeks to, to see if it works! https://aclanthology.org/2023.findings-acl.426/</p></li>
+<li><p>Reinforcement learning: it would be cool if users of the dashboard could correct the labels given by the model - and this information is fed back into the model to retrain it!</p></li>
+<li><p>Few shot approaches: We have been using the framework developed by NHS England - but what if trusts want to use their own frameworks? We could create a pipeline to enable trusts to provide their own framework and examples for each category, and train models in this way?</p></li>
+<li><p>Model interpretability: I think we should use SHAP to highlight which words contributed most to the labels given to a text, to help people understand how the models work.</p></li>
+<li><p>More nuanced approach to sentiment and labelling: One of the issues that we had was the fact that we treated very long comments in exactly the same way as very short comments. So comments with mixed sentiment (e.g.&nbsp;“the nurse was very nice! Toilets were disgusting”) just came out as “neutral / mixed”, thus belonging to the same category as a truly neutral comment like “everything ok”. We should ideally explore some way of splitting sentences perhaps, or highlighting exactly which elements in a sentence are positive/negative in sentiment, and perhaps linking this with the multilabel categories.</p></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script type="text/javascript">
@@ -557,7 +566,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">This page is built with <a href="https://quarto.org/">Quarto</a> and is based on the <a href="https://github.com/craig-shenton/quarto-nhs-theme">NHS Theme by Craig Shenton</a></div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">

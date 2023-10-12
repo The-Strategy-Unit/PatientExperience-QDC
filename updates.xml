@@ -10,7 +10,67 @@
 <atom:link href="https://CDU-data-science-team.github.io/PatientExperience-QDC/updates.xml" rel="self" type="application/rss+xml"/>
 <description>Website for the NHS England funded Patient Experience Qualitative Data Categorisation project</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Tue, 18 Jul 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 13 Oct 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Ensembling models</title>
+  <dc:creator>YiWen Hon</dc:creator>
+  <link>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-13/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>We found that there are three different model architectures / algorithms that produced a reasonable performance for predicting the themes: XGBoost, Distilbert, and Support Vector Machine. We decided to combine the three models together, in order to build upon their individual strengths and improve overall performance. In data science terminology, this is called “ensembling”.</p>
+<p>We tried three different methods of ensembling:</p>
+<ul>
+<li>Taking all the predicted labels from each model. If Models A and B predicted the label “Safety &amp; security” and Model C predicted the label “Feeling safe”, we would take both “Safety &amp; security” and “Feeling safe” as the predicted labels for the text. This method resulted in a higher recall score but lower precision.</li>
+<li>Taking predicted labels only if at least two models predicted it. This is called “Hard voting” in data science terminology. If Models A and B predicted the label “Safety &amp; security” and Model C predicted the label “Feeling safe”, we would take only “Safety &amp; security” as the predicted label for the text. This is because “Feeling safe” was predicted by only one model. This method did not increase performance.</li>
+<li>Taking the predicted probabilities from each model and averaging them. This is called “Soft voting” in data science terminology. For example, if Models A, B, and C predicted the probability of the text belonging to the class “Feeling safe” as 0.2, 0.9 and 0.8 respectively, the average would be 0.63. This method worked the best, particularly when the threshold for accepting a predicted label was lowered to 0.3. This offered the best balance between precision and recall.</li>
+</ul>
+<p>We have opted for method 3, as it offered the best balance between improving precision and recall. However, it also takes a longer time as we need to wait for all three models to make their predictions before we combine them. We are using this method with the slower “wait” API.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-13/ensemble.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Diagram showing how models are ensembled</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-13/index.html</guid>
+  <pubDate>Fri, 13 Oct 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-13/ensemble.png" medium="image" type="image/png" height="152" width="144"/>
+</item>
+<item>
+  <title>Productionising an LLM with limited hardware resources</title>
+  <dc:creator>YiWen Hon</dc:creator>
+  <link>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-12/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<p>For this project, we tried several different machine learning algorithms. The best performing algorithms were the Support Vector Classifier, Gradient Boosted Decision Trees (XGBoost), and Distilbert. For the multilabel categories, we found that these three models were largely comparable to one another but that they produced the best results when combined. The Distilbert model outperformed the others for predicting text sentiment (i.e., positive/negative/neutral).</p>
+<p>The Distilbert model is a transformer-based model, which means that it is very slow and requires a lot of computation power. When we tried to deploy it on our RStudio Connect server, we found that it was consuming 100% of the server’s resources! This was not sustainable and we needed to find another way to make this model available.</p>
+<p>The solution that we have come up with is to use Azure Container Instances to host the model. Now, when users send their data for predictions, they get a unique results URL to check. A Docker container with their data is started up, which also installs the pxtextmining package and loads the models. This can take a few minutes, as a fresh instance is set up every time. The Docker container then makes the predictions based on the data, and saves the predictions (without the text). The process of making the predictions can be quite slow, approximately 10 minutes for 5,000 comments. After predictions are made, the original data is deleted, and the predicted categories are returned via the unique results URL. The container is then shut down completely.</p>
+<p>We adopted this approach because it is more cost effective. We only pay for the length of time that the container instance is running - around 5-30 minutes, depending on the number of comments submitted. However, this does mean that it is a slower process overall as the container instance needs to be started up from scratch every time. It therefore makes more sense to use this for processing many comments at once. It’s also a slightly more complicated API to use, but we have provided guidance and example code to aid our end users.</p>
+<p>We are still maintaining the API which uses the lightweight sklearn model. The performance of the model here is less good, but we think it’s important to maintain a ‘quick and easy’ solution as well as the more performant but much slower approach.</p>
+<p>Do you have experience with deploying slow, resource-intensive models with limited resources? What were your solutions?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-12/slow_API.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Diagram showing Slow API structure</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-12/index.html</guid>
+  <pubDate>Thu, 12 Oct 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-12/slow_API.png" medium="image" type="image/png" height="120" width="144"/>
+</item>
 <item>
   <title>Using an upset plot to explore the relationship between large categorical data</title>
   <dc:creator>Oluwasegun Apejoye</dc:creator>
