@@ -64,7 +64,7 @@ Large volumes of qualitative data can be overwhelming which creates a barrier to
 
 - Comments mapped to the 'Environment, facilities & equipment' sub-categories could be shared with Estates & Facilities given they often identify areas that need maintenance or could be fixed.
 
-- Other sub-categories such as 'Funding & use of financial resources' may be most usefully received by senior management. Some of the 'Staff' sub-categories such as 'Number & deployment of staff' and 'Competence & training' may be most useful to HR or managers.
+- Other sub-categories such as 'Funding & use of financial resources' may be most usefully received by senior management. Some of the 'Staff' sub-categories such as 'Staffing levels & responsiveness' and 'Competence & training' may be most useful to HR or managers.
 
 If you have limited resource to look at the qualitative data and don't know where to start, you may wish to consider the following to decide which sub-categories to explore in more depth:
 
