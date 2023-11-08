@@ -89,7 +89,7 @@ In this tab, users have the functionality to
 
     1.  The comment has over 50 words
 
-    2.  The comment has over 3 labels attached
+    2.  The comment has over 5 labels attached
 
     Users can download the data containing complex comments from this section of the dashboard.
 
