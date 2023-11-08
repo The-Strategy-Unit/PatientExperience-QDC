@@ -1,5 +1,5 @@
 ---
-title: "Model selection"
+title: "Project development: Model selection"
 subtitle: "Which machine learning algorithm should we use?"
 comments: false
 ---

@@ -1,6 +1,6 @@
 ---
-title: "Updates"
-subtitle: "Project news"
+title: "Blogposts"
+subtitle: "Project news and info"
 listing:
   sort: "date desc"
   contents: "posts"

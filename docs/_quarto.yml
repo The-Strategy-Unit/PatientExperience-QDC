@@ -26,7 +26,7 @@ website:
       - text: "About PatientExperience-QDC"
         icon: "book"
         href: index.qmd
-      - text: "Updates"
+      - text: "Blogposts"
         icon: "rss"
         href: updates.qmd
 
@@ -64,7 +64,9 @@ website:
           - pxtextmining/performance_metrics.qmd
           - pxtextmining/model_selection.qmd
           - pxtextmining/additional_features.qmd
-          - pxtextmining/project_outcomes.qmd
+          - pxtextmining/model_performance.qmd
+          - pxtextmining/using_models.qmd
+          - pxtextmining/pxtextmining_learning.qmd
       - section: Experiences dashboard
         file: dashboard/index.qmd
         contents:

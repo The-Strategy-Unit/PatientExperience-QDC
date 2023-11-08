@@ -12,6 +12,12 @@ number-sections: false
 
 # Patient Experience Qualitative Data Categorisation Framework
 
+Note: Although the framework has been designed to be used across all Trust types there are a small number of sub-categories where Trust type has an impact as follows:
+
+- The 'Mental Health Act' subcategory is specific to Mental Health Trusts and other Trust types are unlikely to have any comments appearing here.
+
+- Ambulance Trusts are unlikely to have comments appearing int he 'Activities & access to fresh air' and 'Electronic entertainment' sub-categories
+
 ## General
 
 ::: {.callout-note icon=false title="Positive experience & gratitude" collapse=true}

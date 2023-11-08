@@ -1,0 +1,107 @@
+---
+title: "Good practice guidance"
+subtitle: "How to use the dashboard to improve your use of qualitative data"
+author: "Estelle Phillips"
+date: "2023-10-11"
+---
+
+This section provides information on good practice when working with qualitative data, as well as practical tips, and advice to help you maximise your use of the qualitative comments that the dashboard draws on. The dashboard should be used to facilitate initial exploration of your qualitative data, before drawing fuller insight from the underlying qualitative comments. We recommend you use the dashboard as a data discovery tool.
+
+### What the dashboard does
+
+- Categorises large volumes of qualitative comments, organising them into more manageable batches i.e., sub-categories. This is often the starting point of qualitative analysis even when done manually, so the tool saves you time by doing this initial sorting for you.
+
+- Provides visuals and functionality to help you start exploring your data and identify possible patterns, or areas of particular interest.
+
+- Displays the underlying qualitative comments which you can then read and/or use for more in-depth qualitative analysis to derive actionable insights.
+
+### What the dashboard does **not** do
+
+- Replace the need to read the underlying qualitative comments.
+
+- Apply human interpretation or contextual knowledge about your Trust.
+
+- Carry out the detailed qualitative analysis required to maximise the usefulness of the data and meaningfully listen to all of the feedback fully.
+
+# Qualitative caveats and tips
+
+## Why should I move beyond the quantification of qualitative data?
+
+Whilst looking at the volumes of data for sub-categories can be a useful starting point to understanding your data, you will miss qualitative findings and/or misinterpret the data if you rely on the number of comments. You should take care not to oversimplify by assuming that the sub-categories with the most data categorised within them, are the most important and impactful, or that sub-categories with a low volume of data aren't worth further exploration. In relation to this:
+
+- We know that the Friends & Family test qualitative data is heavily skewed towards certain sub-categories, in particular 'Staff manner & personal attributes' and 'Positive experience & gratitude' so these will likely always show up in the greatest volumes.
+
+- Issues raised in comments are not necessarily only experienced by the people mentioning them, for example only two people might say that food is consistently cold by the time it gets to a ward, but the reality is that this is very likely happening for everyone on the ward, not just the two people who mentioned it. In this way even a single comment could lead to improvements for multiple people.
+
+- Experiences which relate to a small sub-set of people, will never show up in high volumes but can have a significant impact on these people, just focusing on high volumes means their experiences will constantly be overlooked. This is especially important when aiming to include the feedback from small populations and communities with protected characteristics for example.
+
+## What is the value of the 'Not assigned' sub-category?
+
+There may be some cases where a comment contains information which the model does not recognise as being relevant to any of the other sub-categories, in these cases it will categorise the comment as 'Not assigned'. It is important to check the comments placed here as this is where you are likely to find comments on less frequently raised or rare topics. These topics can be very important to pay attention to.
+
+## How can I identify topics not in the sub-category framework?
+
+We know that there are a small number of topics which occasionally appear in the data but don't have a sub-category. If they exist within your data, the comment search functionality in the dashboard could be used to help identify these. Examples of these infrequent topics as well as some suggested search terms are outlined in the table below.
+
+
+| **Topic** | **Potential search terms** |
+| --- | --- |
+| Patient appearance & grooming | Clothes, dressed, gown, hair, shower(s), wash |
+| Equality, diversity & inclusion | Adjustments, ADHD, age, autistic, deaf, disabled, disability, disabilities, gender, hearing, language, mobility |
+| Patient records | Accurate, confidentiality, notes, paperwork, record(s), system, updated |
+| Admission | Admission, admissions, admitted |
+
+: Infrequent topics and potential search terms {#tbl-searchterms}
+
+
+# Practical advice for using the categorised data
+
+## How can I deal with large volumes of categorised data?
+
+Large volumes of qualitative data can be overwhelming which creates a barrier to making use of it, a strategy to help with this is distributing sub-sets of comments to the most appropriate areas of your organisation where people are best placed to make practical use of the data. For example:
+
+- As the 'Positive experience & gratitude' sub-category captures information which is very 'thin' (e.g., lacks detail), it is suggested that there is little value in additional analysis of the comments. A better use case here is to simply distribute it to relevant teams as feedback which can be shared with staff and celebrated.
+
+- Comments mapped to the 'Environment, facilities & equipment' sub-categories could be shared with Estates & Facilities given they often identify areas that need maintenance or could be fixed.
+
+- Other sub-categories such as 'Funding & use of financial resources' may be most usefully received by senior management. Some of the 'Staff' sub-categories such as 'Staffing levels & responsiveness' and 'Competence & training' may be most useful to HR or managers.
+
+If you have limited resource to look at the qualitative data and don't know where to start, you may wish to consider the following to decide which sub-categories to explore in more depth:
+
+- Prioritise those of particular interest for your Trust. For example, looking at the qualitative comments for relevant sub-categories where findings from other surveys, quantative analysis, research or information from staff indicate there is an issue.
+
+- Where there are sub-categories you are surprised to see data appearing against, even if comments are low in volume. This could tell you something you didn't know before.
+
+- Use the visuals and filters in the dashboard to identify if there are any changes in the volume of information you are seeing for sub-categories, service areas or demographic groups. Explore what makes you curious.
+
+- Use the inter-relationship between sub-categories functionality in the dashboard to identify sub-categories where there are indications that the comment content may overlap, then look at these in conjunction with each other.
+
+- Rotate which sub-categories you look at in depth, e.g., you could focus on a different one each month.
+
+## How can I move beyond reading to qualitative analysis?
+
+Ideally your organisation will have access to the necessary resource and qualitative analysis skills to move beyond simply reading and quantifying comments to apply a more suitable analytical approach. Here it can be useful to consider the following when looking at comments for a sub-category:
+
+- Whether there is variation in what people are saying and if there is a split between negative and positive comments. Look for the reasons for these differences. Use any insights around what sits behind differences to report on where and how improvements could be made. Adding what you know about the context of the feedback can support with its use, e.g., did the feedback collected about a particular sub-category rise in volume notably after a change was made in that particular ward or pathway.
+
+- Identify where people are having good experiences, with examples that can be celebrated and used to provide positive feedback to staff. These could be individual comments or where you are seeing patterns of consistently good feedback.
+
+- Identify the characteristics that lead to good experiences for people that can be shared within the Trust to promote good practice and provide evidence to boards, departments, and staff around what is working well and why. Consider whether the things that are working well could be transferable to other settings or spread wider.
+
+## How can I report qualitative analysis findings?
+
+Once qualitative comments have been read and/or analysed the following are useful prompts to include in reporting, with a view to improving patient experiences and promoting good practice within your Trust:
+
+- For each sub-category you have looked at what the data tells you about a topic and what conclusions you have drawn from it.
+
+- Any action steps you could take and how they could be achieved.
+
+- Who would need to be involved and who would be responsible for taking the actions forward.
+
+This kind of information could be reported to and discussed at relevant staff meetings and/or the Trust board. Analysing and presenting information in the ways described above is good practice when working with qualitative data, as opposed to simply presenting quantified volumes of data for categories/sub-categories.
+
+When presenting and reporting qualitative findings in more depth you should look to describe findings in words, not numbers and use examples/ quotes to substantiate findings. Within qualitative reporting it is also valid to draw findings from one comment e.g., if what has been described is likely to happen again or have an impact for more people that the one person who shared the feedback.
+
+# Further training
+
+Further training on qualitative analysis and best use of qualitative data, is available to NHS staff here: [Training info (including slides & recordings) - Making Data Count - FutureNHS Collaboration Platform](https://future.nhs.uk/system/login?nextURL=%2Fconnect%2Eti%2FMDC%2Fview%3FobjectId%3D23040240) The relevant slides and recordings can be found in the 'Making Data Count - Step 9 Making Qualitative Data Count' section and you can also sign-up to attend upcoming live re-runs of the training by searching for dates on the Calendar.
