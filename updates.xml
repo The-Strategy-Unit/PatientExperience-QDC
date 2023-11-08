@@ -72,6 +72,51 @@
   <media:content url="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-12/slow_API.png" medium="image" type="image/png" height="120" width="144"/>
 </item>
 <item>
+  <title>Experience Dashboard at Version 0.7.0: A data exploration tool</title>
+  <dc:creator>Oluwasegun Apejoye</dc:creator>
+  <link>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Our first update on the dashboard was based on version 0.6 of the dashboard. And we noted then that we would be rolling out some features into the dashboard. We are glad to say that we implemented some changes and added new features, in version 0.7 series of the dashboard, which we believe have added some elegance to the dashboard and improved its usefulness as a data exploration and visualisation tool to help clinicians, ward managers, and general users identify the pattern in free text data and to access the underlying comments to explore explanations for any pattern seen on the visual.</p>
+</section>
+<section id="new-or-updated-features" class="level2">
+<h2 class="anchored" data-anchor-id="new-or-updated-features">New or updated features</h2>
+<p>In this section, I will provide a high-level overview of the changes we made and the additional features we introduced.</p>
+<p><strong>Move from single-labelling to multi-labelling of comments:</strong> This is the main highlight of all the changes that we introduced. Multi-tagging of patient comments is a crucial part of this phase of the patient experience data categorisation project. The dashboard has always supported single labelled categories but we have now improved the dashboard to support multi-labelled sub-categories and categories (also called super-category in this post). The data format of the dashboard underlining data has also changed to accommodate these changes.</p>
+<p><strong>Adoption of the NHS Identity:</strong> We made every effort to change the general dashboard theme and visualisation colours to follow the <a href="https://www.england.nhs.uk/nhsidentity/">NHS Identity</a>. This was done to provide consistency between the dashboard and other NHS-related dashboards since the dashboard is targeted at NHS-related organisations. Note: This project is still open source and can be used by anyone as far as you follow the <a href="https://github.com/CDU-data-science-team/experiencesdashboard/blob/documentation/LICENSE.md">MIT Licence</a> under which this work is distributed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/landing_page.png"><img src="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/images/landing_page.png" class="img-fluid figure-img" alt="New Landing Page"></a></p>
+<figcaption class="figure-caption">Fig 1. New Landing Page</figcaption>
+</figure>
+</div>
+<p><strong>Update SPC Chart of the FFT Scores:</strong> We used the <a href="https://github.com/nhs-r-community/NHSRplotthedots">NHSR plotthedots package</a> to draw the SPC (statistical process control) chart. The now follows the principles laid out in the NHSE programme, <a href="https://www.england.nhs.uk/publication/making-data-count/">‘Making Data Count’</a>, and allows users to easily see change points, and identify when rules are breached.</p>
+<p><strong>Use Upset plot instead of HeatMap to visualise inter-relationships between sub-categories</strong>: Using an upset plot allows users to see the relationships and associations between the large sub-categories (over 40 different sub-categories) present in the data. <a href="../../posts/upset_plot-23-07-18/index.html">Read more here</a></p>
+<p><strong>QDC Framework</strong>: The landing page now contains a high-level overview of the data categorisation framework developed as part of this project and implemented to assign the sub-categories to the free text comments. see the <a href="../../framework/index.html">framework</a> for more details.</p>
+<p><strong>Visualise trends in sub-categories</strong>: We added a plot to visualise the distribution of comments over time.</p>
+<p><strong>Implement the Pxtextming API</strong>: We implemented the <a href="../../posts/update-23-05-31/index.html">pxtextmining API</a> for machining learning tasks (predicting the sub-categories). Using the API was a more efficient way to interact with the Python machine learning model compared to the previous implementation which requires installing the R version of the pxtextmining package, <code>pxtextmineR</code>, <code>reticulate</code> and downloading the actual Python models needed for the prediction.</p>
+<p><strong>Download complex comments</strong> <strong>and other data</strong>: We added the functionality to download the complex comment for further analysis. Also, users can now download the underline data serving the visualisation they interact with. They can also download all the historical data that serve the dashboard.</p>
+<p><strong>Filter with Demographic features</strong>: Users can now drill down into the data using three demographic features such as age, sex, and ethnicity. This alongside the location and date filter will allow users to drill down the data to their target population and analyse further.</p>
+</section>
+<section id="future-work" class="level2">
+<h2 class="anchored" data-anchor-id="future-work">Future work</h2>
+<p>As we progress, we eagerly embrace the invaluable feedback from the dashboard users. Our commitment to agility remains steadfast, allowing us to efficiently incorporate and implement the essential updates inspired by users’ feedback, to make sure the dashboard consistently meets their evolving needs. We’ll continue to refine and enrich the dashboard’s features to achieve optimal performance and user satisfaction.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>news</category>
+  <category>dashboard</category>
+  <guid>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/index.html</guid>
+  <pubDate>Tue, 18 Jul 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/images/landing_page.png" medium="image" type="image/png" height="73" width="144"/>
+</item>
+<item>
   <title>Using an upset plot to explore the relationship between large categorical data</title>
   <dc:creator>Oluwasegun Apejoye</dc:creator>
   <link>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/upset_plot-23-07-18/index.html</link>
@@ -118,51 +163,6 @@
   <guid>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/upset_plot-23-07-18/index.html</guid>
   <pubDate>Tue, 18 Jul 2023 00:00:00 GMT</pubDate>
   <media:content url="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/upset_plot-23-07-18/images/annotated_Upset_plot.jpg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>Experience Dashboard at Version 0.7.0: A data exploration tool</title>
-  <dc:creator>Oluwasegun Apejoye</dc:creator>
-  <link>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/index.html</link>
-  <description><![CDATA[ 
-
-
-
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Our first update on the dashboard was based on version 0.6 of the dashboard. And we noted then that we would be rolling out some features into the dashboard. We are glad to say that we implemented some changes and added new features, in version 0.7 series of the dashboard, which we believe have added some elegance to the dashboard and improved its usefulness as a data exploration and visualisation tool to help clinicians, ward managers, and general users identify the pattern in free text data and to access the underlying comments to explore explanations for any pattern seen on the visual.</p>
-</section>
-<section id="new-or-updated-features" class="level2">
-<h2 class="anchored" data-anchor-id="new-or-updated-features">New or updated features</h2>
-<p>In this section, I will provide a high-level overview of the changes we made and the additional features we introduced.</p>
-<p><strong>Move from single-labelling to multi-labelling of comments:</strong> This is the main highlight of all the changes that we introduced. Multi-tagging of patient comments is a crucial part of this phase of the patient experience data categorisation project. The dashboard has always supported single labelled categories but we have now improved the dashboard to support multi-labelled sub-categories and categories (also called super-category in this post). The data format of the dashboard underlining data has also changed to accommodate these changes.</p>
-<p><strong>Adoption of the NHS Identity:</strong> We made every effort to change the general dashboard theme and visualisation colours to follow the <a href="https://www.england.nhs.uk/nhsidentity/">NHS Identity</a>. This was done to provide consistency between the dashboard and other NHS-related dashboards since the dashboard is targeted at NHS-related organisations. Note: This project is still open source and can be used by anyone as far as you follow the <a href="https://github.com/CDU-data-science-team/experiencesdashboard/blob/documentation/LICENSE.md">MIT Licence</a> under which this work is distributed.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/landing_page.png"><img src="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/images/landing_page.png" class="img-fluid figure-img" alt="New Landing Page"></a></p>
-<figcaption class="figure-caption">Fig 1. New Landing Page</figcaption>
-</figure>
-</div>
-<p><strong>Update SPC Chart of the FFT Scores:</strong> We used the <a href="https://github.com/nhs-r-community/NHSRplotthedots">NHSR plotthedots package</a> to draw the SPC (statistical process control) chart. The now follows the principles laid out in the NHSE programme, <a href="https://www.england.nhs.uk/publication/making-data-count/">‘Making Data Count’</a>, and allows users to easily see change points, and identify when rules are breached.</p>
-<p><strong>Use Upset plot instead of HeatMap to visualise inter-relationships between sub-categories</strong>: Using an upset plot allows users to see the relationships and associations between the large sub-categories (over 40 different sub-categories) present in the data. <a href="../../posts/upset_plot-23-07-18/index.html">Read more here</a></p>
-<p><strong>QDC Framework</strong>: The landing page now contains a high-level overview of the data categorisation framework developed as part of this project and implemented to assign the sub-categories to the free text comments. see the <a href="../../framework/index.html">framework</a> for more details.</p>
-<p><strong>Visualise trends in sub-categories</strong>: We added a plot to visualise the distribution of comments over time.</p>
-<p><strong>Implement the Pxtextming API</strong>: We implemented the <a href="../../posts/update-23-05-31/index.html">pxtextmining API</a> for machining learning tasks (predicting the sub-categories). Using the API was a more efficient way to interact with the Python machine learning model compared to the previous implementation which requires installing the R version of the pxtextmining package, <code>pxtextmineR</code>, <code>reticulate</code> and downloading the actual Python models needed for the prediction.</p>
-<p><strong>Download complex comments</strong> <strong>and other data</strong>: We added the functionality to download the complex comment for further analysis. Also, users can now download the underline data serving the visualisation they interact with. They can also download all the historical data that serve the dashboard.</p>
-<p><strong>Filter with Demographic features</strong>: Users can now drill down into the data using three demographic features such as age, sex, and ethnicity. This alongside the location and date filter will allow users to drill down the data to their target population and analyse further.</p>
-</section>
-<section id="future-work" class="level2">
-<h2 class="anchored" data-anchor-id="future-work">Future work</h2>
-<p>As we progress, we eagerly embrace the invaluable feedback from the dashboard users. Our commitment to agility remains steadfast, allowing us to efficiently incorporate and implement the essential updates inspired by users’ feedback, to make sure the dashboard consistently meets their evolving needs. We’ll continue to refine and enrich the dashboard’s features to achieve optimal performance and user satisfaction.</p>
-
-
-</section>
-
- ]]></description>
-  <category>news</category>
-  <category>dashboard</category>
-  <guid>https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/index.html</guid>
-  <pubDate>Tue, 18 Jul 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/dashboard-update-23-07-18/images/landing_page.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
   <title>pxtextmining API: enabling access to project outputs</title>
