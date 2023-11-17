@@ -59,6 +59,8 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="../site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet">
+<link href="../site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../_assets/style/styles.css">
@@ -283,14 +285,18 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#feature-tabs" id="toc-feature-tabs" class="nav-link" data-scroll-target="#feature-tabs">Feature tabs</a>
   <ul class="collapse">
-  <li><a href="#data-categorisation-framework" id="toc-data-categorisation-framework" class="nav-link" data-scroll-target="#data-categorisation-framework">Data categorisation framework</a></li>
-  <li><a href="#data-upload-and-management-section" id="toc-data-upload-and-management-section" class="nav-link" data-scroll-target="#data-upload-and-management-section">Data upload and management section</a></li>
-  <li><a href="#distribution-of-comments-over-time" id="toc-distribution-of-comments-over-time" class="nav-link" data-scroll-target="#distribution-of-comments-over-time">Distribution of comments over time</a></li>
-  <li><a href="#inter-relationship-between-sub-categories" id="toc-inter-relationship-between-sub-categories" class="nav-link" data-scroll-target="#inter-relationship-between-sub-categories">Inter-relationship between sub-categories</a></li>
-  <li><a href="#what-people-are-telling-us-about" id="toc-what-people-are-telling-us-about" class="nav-link" data-scroll-target="#what-people-are-telling-us-about">What people are telling us about</a></li>
-  <li><a href="#who-we-are-hearing-from" id="toc-who-we-are-hearing-from" class="nav-link" data-scroll-target="#who-we-are-hearing-from">Who we are hearing from</a></li>
+  <li><a href="#understanding-the-categories" id="toc-understanding-the-categories" class="nav-link" data-scroll-target="#understanding-the-categories">Understanding the categories</a></li>
+  <li><a href="#categorised-comments-over-time" id="toc-categorised-comments-over-time" class="nav-link" data-scroll-target="#categorised-comments-over-time">Categorised comments over time</a></li>
+  <li><a href="#sub-categories-people-are-telling-us-about" id="toc-sub-categories-people-are-telling-us-about" class="nav-link" data-scroll-target="#sub-categories-people-are-telling-us-about">Sub-categories people are telling us about</a>
+  <ul class="collapse">
+  <li><a href="#number-of-samples-in-filtered-selection" id="toc-number-of-samples-in-filtered-selection" class="nav-link" data-scroll-target="#number-of-samples-in-filtered-selection">Number of samples in filtered Selection</a></li>
+  <li><a href="#sub-category-table" id="toc-sub-category-table" class="nav-link" data-scroll-target="#sub-category-table">Sub-category table</a></li>
+  </ul></li>
+  <li><a href="#complex-comments" id="toc-complex-comments" class="nav-link" data-scroll-target="#complex-comments">Complex comments</a></li>
   <li><a href="#comment-search" id="toc-comment-search" class="nav-link" data-scroll-target="#comment-search">Comment Search</a></li>
-  <li><a href="#summaryreport-builder" id="toc-summaryreport-builder" class="nav-link" data-scroll-target="#summaryreport-builder">Summary/Report builder</a></li>
+  <li><a href="#additional-data-exploration-tools" id="toc-additional-data-exploration-tools" class="nav-link" data-scroll-target="#additional-data-exploration-tools">Additional data exploration tools</a></li>
+  <li><a href="#respondent-demographics" id="toc-respondent-demographics" class="nav-link" data-scroll-target="#respondent-demographics">Respondent demographics</a></li>
+  <li><a href="#data-upload-and-management-section" id="toc-data-upload-and-management-section" class="nav-link" data-scroll-target="#data-upload-and-management-section">Data upload and management section</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#what-next" id="toc-what-next" class="nav-link" data-scroll-target="#what-next">What Next?</a></li>
@@ -321,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Introduction</h1>
 <p>The <a href="https://github.com/CDU-data-science-team/experiencesdashboard">Experience dashboard</a> is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the <a href="../pxtextmining/index.html">Pxtextmining</a>, to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text comments. A key focus of the dashboard is to present people with the categorisation of qualitative data.</p>
 <p>The dashboard automates the labelling/categorization of free text data (patient experience comments) using a multilabeling approach and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trends in the data, download reports, etc.</p>
-<p><em>The functionalities highlighted here are based on version 0.7.2 of the experiences dashboard package. Please go <a href="../posts/dashboard-update-23-07-18/index.html">here</a> to compare these changes to those of the previous version.</em></p>
+<p><em>The functionalities highlighted here are based on version 0.9 of the experiences dashboard package. Please go <a href="../posts/dashboard-update-23-07-18/index.html">here</a> to see the update of the previous versions.</em></p>
 <section id="the-structure" class="level2">
 <h2 class="anchored" data-anchor-id="the-structure">The structure</h2>
 <p>The dashboard is built using <a href="https://github.com/ThinkR-open/golem">golem</a>, an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard’s structure. We have the source code <a href="https://github.com/CDU-data-science-team/experiencesdashboard">here</a>.</p>
@@ -337,7 +343,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Getting started</h1>
 <section id="new-trust-onboarding-process" class="level2">
 <h2 class="anchored" data-anchor-id="new-trust-onboarding-process">New Trust Onboarding Process</h2>
-<p>As a new user, to begin using the dashboard, you need to <a href="mailto:PHUdatascience@nottshc.nhs.uk?cc=chris.beeley1@nhs.net">reach out to the project</a> team so they can establish your organization’s version of the dashboard. The team will assess your request, arrange a meeting to discuss your requirements and provide an onboarding email enabling you to access the dashboard.</p>
+<p>As a new user, to begin using the dashboard, you need to <a href="mailto:chris.beeley1@nhs.net">reach out to the project</a> team so they can establish your organization’s version of the dashboard. The team will assess your request, arrange a meeting to discuss your requirements and provide an onboarding email enabling you to access the dashboard.</p>
 </section>
 <section id="uploading-your-data" class="level2">
 <h2 class="anchored" data-anchor-id="uploading-your-data">Uploading your data</h2>
@@ -349,10 +355,10 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>There are a few things to note here. The data must pass the following checks:</p>
 <ol type="1">
-<li><p><em>Column names:</em> They should follow the names used in the <a href="https://github.com/CDU-data-science-team/experiencesdashboard/raw/main/data-raw/New%20general%20trust%20template.xlsx">“general_trust_template”</a>. Columns with names other than these are ignored by the dashboard.</p></li>
-<li><p><em>Compulsory columns</em>: the following columns must be present in your data no matter your Trust configuration: <strong>“date”, “location_1”, “question_1”, “fft_score”</strong></p></li>
+<li><p><em>Column names:</em> They should follow the names used in the <a href="https://github.com/CDU-data-science-team/experiencesdashboard/raw/main/data-raw/New%20general%20trust%20template.xlsx">“general_trust_template”</a>. The dashboard ignores columns with names other than these.</p></li>
+<li><p><em>Compulsory columns</em>: the following columns must be present in your data no matter your Trust configuration: <strong>“date”, “location_1”, “question_1”, “fft_score”.</strong></p></li>
 <li><p><em>Additional Columns</em>: Your data must contain other columns depending on your Trust configuration agreed upon during onboarding. e.g.&nbsp;if you indicated you would like to filter using demographic features such as Sex, and Age, then the “sex” and “age” column must be present in your uploaded data. Likewise, if you indicated you needed to filter using the 3 clinical locations, then the “location_1”, “location_2”, and “location_3” columns must be present in your data.</p></li>
-<li><p><em>File extension:</em> The following file extensions can be used to upload data: .csv, .txt, .xls, .xlsx, .rds, .fst, .sas7bdat, .sav. However, we recommend using .xlsx (Excel format)</p></li>
+<li><p><em>File extension:</em> The following file extensions can be used to upload data: .csv, .txt, .xls, .xlsx, .rds, .fst, .sas7bdat, .sav. However, we recommend using .xlsx (Excel format).</p></li>
 <li><p><em>Date format:</em> As much as possible, the date format should be in dd/mm/yyyy e.g.&nbsp;30/09/2021, 27/10/2022.</p></li>
 </ol>
 </section>
@@ -360,13 +366,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="using-the-dashboard" class="level1">
 <h1><strong>Using the dashboard</strong></h1>
 <p>Below are the key features of the dashboard. Figure 2 below shows a screenshot of the dashboard landing page alongside all the feature tabs and the data selection options.</p>
-<p>In this section, I will discuss the key features of the dashboard.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/landing_page.jpg" class="img-fluid figure-img" alt="Dashboard Landing page"></p>
+<p><a href="images/landing_page.jpg"><img src="images/landing_page.jpg" class="img-fluid figure-img" alt="Dashboard Landing page"></a></p>
 <figcaption class="figure-caption">Fig 2. Dashboard landing page showing the feature tabs and the data drilling options</figcaption>
 </figure>
 </div>
+<p>In this section, I will discuss the key features of the dashboard.</p>
 <section id="data-selection" class="level2">
 <h2 class="anchored" data-anchor-id="data-selection">Data Selection</h2>
 <section id="sidebar-filters---affect-all-tabs" class="level3">
@@ -376,44 +382,23 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
 <p><a href="images/sidebar-filter.jpg"><img src="images/sidebar-filter.jpg" class="img-fluid figure-img" alt="Sidebar filter" width="256"></a></p>
-<figcaption class="figure-caption">Sidebar filter - The filter affects the dashboard contents on all of the feature tabs</figcaption>
+<figcaption class="figure-caption">Fig 3: Sidebar filter - The filter affects the dashboard contents on all of the feature tabs</figcaption>
 </figure>
 </div>
 </section>
 <section id="tab-specific-filters---affect-a-specific-tab" class="level3">
 <h3 class="anchored" data-anchor-id="tab-specific-filters---affect-a-specific-tab">Tab-specific filters - affect a specific tab</h3>
-<p>Some of the feature tabs (such as the “Distribution of comments over time” and “Inter-relationship between sub-categories” tab) have additional data filtering features that allow you to further drill down into the data and visualise smaller samples of the data in that particular tab. <em>These tab-specific filters don’t affect the data that is viewed in other feature tabs of the dashboard.</em></p>
+<p>Some of the feature tabs (such as the “Categorised comments over time” and “Additional data exploration tools” tab) have additional data filtering features that allow you to drill down into the data and visualise smaller samples of the data in that particular tab. <em>These tab-specific filters don’t affect the data that is viewed in other feature tabs of the dashboard.</em></p>
 </section>
 </section>
 <section id="feature-tabs" class="level2">
 <h2 class="anchored" data-anchor-id="feature-tabs">Feature tabs</h2>
-<section id="data-categorisation-framework" class="level3">
-<h3 class="anchored" data-anchor-id="data-categorisation-framework">Data categorisation framework</h3>
-<p>This tab contains a brief introduction of the data categorisation framework developed as part of this project and used to assign the sub-categories to the free text comments. see the <a href="../framework/index.html">framework</a> for more details.</p>
+<section id="understanding-the-categories" class="level3">
+<h3 class="anchored" data-anchor-id="understanding-the-categories">Understanding the categories</h3>
+<p>This tab contains a brief introduction to the data categorisation framework developed as part of this project and used to assign the sub-categories to the free text comments, see the <a href="../framework/index.html">framework</a> for more details. It also contains examples of comments that fall under each sub-category.</p>
 </section>
-<section id="data-upload-and-management-section" class="level3">
-<h3 class="anchored" data-anchor-id="data-upload-and-management-section">Data upload and management section</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/data_mgt.png"><img src="images/data_mgt.png" class="img-fluid figure-img" alt="Data management tab"></a></p>
-<figcaption class="figure-caption">Fig 3. Data Upload and Management tab</figcaption>
-</figure>
-</div>
-<p>In this tab, users have the functionality to</p>
-<ul>
-<li><p><em>Assign label to new data</em>: Users can upload their data and once this data is uploaded the pxtextmining API is called to assign sub-categories to the free comments and the data is saved in the database. Users can then refresh their browsers to assess the newly uploaded data alongside their existing data.</p></li>
-<li><p><em>Manage Data</em>: Users can delete rows within their data right from the dashboard environment.</p></li>
-<li><p><em>Download historical data</em>: Users can download the whole underline data currently loaded into the dashboard.</p></li>
-<li><p><em>Download complex data</em>: We identify that there may be situations where the machine learning model might be wrong in the sub-categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below are the simple criteria used to flag a comment as a complex comment (if any are met):</p>
-<ol type="1">
-<li><p>The comment has over 50 words</p></li>
-<li><p>The comment has over 5 labels attached</p></li>
-</ol>
-<p>Users can download the data containing complex comments from this section of the dashboard.</p></li>
-</ul>
-</section>
-<section id="distribution-of-comments-over-time" class="level3">
-<h3 class="anchored" data-anchor-id="distribution-of-comments-over-time">Distribution of comments over time</h3>
+<section id="categorised-comments-over-time" class="level3">
+<h3 class="anchored" data-anchor-id="categorised-comments-over-time">Categorised comments over time</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="images/trend-tab.png"><img src="images/trend-tab.png" class="img-fluid figure-img" alt="Comment Distribution over Time"></a></p>
@@ -421,16 +406,48 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>It shows a visual of the monthly distribution of comments in the sub-category/super-category levels. This visual should be used to help identify patterns in the data, particularly where there are clusters of comments around a particular sub-category.</p>
-<p>The plot is interactive and the box increases with the volume of comments. Clicking on any of the boxes will show the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories). The comments should be read to explore explanations for any pattern seen on the visual and to carry out any additional qualitative analysis as required.</p>
+<p>The plot is interactive and the box increases with the volume of comments. Clicking on any of the boxes will show the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned Sentiment, sub-categories and super-categories). The comments should be read to explore explanations for any pattern seen on the visual and to carry out any additional qualitative analysis as required.</p>
 </section>
-<section id="inter-relationship-between-sub-categories" class="level3">
-<h3 class="anchored" data-anchor-id="inter-relationship-between-sub-categories">Inter-relationship between sub-categories</h3>
-<p>This shows an upset plot, which is a type of visualisation for analysing data with a large set (in our case sub-categories). The plot allows users to see the number of comments in the sub-categories association, i.e., you can see the sub-categories that occur together more/less often based on the number of comments they have in common. Users can’t interact with this plot but they have the option to scroll down and select two or three sub-categories to see the underlying comments (alongside key columns such as date, FFT question type, FFT score and assigned sub-categories and super-categories) they have in common.</p>
-<p>There are two sub-tabs in this tab that allow you to view the relationship within a category (e.g.&nbsp;staff) or across all the categories. The column bar on the plot shows the total number of comments in each relationship. A selection feature is provided to set the minimum number of comments a relationship needs to have in other to show on the pot.</p>
+<section id="sub-categories-people-are-telling-us-about" class="level3">
+<h3 class="anchored" data-anchor-id="sub-categories-people-are-telling-us-about">Sub-categories people are telling us about</h3>
+<p>This tab contains a few information and functionalities. These are</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/upset.png"><img src="images/upset.png" class="img-fluid figure-img" alt="Tab showing Inter-relationship between sub-categories"></a></p>
-<figcaption class="figure-caption">Fig 5. Tab showing Inter-relationship between sub-categories</figcaption>
+<p><a href="images/cetegory-tab.png"><img src="images/cetegory-tab.png" class="img-fluid figure-img" alt="Summary Tab"></a></p>
+<figcaption class="figure-caption">Fig 5. Summary Tab</figcaption>
+</figure>
+</div>
+<section id="number-of-samples-in-filtered-selection" class="level4">
+<h4 class="anchored" data-anchor-id="number-of-samples-in-filtered-selection">Number of samples in filtered Selection</h4>
+<p>Come here to quickly see the volume of comments visualised in the dashboard. The tab shows the total number of comments/responders in the current selection (based on the filter applied from the sidebar) and the total number of comments/responders in the database (ignoring all the sidebar filters). The figure in the “current selection” represents the actual data that you are viewing in the dashboard. If you didn’t select any filter from the sidebar, then the “database” figures will be the same as those of the “current selection” figures.</p>
+</section>
+<section id="sub-category-table" class="level4">
+<h4 class="anchored" data-anchor-id="sub-category-table">Sub-category table</h4>
+<p>This shows a table of the number of comments in each sub-category. Users can select a sub-category from the table to see all the comments relating to the selection.</p>
+</section>
+</section>
+<section id="complex-comments" class="level3">
+<h3 class="anchored" data-anchor-id="complex-comments">Complex comments</h3>
+<p>We identify that there may be situations where the machine learning model might be wrong in the sub-categories assigned to comments, and this may be especially true for very long comments. We set some criteria to catch those complex comments for further interrogation. Below are the simple criteria used to flag a comment as a complex comment (if any are met):</p>
+<ol type="1">
+<li><p>The comment has over 50 words</p></li>
+<li><p>The comment has over 5 labels attached</p></li>
+</ol>
+<p>Users can view and download the data containing complex comments from this section of the dashboard.</p>
+</section>
+<section id="comment-search" class="level3">
+<h3 class="anchored" data-anchor-id="comment-search">Comment Search</h3>
+<p>Users can make a Boolean search for comments with specific keyword(s). The result of the search can be downloaded. The keywords used in the search are used as the filename when saving the data.</p>
+</section>
+<section id="additional-data-exploration-tools" class="level3">
+<h3 class="anchored" data-anchor-id="additional-data-exploration-tools">Additional data exploration tools</h3>
+<p>This shows an upset plot, which is a type of visualisation for analysing data with a large set (in our case sub-categories). The plot allows users to see the number of comments in the sub-categories association, i.e., you can see the sub-categories that occur together more/less often based on the number of comments they have in common. Users <strong>can’t interact with this plot</strong> but they have the option to scroll down and select two or three sub-categories to see the underlying comments they have in common.</p>
+<p>There are two sub-tabs in this tab that allow you to view the relationship within a category (e.g.&nbsp;staff) or across all the categories. The column bar on the plot shows the total number of comments in each relationship. A selection feature is provided to set the minimum number of comments a relationship needs to have in other to show on the pot.</p>
+<p><strong>The plot is not currently interactive, you need to use the selection features below the plot to select the 2 or 3 sub-categories you wish to explore.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/upset.png"><img src="images/upset.png" class="img-fluid figure-img" alt="Tab showing Inter-relationship between sub-categories and comment table"></a></p>
+<figcaption class="figure-caption">Fig 6. Inter-relationship between sub-categories and comment table</figcaption>
 </figure>
 </div>
 <p>The visual should be used to identify sub-categories with relationship and the sub-category selection functionalities should be used to see the underlined comment and investigate the pattern. Please see our post on <a href="../posts/upset_plot-23-07-18/index.html">using an upset plot to explore the relationship between large categorical data</a> to understand more about upset plots.</p>
@@ -438,62 +455,38 @@ ul.task-list li input[type="checkbox"] {
 <p><strong><em>a. Please access your browser setting (three dots (…) at the top right of your browser)</em></strong></p>
 <p><strong><em>b. Zoom out to 75% or 80%</em></strong></p>
 </section>
-<section id="what-people-are-telling-us-about" class="level3">
-<h3 class="anchored" data-anchor-id="what-people-are-telling-us-about">What people are telling us about</h3>
-<p>This shows a table of the number of comments in each sub-category. Users can select a sub-category from the table to see all the comments relating to the selection.</p>
-</section>
-<section id="who-we-are-hearing-from" class="level3">
-<h3 class="anchored" data-anchor-id="who-we-are-hearing-from">Who we are hearing from</h3>
+<section id="respondent-demographics" class="level3">
+<h3 class="anchored" data-anchor-id="respondent-demographics">Respondent demographics</h3>
 <p>Two types of charts are shown here for each demographic variable</p>
 <ul>
 <li>Distribution of the demographics in the sample.</li>
-<li>The average percentage of FFT score for each group in the demographic feature.</li>
+<li>The percentage of the mean FFT score for each group in the demographic feature. Where a Mean score of 1 is 100% and 5 is 0%.</li>
 </ul>
 </section>
-<section id="comment-search" class="level3">
-<h3 class="anchored" data-anchor-id="comment-search">Comment Search</h3>
-<p>Users can make a Boolean search for comments with specific keyword(s). The result of the search can be downloaded. The keywords used in the search are used as the filename when saving the data.</p>
-</section>
-<section id="summaryreport-builder" class="level3">
-<h3 class="anchored" data-anchor-id="summaryreport-builder">Summary/Report builder</h3>
-<p>This tab contains few information and functionalities. These are</p>
+<section id="data-upload-and-management-section" class="level3">
+<h3 class="anchored" data-anchor-id="data-upload-and-management-section">Data upload and management section</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/summary-tab.jpg"><img src="images/summary-tab.jpg" class="img-fluid figure-img" alt="Summary Tab"></a></p>
-<figcaption class="figure-caption">Fig 6. Summary Tab</figcaption>
+<p><a href="images/data_mgt.png"><img src="images/data_mgt.png" class="img-fluid figure-img" alt="Data management tab"></a></p>
+<figcaption class="figure-caption">Fig 7. Data Upload and Management tab</figcaption>
 </figure>
 </div>
-<section id="number-of-samples-in-filtered-selection" class="level5">
-<h5 class="anchored" data-anchor-id="number-of-samples-in-filtered-selection">Number of samples in filtered Selection</h5>
-<p>Come here to quickly see the volume of comments that are visualised in the dashboard. The tab shows the total number of comments/responders in the current selection (based on the filter applied from the sidebar) and the total number of comments/responders in the database (ignoring all the sidebar filters). The figure in the “current selection” represents the actual data that you are viewing in the dashboard. If you didn’t select any filter from the sidebar, then the “database” figures will be the same as that of the “current selection” figures.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/selection summary.jpg"><img src="images/selection summary.jpg" class="img-fluid figure-img" alt="Numbers of comments and responders in current selection"></a></p>
-<figcaption class="figure-caption">Fig 7. Selection Summary</figcaption>
-</figure>
-</div>
-</section>
-<section id="spc-of-the-fft-score" class="level5">
-<h5 class="anchored" data-anchor-id="spc-of-the-fft-score">SPC of the FFT score</h5>
-<p>This shows the Statistical Process Control (SPC) chart of the FFT score. The SPC chart is simply a line graph showing the FFT score in chronological order, with the score on the vertical (y) axis, the date on the horizontal (x) axis and the average score shown as the centre line.</p>
-</section>
-<section id="report-builder" class="level5">
-<h5 class="anchored" data-anchor-id="report-builder">Report Builder</h5>
-<p>There are four options to select, each adding sections to the generated report (Word document).</p>
+<p><strong>This tab will only be visible to those specific users within your organisation who have the right to upload new data or amend the existing data in the dashboard.</strong></p>
+<p>In this tab, users have the functionality to</p>
 <ul>
-<li><p>% categories table: adds a table for the number of comments assigned to each category and percentage contributions of each category/topic</p></li>
-<li><p>Verbatim comments: the actual comments from the selected data</p></li>
-<li><p>Sample demographics: The demographic graphs of the selected data</p></li>
-<li><p>FFT graph: the FFT plot</p></li>
+<li><p><em>Assign label to new data</em>: Users can upload their data and once this data is uploaded the pxtextmining API is called to assign sub-categories to the free comments and the data is saved in the database. Users can then refresh their browsers to assess the newly uploaded data alongside their existing data.</p></li>
+<li><p><em>Manage Data</em>: Users can delete rows within their data right from the dashboard environment.</p></li>
+<li><p><em>Download historical data</em>: Users can download the whole underline data currently loaded into the dashboard.</p></li>
+<li><p><em>Flag comments as wrongly coded or as interesting:</em> Users familiar with the comments data can flag wrongly labelled comments (or those which should be assigned additional labels) by checking the <i class="far fa-circle-xmark" role="presentation" aria-label="circle-xmark icon" style="color:red"></i> box. Also, they can flag comments as interesting (for later download) by checking the <i class="far fa-flag" role="presentation" aria-label="flag icon" style="color:green"></i> box of the comment.</p></li>
+<li><p><em>Download flagged comments data</em>: If any comments are flagged as “interesting”, they will be available for download from this tab.</p></li>
 </ul>
-</section>
 </section>
 </section>
 </section>
 <section id="what-next" class="level1">
 <h1>What Next?</h1>
-<p>We are constantly improving the dashboard to better serve our users. As we work on enhancing its features, we would greatly appreciate your feedback. How have you utilized the dashboard? What benefits have you gained from it? Are there any changes or adjustments you would recommend? Additionally, what new features would you like to see added? Your input will help us make the dashboard even more effective and useful.</p>
-<p>Please contact us via PHUdatascience@nottshc.nhs.uk (and cc chris.beeley1@nhs.net)</p>
+<p>We kindly ask for feedback from the dashboard users. How have you utilized the dashboard? What benefits have you gained from using it? Are there any changes or adjustments that you would recommend? Moreover, we would like to know what new features you would like to see added. Your input is significant to us in making the dashboard more effective and useful.</p>
+<p>Please contact us by emailing chris.beeley1@nhs.net.</p>
 
 
 </section>
