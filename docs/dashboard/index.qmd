@@ -1,6 +1,10 @@
 ---
 title: "Dashboard"
 comments: false
+execute:
+  echo: false
+  warning: false
+  freeze: true
 ---
 
 ```{r}
