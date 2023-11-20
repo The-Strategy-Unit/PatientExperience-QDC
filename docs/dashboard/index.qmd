@@ -20,7 +20,7 @@ The dashboard automates the labelling/categorization of free text data (patient 
 
 ## The structure
 
-The dashboard is built using [golem](https://github.com/ThinkR-open/golem), an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure. We have the source code [here](https://github.com/CDU-data-science-team/experiencesdashboard).
+The dashboard is built using [golem](https://engineering-shiny.org/golem.html), an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure. We have the source code [here](https://github.com/CDU-data-science-team/experiencesdashboard).
 
 [![Fig 1. Dashboard structure](images/expdash_structure.png){fig-alt="Dashboard structure"}](images/expdash_structure.png)
 
