@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="YiWen Hon">
-<meta name="dcterms.date" content="2023-10-13">
+<meta name="dcterms.date" content="2024-01-09">
 
-<title>PatientExperience-QDC website - Ensembling models</title>
+<title>PatientExperience-QDC website - Project conclusion</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,12 +71,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../_assets/style/styles.css">
-<meta property="og:title" content="PatientExperience-QDC website - Ensembling models">
+<meta property="og:title" content="PatientExperience-QDC website - Project conclusion">
 <meta property="og:description" content="Website for the NHS England funded Patient Experience Qualitative Data Categorisation project">
-<meta property="og:image" content="https://The-Strategy-Unit.github.io/PatientExperience-QDC/posts/update-23-10-13/ensemble.png">
 <meta property="og:site_name" content="PatientExperience-QDC website">
-<meta property="og:image:height" content="2023">
-<meta property="og:image:width" content="1913">
 </head>
 
 <body class="nav-fixed">
@@ -144,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Ensembling models</h1>
+<h1 class="title">Project conclusion</h1>
   <div class="quarto-categories">
     <div class="quarto-category">news</div>
   </div>
@@ -164,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 13, 2023</p>
+      <p class="date">January 9, 2024</p>
     </div>
   </div>
   
@@ -176,20 +173,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We found that there are three different model architectures / algorithms that produced a reasonable performance for predicting the themes: XGBoost, Distilbert, and Support Vector Machine. We decided to combine the three models together, in order to build upon their individual strengths and improve overall performance. In data science terminology, this is called “ensembling”.</p>
-<p>We tried three different methods of ensembling:</p>
+<p>This project concluded in December 2023, but all the code is available on GitHub, and the API will continue to be hosted by The Strategy Unit throughout 2024 at least.</p>
+<p>We presented on pxtextmining and the dashboard at the NHS-R conference; links to the recordings are available below.</p>
 <ul>
-<li>Taking all the predicted labels from each model. If Models A and B predicted the label “Safety &amp; security” and Model C predicted the label “Feeling safe”, we would take both “Safety &amp; security” and “Feeling safe” as the predicted labels for the text. This method resulted in a higher recall score but lower precision.</li>
-<li>Taking predicted labels only if at least two models predicted it. This is called “Hard voting” in data science terminology. If Models A and B predicted the label “Safety &amp; security” and Model C predicted the label “Feeling safe”, we would take only “Safety &amp; security” as the predicted label for the text. This is because “Feeling safe” was predicted by only one model. This method did not increase performance.</li>
-<li>Taking the predicted probabilities from each model and averaging them. This is called “Soft voting” in data science terminology. For example, if Models A, B, and C predicted the probability of the text belonging to the class “Feeling safe” as 0.2, 0.9 and 0.8 respectively, the average would be 0.63. This method worked the best, particularly when the threshold for accepting a predicted label was lowered to 0.3. This offered the best balance between precision and recall.</li>
+<li><a href="https://youtu.be/3uSbLT7ISPc?si=i38cktknYHrodojb&amp;t=7510">experiencesdashboard at the NHS-R Conference 2023</a></li>
+<li><a href="https://www.youtube.com/watch?v=8jcPwD8x8WE&amp;t=16293s">pxtextmining at the NHS-R Conference 2023</a></li>
 </ul>
-<p>We have opted for method 3, as it offered the best balance between improving precision and recall. However, it also takes a longer time as we need to wait for all three models to make their predictions before we combine them. We are using this method with the slower “wait” API.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="ensemble.png" class="img-fluid figure-img"></p>
-<figcaption>Diagram showing how models are ensembled</figcaption>
-</figure>
-</div>
 
 
 

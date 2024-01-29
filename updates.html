@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -94,20 +101,44 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="_assets/style/styles.css">
-<link rel="alternate" type="application/rss+xml" title="PatientExperience-QDC website" href="updates.xml"><meta property="og:title" content="PatientExperience-QDC website - Blogposts">
+<link rel="alternate" type="application/rss+xml" title="PatientExperience-QDC website" href="updates.xml" data-external="1"><meta property="og:title" content="PatientExperience-QDC website - Blogposts">
 <meta property="og:description" content="Project news and info">
-<meta property="og:image" content="https://CDU-data-science-team.github.io/PatientExperience-QDC/posts/update-23-10-13/ensemble.png">
-<meta property="og:site-name" content="PatientExperience-QDC website">
-<meta property="og:image:height" content="2023">
-<meta property="og:image:width" content="1913">
+<meta property="og:site_name" content="PatientExperience-QDC website">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -116,188 +147,55 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page"><i class="bi bi-book" role="img">
+    <a class="nav-link" href="./index.html"> <i class="bi bi-book" role="img">
 </i> 
- <span class="menu-text">About PatientExperience-QDC</span></a>
+<span class="menu-text">About PatientExperience-QDC</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./updates.html" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link active" href="./updates.html" aria-current="page"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text">Blogposts</span></a>
+<span class="menu-text">Blogposts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Help</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-help">    
         <li>
-    <a class="dropdown-item" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues" rel="" target=""><i class="bi bi-bug" role="img">
+    <a class="dropdown-item" href="https://github.com/The-Strategy-Unit/PatientExperience-QDC/issues"><i class="bi bi-bug" role="img">
 </i> 
  <span class="dropdown-text">Report a Bug</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/discussions" rel="" target=""><i class="bi bi-chat-right-text" role="img">
+    <a class="dropdown-item" href="https://github.com/The-Strategy-Unit/PatientExperience-QDC/discussions"><i class="bi bi-chat-right-text" role="img">
 </i> 
  <span class="dropdown-text">Ask a Question</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/CDU-data-science-team/PatientExperience-QDC" rel="" target=""><i class="bi bi-github" role="img" aria-label="GitHub">
+    <a class="nav-link" href="https://github.com/The-Strategy-Unit/PatientExperience-QDC"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Blogposts</li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Homepage</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./background/background.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project background</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./background/phase_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Phase 1 overview</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./framework/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Qualitative Framework</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./framework/framework2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Framework development</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./framework/framework3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Framework details</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./pxtextmining/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Machine learning (pxtextmining)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/performance_metrics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project development: Performance metrics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/model_selection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project development: Model selection</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/additional_features.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project development: Additional features</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/model_performance.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project outcomes: Model performance</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/using_models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project outcomes: Using the models</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pxtextmining/pxtextmining_learning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project outcomes: Key takeaways</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./dashboard/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Experiences dashboard</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dashboard/dashboard_good_practice.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Good practice guidance</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./project_team.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project team</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="dashboard">dashboard <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(6)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="dashboard">dashboard <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(7)</span></div></div></div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -307,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -315,7 +213,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 
 
@@ -323,32 +223,63 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1697155200000" data-listing-file-modified-sort="1700755679518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1704758400000" data-listing-file-modified-sort="1706540270953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="59">
 <div class="thumbnail">
-<p><a href="./posts/update-23-10-13/index.html"> <img src="./posts/update-23-10-13/ensemble.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/update-24-01-29/index.html" class="no-external"></a></p><a href="./posts/update-24-01-29/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/update-24-01-29/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/update-23-10-13/index.html">
 <h3 class="no-anchor listing-title">
-Ensembling models
+<a href="./posts/update-24-01-29/index.html" class="no-external">Project conclusion</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/update-24-01-29/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/update-23-10-13/index.html">
 <div class="listing-description">
-We found that there are three different model architectures / algorithms that produced a reasonable performance for predicting the themes: XGBoost, Distilbert, and Support…
+<a href="./posts/update-24-01-29/index.html" class="no-external">This project concluded in December 2023, but all the code is available on GitHub, and the API will continue to be hosted by The Strategy Unit throughout 2024 at least.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/update-24-01-29/index.html" class="no-external">
+<div class="listing-date">
+Jan 9, 2024
+</div>
+<div class="listing-author">
+YiWen Hon
 </div>
 </a>
 </div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1697155200000" data-listing-file-modified-sort="1706540270953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="317">
+<div class="thumbnail">
+<p><a href="./posts/update-23-10-13/index.html" class="no-external"></a></p><a href="./posts/update-23-10-13/index.html" class="no-external">
+<p><img src="./posts/update-23-10-13/ensemble.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/update-23-10-13/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/update-23-10-13/index.html" class="no-external">Ensembling models</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/update-23-10-13/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/update-23-10-13/index.html" class="no-external">We found that there are three different model architectures / algorithms that produced a reasonable performance for predicting the themes: XGBoost, Distilbert, and Support…</a>
+</div>
+</div>
 <div class="metadata">
-<a href="./posts/update-23-10-13/index.html">
+<a href="./posts/update-23-10-13/index.html" class="no-external">
 <div class="listing-date">
 Oct 13, 2023
 </div>
@@ -358,32 +289,30 @@ YiWen Hon
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1697068800000" data-listing-file-modified-sort="1700755679518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="2" data-categories="news" data-listing-date-sort="1697068800000" data-listing-file-modified-sort="1706540270953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
 <div class="thumbnail">
-<p><a href="./posts/update-23-10-12/index.html"> <img src="./posts/update-23-10-12/slow_API.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/update-23-10-12/index.html" class="no-external"></a></p><a href="./posts/update-23-10-12/index.html" class="no-external">
+<p><img src="./posts/update-23-10-12/slow_API.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/update-23-10-12/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/update-23-10-12/index.html">
 <h3 class="no-anchor listing-title">
-Productionising an LLM with limited hardware resources
+<a href="./posts/update-23-10-12/index.html" class="no-external">Productionising an LLM with limited hardware resources</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/update-23-10-12/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/update-23-10-12/index.html">
 <div class="listing-description">
-For this project, we tried several different machine learning algorithms. The best performing algorithms were the Support Vector Classifier, Gradient Boosted Decision Trees…
+<a href="./posts/update-23-10-12/index.html" class="no-external">For this project, we tried several different machine learning algorithms. The best performing algorithms were the Support Vector Classifier, Gradient Boosted Decision Trees…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/update-23-10-12/index.html">
+<a href="./posts/update-23-10-12/index.html" class="no-external">
 <div class="listing-date">
 Oct 12, 2023
 </div>
@@ -393,19 +322,19 @@ YiWen Hon
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="news,dashboard" data-listing-date-sort="1689638400000" data-listing-file-modified-sort="1700755679514" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="3" data-categories="news,dashboard" data-listing-date-sort="1689638400000" data-listing-file-modified-sort="1706540270953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="620">
 <div class="thumbnail">
-<p><a href="./posts/dashboard-update-23-07-18/index.html"> <img src="./posts/dashboard-update-23-07-18/images/landing_page.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/dashboard-update-23-07-18/index.html" class="no-external"></a></p><a href="./posts/dashboard-update-23-07-18/index.html" class="no-external">
+<p><img src="./posts/dashboard-update-23-07-18/images/landing_page.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/dashboard-update-23-07-18/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/dashboard-update-23-07-18/index.html">
 <h3 class="no-anchor listing-title">
-Experience Dashboard at Version 0.7.0: A data exploration tool
+<a href="./posts/dashboard-update-23-07-18/index.html" class="no-external">Experience Dashboard at Version 0.7.0: A data exploration tool</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/dashboard-update-23-07-18/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
@@ -414,14 +343,12 @@ news
 dashboard
 </div>
 </div>
-<a href="./posts/dashboard-update-23-07-18/index.html">
 <div class="listing-description">
-Our first update on the dashboard was based on version 0.6 of the dashboard. And we noted then that we would be rolling out some features into the dashboard. We are glad to…
+<a href="./posts/dashboard-update-23-07-18/index.html" class="no-external">Our first update on the dashboard was based on version 0.6 of the dashboard. And we noted then that we would be rolling out some features into the dashboard. We are glad to…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/dashboard-update-23-07-18/index.html">
+<a href="./posts/dashboard-update-23-07-18/index.html" class="no-external">
 <div class="listing-date">
 Jul 18, 2023
 </div>
@@ -431,32 +358,30 @@ Oluwasegun Apejoye
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="news" data-listing-date-sort="1689638400000" data-listing-file-modified-sort="1700755679522" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1689638400000" data-listing-file-modified-sort="1706540270957" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="394">
 <div class="thumbnail">
-<p><a href="./posts/upset_plot-23-07-18/index.html"> <img src="./posts/upset_plot-23-07-18/images/annotated_Upset_plot.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/upset_plot-23-07-18/index.html" class="no-external"></a></p><a href="./posts/upset_plot-23-07-18/index.html" class="no-external">
+<p><img src="./posts/upset_plot-23-07-18/images/annotated_Upset_plot.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/upset_plot-23-07-18/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/upset_plot-23-07-18/index.html">
 <h3 class="no-anchor listing-title">
-Using an upset plot to explore the relationship between large categorical data
+<a href="./posts/upset_plot-23-07-18/index.html" class="no-external">Using an upset plot to explore the relationship between large categorical data</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/upset_plot-23-07-18/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/upset_plot-23-07-18/index.html">
 <div class="listing-description">
-An upset plot is a great visualisation tool that can be used to show and understand the relationships and associations between large categories (called sets) in data. It…
+<a href="./posts/upset_plot-23-07-18/index.html" class="no-external">An upset plot is a great visualisation tool that can be used to show and understand the relationships and associations between large categories (called sets) in data. It…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/upset_plot-23-07-18/index.html">
+<a href="./posts/upset_plot-23-07-18/index.html" class="no-external">
 <div class="listing-date">
 Jul 18, 2023
 </div>
@@ -466,32 +391,30 @@ Oluwasegun Apejoye
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="news" data-listing-date-sort="1685491200000" data-listing-file-modified-sort="1700755679518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="5" data-categories="news" data-listing-date-sort="1685491200000" data-listing-file-modified-sort="1706540270953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="610">
 <div class="thumbnail">
-<p><a href="./posts/update-23-05-31/index.html"> <img src="./posts/update-23-05-31/px_diagram.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./posts/update-23-05-31/index.html" class="no-external"></a></p><a href="./posts/update-23-05-31/index.html" class="no-external">
+<p><img src="./posts/update-23-05-31/px_diagram.jpg" class="thumbnail-image"></p>
+</a><p><a href="./posts/update-23-05-31/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/update-23-05-31/index.html">
 <h3 class="no-anchor listing-title">
-pxtextmining API: enabling access to project outputs
+<a href="./posts/update-23-05-31/index.html" class="no-external">pxtextmining API: enabling access to project outputs</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/update-23-05-31/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/update-23-05-31/index.html">
 <div class="listing-description">
-Our latest major project milestone is the release of a model API. This blog post will explain what this is, how we have achieved it, and what our next steps are.
+<a href="./posts/update-23-05-31/index.html" class="no-external">Our latest major project milestone is the release of a model API. This blog post will explain what this is, how we have achieved it, and what our next steps are.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/update-23-05-31/index.html">
+<a href="./posts/update-23-05-31/index.html" class="no-external">
 <div class="listing-date">
 May 31, 2023
 </div>
@@ -501,32 +424,30 @@ YiWen Hon
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="news" data-listing-date-sort="1678665600000" data-listing-file-modified-sort="1700755679518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="6" data-categories="news" data-listing-date-sort="1678665600000" data-listing-file-modified-sort="1706540270953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="290">
 <div class="thumbnail">
-<p><a href="./posts/update-23-03-13/index.html"> <img src="./posts/update-23-03-13/model_architecture.png" class="thumbnail-image"> </a></p>
+<p><a href="./posts/update-23-03-13/index.html" class="no-external"></a></p><a href="./posts/update-23-03-13/index.html" class="no-external">
+<p><img src="./posts/update-23-03-13/model_architecture.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/update-23-03-13/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./posts/update-23-03-13/index.html">
 <h3 class="no-anchor listing-title">
-Machine learning update
+<a href="./posts/update-23-03-13/index.html" class="no-external">Machine learning update</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./posts/update-23-03-13/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/update-23-03-13/index.html">
 <div class="listing-description">
-We’ve had a chance to play around with a few different model architectures now and the main finding is that so far, as in Phase 1 and other similar projects, Support Vector Classifier is performing the best. We are currently prototyping using only some of the final dataset, and focusing on predicting 1 of 13 overarching ‘major…
+<a href="./posts/update-23-03-13/index.html" class="no-external">We’ve had a chance to play around with a few different model architectures now and the main finding is that so far, as in Phase 1 and other similar projects, Support Vector…</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./posts/update-23-03-13/index.html">
+<a href="./posts/update-23-03-13/index.html" class="no-external">
 <div class="listing-date">
 Mar 13, 2023
 </div>
@@ -632,10 +553,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -645,8 +565,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -659,6 +588,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -702,6 +750,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -727,6 +776,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -789,22 +864,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">This page is built with <a href="https://quarto.org/">Quarto</a> and is based on the <a href="https://github.com/craig-shenton/quarto-nhs-theme">NHS Theme by Craig Shenton</a></div>   
+    <div class="nav-footer-left">
+<p>This page is built with <a href="https://quarto.org/">Quarto</a> and is based on the <a href="https://github.com/craig-shenton/quarto-nhs-theme">NHS Theme by Craig Shenton</a></p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/CDU-data-science-team/PatientExperience-QDC/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/The-Strategy-Unit/PatientExperience-QDC/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/blob/main/LICENCE">License</a>
+    <a class="nav-link" href="https://github.com/The-Strategy-Unit/PatientExperience-QDC/blob/main/LICENCE">
+<p>License</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="https://github.com/CDU-data-science-team/PatientExperience-QDC/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a>
+    <a class="nav-link" href="https://github.com/The-Strategy-Unit/PatientExperience-QDC/blob/main/CODE_OF_CONDUCT.md">
+<p>Code of Conduct</p>
+</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
+
 
 
 
