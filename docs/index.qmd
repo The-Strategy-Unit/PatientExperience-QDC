@@ -10,7 +10,7 @@ comments: false
 
 ## Patient Experience Qualitative Data Categorisation
 
-This is the website for the NHS England (NHSE) Insight and Feedback Team funded Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project. This project is being conducted in partnership with the [Nottinghamshire Healthcare NHS Foundation Trust Clinical Development Unit Data Science Team](https://github.com/CDU-data-science-team).
+This is the website for the NHS England (NHSE) Insight and Feedback Team funded Patient Experience Qualitative Data Categorisation (PatientExperience-QDC) project. This project is being conducted in partnership with the [Nottinghamshire Healthcare NHS Foundation Trust Clinical Development Unit Data Science Team](https://github.com/The-Strategy-Unit).
 
 The aim of this project is develop and test an innovative approach to free text analysis, to support better use of qualitative patient experience feedback gathered through the [NHS Friends and Family Test](https://www.england.nhs.uk/fft/).
 
@@ -22,3 +22,4 @@ There are three main elements to the project:
 
 3. Experiences Dashboard: Development of a [user friendly interface](dashboard/index.qmd) to enable the exploration of qualitative patient feedback.
 
+This project concluded in December 2023. The repository migrated from CDU-data-science to The-Strategy-Unit, so many links have been updated.

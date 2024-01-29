@@ -5,18 +5,18 @@ website:
   open-graph: true
   title: "PatientExperience-QDC website"
   description: "Website for the NHS England funded Patient Experience Qualitative Data Categorisation project"
-  site-url: https://CDU-data-science-team.github.io/PatientExperience-QDC
+  site-url: https://The-Strategy-Unit.github.io/PatientExperience-QDC
   favicon: docs/_assets/favicon.ico
-  repo-url: https://github.com/CDU-data-science-team/PatientExperience-QDC
+  repo-url: https://github.com/The-Strategy-Unit/PatientExperience-QDC
   repo-actions: [issue]
 
   page-footer:
     left: "This page is built with [Quarto](https://quarto.org/) and is based on the [NHS Theme by Craig Shenton](https://github.com/craig-shenton/quarto-nhs-theme)"
     right:
     - text: "License"
-      href: https://github.com/CDU-data-science-team/PatientExperience-QDC/blob/main/LICENCE
+      href: https://github.com/The-Strategy-Unit/PatientExperience-QDC/blob/main/LICENCE
     - text: "Code of Conduct"
-      href: https://github.com/CDU-data-science-team/PatientExperience-QDC/blob/main/CODE_OF_CONDUCT.md
+      href: https://github.com/The-Strategy-Unit/PatientExperience-QDC/blob/main/CODE_OF_CONDUCT.md
 
   navbar:
     background: light
@@ -35,12 +35,12 @@ website:
         menu:
           - text: "Report a Bug"
             icon: "bug"
-            href: "https://github.com/CDU-data-science-team/PatientExperience-QDC/issues"
+            href: "https://github.com/The-Strategy-Unit/PatientExperience-QDC/issues"
           - text: "Ask a Question"
             icon: "chat-right-text"
-            href: "https://github.com/CDU-data-science-team/PatientExperience-QDC/discussions"
+            href: "https://github.com/The-Strategy-Unit/PatientExperience-QDC/discussions"
       - icon: github
-        href: https://github.com/CDU-data-science-team/PatientExperience-QDC
+        href: https://github.com/The-Strategy-Unit/PatientExperience-QDC
         aria-label: GitHub
 
   sidebar:
@@ -73,9 +73,6 @@ website:
           - auto: dashboard/*.qmd
       - text: "Project team"
         file: project_team.qmd
-  comments:
-    giscus:
-      repo: CDU-data-science-team/PatientExperience-QDC
 format:
   html:
     toc: true

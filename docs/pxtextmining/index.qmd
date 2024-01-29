@@ -4,7 +4,7 @@ author: "YiWen Hon"
 comments: false
 ---
 
-**pxtextmining** is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is [available on GitHub](https://github.com/CDU-data-science-team/pxtextmining).
+**pxtextmining** is a package built using Python. The package creates and trains models for categorising patient comments using the labels from the qualitative framework. The code is fully open source and is [available on GitHub](https://github.com/The-Strategy-Unit/pxtextmining).
 
 On a basic level, this is what is happening:
 

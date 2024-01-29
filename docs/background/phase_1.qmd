@@ -19,11 +19,11 @@ Objectives of phase 1:
  
 The project was characterised by three distinct outputs:
 
-- [Text classification model](https://github.com/CDU-data-science-team/pxtextmining). A ML model that is able to predict the themes and criticalities of unlabelled feedback text ([release 0.3.4](https://github.com/CDU-data-science-team/pxtextmining/releases/tag/0.3.4))
+- [Text classification model](https://github.com/The-Strategy-Unit/pxtextmining). A ML model that is able to predict the themes and criticalities of unlabelled feedback text ([release 0.3.4](https://github.com/The-Strategy-Unit/pxtextmining/releases/tag/0.3.4))
 
-- [Text mining dashboard](https://github.com/CDU-data-science-team/experiencesdashboard). An interactive dashboard that presents the results of the text classification model, along with further insights derived from the feedback text, including sentiment analysis and other text mining methods ([release 0.4.4](https://github.com/CDU-data-science-team/experiencesdashboard/releases/tag/0.4.4))
+- [Text mining dashboard](https://github.com/The-Strategy-Unit/experiencesdashboard). An interactive dashboard that presents the results of the text classification model, along with further insights derived from the feedback text, including sentiment analysis and other text mining methods ([release 0.4.4](https://github.com/The-Strategy-Unit/experiencesdashboard/releases/tag/0.4.4))
 
-- [Model summary dashboard](https://github.com/CDU-data-science-team/pxtextminingdashboard). A dashboard designed to allow non technical users to assess the accuracy of the model in use, including summary metrics as well as example of classified data to enable the user to make their own judgments about accuracy
+- [Model summary dashboard](https://github.com/The-Strategy-Unit/pxtextminingdashboard). A dashboard designed to allow non technical users to assess the accuracy of the model in use, including summary metrics as well as example of classified data to enable the user to make their own judgments about accuracy
 
 **Machine learning model and dataset**
 

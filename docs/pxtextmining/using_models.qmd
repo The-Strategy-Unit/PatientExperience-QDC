@@ -4,7 +4,7 @@ subtitle: "How to use the trained pxtextmining models"
 comments: false
 ---
 
-For any technical support, or to get the URLs for the APIs, please contact the project team. Technical documentation, including code examples, is available on the [pxtextmining technical documentation page](https://cdu-data-science-team.github.io/pxtextmining/). 
+For any technical support, or to get the URLs for the APIs, please contact the project team. Technical documentation, including code examples, is available on the [pxtextmining technical documentation page](https://The-Strategy-Unit.github.io/pxtextmining/). 
 
 # Option A: Using the APIs
 
@@ -12,13 +12,13 @@ We have set up two different APIs for the models. API stands for [Application Pr
 
 ## The Quick API (Less accurate model, very fast)
 
-This API is fast and easy to use, but only utilises one of the four models that make up the final output for this project. The performance of the model used for this API is available to see [here](https://github.com/CDU-data-science-team/pxtextmining/tree/main/current_best_model/final_svc).
+This API is fast and easy to use, but only utilises one of the four models that make up the final output for this project. The performance of the model used for this API is available to see [here](https://github.com/The-Strategy-Unit/pxtextmining/tree/main/current_best_model/final_svc).
 
 ![Diagram showing Quick API structure](quick_API.png)
 
 ## The Slow API (Best performance, but takes a long time)
 
-This API is slow and slightly more complicated to use, but it utilises all of the models that we trained for this project and has the best performance. The performance of these models is available [here](https://cdu-data-science-team.github.io/PatientExperience-QDC/pxtextmining/project_outcomes.html). This model is slow because the transformer-based models take up a lot of computer resources, and can take a long time to run.
+This API is slow and slightly more complicated to use, but it utilises all of the models that we trained for this project and has the best performance. The performance of these models is available [here](https://The-Strategy-Unit.github.io/PatientExperience-QDC/pxtextmining/project_outcomes.html). This model is slow because the transformer-based models take up a lot of computer resources, and can take a long time to run.
 
 ![Diagram showing Slow API structure](slow_API.png)
 
@@ -27,4 +27,4 @@ This API is slow and slightly more complicated to use, but it utilises all of th
 
 GitHub has a file size limit of 100MB. The smaller models that can be shared on GitHub have been shared there, so it is possible to download and run them on your own machine using the pxtextmining package.
 
-The transformer-based Distilbert models are very large and could not be shared directly on GitHub. However, we have packaged them up in a Docker container which is available on Github Container Registry. This container is what is used in the Slow API. Full details on how to use this are available [here](https://github.com/CDU-data-science-team/pxtextmining/blob/main/docker_README.md). 
+The transformer-based Distilbert models are very large and could not be shared directly on GitHub. However, we have packaged them up in a Docker container which is available on Github Container Registry. This container is what is used in the Slow API. Full details on how to use this are available [here](https://github.com/The-Strategy-Unit/pxtextmining/blob/main/docker_README.md). 

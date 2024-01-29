@@ -15,7 +15,7 @@ API stands for “application programming interface”. Most of the digital serv
 
 Still confused? [This video](https://youtu.be/s7wmiS2mSXY) may help. 
 
-The pxtextmining API allows people to utilise the machine learning models that we have trained for the project to label new text. It makes the model accessible over the internet, without any installation or downloads required. All that’s needed is a few lines of code. Examples are available on the [pxtextmining documentation website](https://cdu-data-science-team.github.io/pxtextmining/reference/API/API/).
+The pxtextmining API allows people to utilise the machine learning models that we have trained for the project to label new text. It makes the model accessible over the internet, without any installation or downloads required. All that’s needed is a few lines of code. Examples are available on the [pxtextmining documentation website](https://The-Strategy-Unit.github.io/pxtextmining/reference/API/API/).
 
 ## Why did we do it?
 
