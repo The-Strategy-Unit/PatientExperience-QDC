@@ -6,7 +6,7 @@ comments: false
 
 Thanks to the 21000 comments painstakingly and expertly labelled as part of this project, we had a very rich dataset with which to train our machine learning models. The best performing models were the Support Vector Classifier, Gradient Boosted Decision Trees (XGBoost), and Distilbert, a transformer-based large language model. For the multilabel categories, we found that these three models were largely comparable to one another but that they produced the best results when combined together. The Distilbert model outperformed the others for predicting text sentiment (i.e., positive/negative/neutral).
 
-Please see below the final performance metrics for the models that we have trained and which are available via the API. These are also available in alternative formats to download from our [github repository](https://github.com/CDU-data-science-team/pxtextmining/tree/main/current_best_model).
+Please see below the final performance metrics for the models that we have trained and which are available via the API. These are also available in alternative formats to download from our [github repository](https://github.com/The-Strategy-Unit/pxtextmining/tree/main/current_best_model).
 
 ## Multilabel ensemble model
 

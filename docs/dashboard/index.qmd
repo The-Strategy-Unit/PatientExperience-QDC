@@ -12,7 +12,7 @@ execute:
 
 # Introduction
 
-The [Experience dashboard](https://github.com/CDU-data-science-team/experiencesdashboard) is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text comments. A key focus of the dashboard is to present people with the categorisation of qualitative data.
+The [Experience dashboard](https://github.com/The-Strategy-Unit/experiencesdashboard) is the front-end tool for the PatientExperience-QDC project. It ties the back-end, the [Pxtextmining](../pxtextmining/index.qmd), to the data source via an API and presents metrics and graphs to help clinical staff and managers gain quick insight from patient experience data and further explore the free text comments. A key focus of the dashboard is to present people with the categorisation of qualitative data.
 
 The dashboard automates the labelling/categorization of free text data (patient experience comments) using a multilabeling approach and gives users the functionality to interact with the data, do boolean searching on the text data, compare relationships across topics, visualize trends in the data, download reports, etc.
 
@@ -20,7 +20,7 @@ The dashboard automates the labelling/categorization of free text data (patient 
 
 ## The structure
 
-The dashboard is built using [golem](https://engineering-shiny.org/golem.html), an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure. We have the source code [here](https://github.com/CDU-data-science-team/experiencesdashboard).
+The dashboard is built using [golem](https://engineering-shiny.org/golem.html), an R package for building production-ready Shiny applications. The dashboard saves and loads data from a database and gives users the functionality to upload their unlabeled comment data (in several formats such as .csv or .xlsx) for labelling. The dashboard processes the feedback data and presents several insights using interactive tables, charts and other data formats for easy digestion of the data. Figure 1 below shows the schematic diagram of the dashboard's structure. We have the source code [here](https://github.com/The-Strategy-Unit/experiencesdashboard).
 
 [![Fig 1. Dashboard structure](images/expdash_structure.png){fig-alt="Dashboard structure"}](images/expdash_structure.png)
 
@@ -42,7 +42,7 @@ To access the dashboard contents, you need to upload your data. It is a simple p
 
 There are a few things to note here. The data must pass the following checks:
 
-1.  *Column names:* They should follow the names used in the ["general_trust_template"](https://github.com/CDU-data-science-team/experiencesdashboard/raw/main/data-raw/New%20general%20trust%20template.xlsx). The dashboard ignores columns with names other than these.
+1.  *Column names:* They should follow the names used in the ["general_trust_template"](https://github.com/The-Strategy-Unit/experiencesdashboard/raw/main/data-raw/New%20general%20trust%20template.xlsx). The dashboard ignores columns with names other than these.
 
 2.  *Compulsory columns*: the following columns must be present in your data no matter your Trust configuration: **"date", "location_1", "question_1", "fft_score".**
 

@@ -1,0 +1,14 @@
+---
+title: "Project conclusion"
+author: "YiWen Hon"
+date: "2024-01-09"
+categories: [news]
+title-block-banner: false
+---
+
+This project concluded in December 2023, but all the code is available on GitHub, and the API will continue to be hosted by The Strategy Unit throughout 2024 at least.
+
+We presented on pxtextmining and the dashboard at the NHS-R conference; links to the recordings are available below.
+
+- [experiencesdashboard at the NHS-R Conference 2023](https://youtu.be/3uSbLT7ISPc?si=i38cktknYHrodojb&t=7510)
+- [pxtextmining at the NHS-R Conference 2023](https://www.youtube.com/watch?v=8jcPwD8x8WE&t=16293s)
