@@ -1,6 +1,6 @@
 ## PatientExperience-QDC project website
 
-Website for the NHS England funded and Nottinghamshire Healthcare NHS Foundation Trust Clinical Decision Unit hosted Patient Experience Qualitative Data Categorisation Project
+Website for the Patient Experience Qualitative Data Categorisation Project
 
 ## License
 
@@ -10,5 +10,5 @@ Distributed under a MIT License. _See [LICENSE.md](/LICENSE) for more informatio
 
 ## About
 
-Project contact email: [PHUdatascience@nottshc.nhs.uk](mailto:PHUdatascience@nottshc.nhs.uk)
+Project contact email: [mlcsu.su.datascience@nhs.net](mailto:mlcsu.su.datascience@nhs.net)
 
