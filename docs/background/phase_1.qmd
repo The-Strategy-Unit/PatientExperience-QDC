@@ -5,7 +5,7 @@ subtitle: Developments and findings from 2021-22
 
 A short summary of the report for phase 1 of the project is available on this page. The full report can be downloaded [here](text_mining_final_report_mar-22.pdf)
 
-Phase 1 of the text mining pilot project hosted at Nottinghamshire Healthcare NHS Foundation Trust and funded by NHS England took place between 2021-22. This formed the basis of the current Patient Experience-QDC project. This project aimed to improve the use of FFT and patient experience survey qualitative data in selected trusts, working towards generating from this piece of work a national “support or guidance toolkit” to help drive service improvements. This project’s overarching goal was to create text mining software, originating in the NHS, which analyses qualitative patient experience data for theme and sentiment, displays this on an online dashboard and is freely available to all NHS Trusts.
+Phase 1 of the text mining pilot project was hosted at Nottinghamshire Healthcare NHS Foundation Trust and took place between 2021-22. This formed the basis of the current Patient Experience-QDC project. This project aimed to improve the use of FFT and patient experience survey qualitative data in selected trusts, working towards generating from this piece of work a national “support or guidance toolkit” to help drive service improvements. This project’s overarching goal was to create text mining software, originating in the NHS, which analyses qualitative patient experience data for theme and sentiment, displays this on an online dashboard and is freely available to all NHS Trusts.
 
 Objectives of phase 1:
 
